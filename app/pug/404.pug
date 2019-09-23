@@ -1,0 +1,41 @@
+- var page = "error"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page-error
+				.container
+					.page-error__inner
+						.page-error__title 404
+						.page-error__message
+							p Ой, что то пошло не так :( 
+							p Страница не найдена.
+						.page-error__btns
+							a.btn.btn--transp(href="/") 
+								img.svg(src="img/icons/ic-1.svg", alt="alt", width="20", height="20")
+								| Вернуться на главную
+							a.btn.btn--bg(href="#") Наши объекты
+
+				// /.container
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+		
+
+

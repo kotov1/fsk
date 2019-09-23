@@ -1,0 +1,122 @@
+/* ------------------------------------- 
+	Common styles 
+	------------------------------------- */
+
+.wrapper
+	// padding-top: 60px
+
+	
+/* ---------- Grid ---------- */
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@media (min-width: 576px)
+	.container
+		max-width: 540px
+
+@media (min-width: 768px)
+	.container
+		max-width: 758px
+
+@media (min-width: 992px)
+	.container
+		max-width: 960px
+
+@media (min-width: 1200px)
+	.container
+		max-width: 1230px
+
+.flex
+	display: flex
+	flex-wrap: wrap
+
+.f-row
+	display: flex
+	flex-wrap: wrap
+	margin-left: -12px
+	margin-right: -12px
+.cols
+	padding-left: 12px
+	padding-right: 12px
+.col-1-2
+	width: 50%
+
+
+/* ---------- Additional styles--------- */
+.img
+	display: block
+	max-width: 100%
+	height: auto
+
+.nowrap
+	white-space: nowrap
+
+.text-center
+	text-align: center
+
+
+
+/* ---------- Titles, texts, lists ---------- */
+h1, .h1
+	font-size: 30px
+	font-weight: 300
+h2, h3, h4, h5, h6
+	font-weight: 500
+h2
+	font-size: 25px
+h3, h4, h5
+	font-size: 20px
+
+
+
+/* ----- Buttons ----- */
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	min-width: 228px
+	height: 50px
+	padding: .25em 1.375em
+	border-width: 1px
+	border-style: solid
+	border-radius: $bd-r
+	font-size: 16px
+	@include trs(.1s)
+	&--bg
+		background-color: v(accent-color)
+		border-color: v(accent-color)
+		color: $white
+		&:hover
+			box-shadow: 0 5px 10px rgba(233, 66, 0, 0.4)
+	&--transp
+		background-color: $white
+		border-color: v(border-color)
+		color: v(text-color)
+		&:hover
+			box-shadow: $shadow1
+	&--border
+		background-color: $white
+		border-color: v(accent-color)
+		color: v(accent-color)
+		&:hover
+			box-shadow: $shadow1
+	&:hover
+		background-color: v(accent-color)
+		color: $white
+
+
+
+
+
+
+
+
+@include max-screen($lg)
+	h1
+		font-size: 25px
+	h2
+		font-size: 20px

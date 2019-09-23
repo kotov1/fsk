@@ -1,0 +1,65 @@
+/* ----- Forms ----- */
+
+*::placeholder
+	color: rgba($text-color, .5)
+	opacity: 1
+	@include trs(.1s)
+
+body input:focus:required:invalid, body textarea:focus:required:invalid,
+body input:required:valid, body textarea:required:valid
+	color: $text-color
+
+
+/* ----- Checkbox  ----- */
+.checkbox 
+	display: flex
+	align-items: center
+	cursor: pointer
+
+	.checkbox-wrap
+		position: relative
+		display: inline-block
+		width: 16px
+		height: 16px
+		flex: 0 0 16px
+		border: 1px solid $border-color
+		border-radius: $bd-r
+		background-color: $white
+		@include trs(.1s)
+
+	.checkbox-check 
+		width: 85%
+		position: absolute
+		top: 2px
+		left: 1px
+		stroke: $accent-color
+		fill: $accent-color
+		stroke-width: 2.5px
+		stroke-dasharray: 19px
+		stroke-dashoffset: 19px
+		transition: .2s ease-out
+
+	.checkbox-text
+		display: inline-block
+		margin-left: 8px
+		font-size: 12px
+		font-weight: 500
+		color: $black
+		a 
+			color: inherit
+			text-decoration: underline
+			
+	input
+		display: none
+		&:checked
+			+ .checkbox-wrap
+				background-color: $accent-color
+				.checkbox-check
+					stroke-dashoffset: 38px
+					stroke: $white
+					fill: $white
+
+	&:hover
+		.checkbox-wrap
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.16)
+
