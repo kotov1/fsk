@@ -1,0 +1,94 @@
+- var page = "discounts-page"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+				.container
+
+					.p-hero(style="background-image: url('img/img-article-hero.jpg')")
+						.p-hero__inner
+							.p-hero__top 31 января 2020
+							h1.h2.p-hero__title Новость про время работы офиса продаж.
+							.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+								span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+									a(rel='nofollow', itemprop='item', title='Главная', href='/')
+										span(itemprop='name') Главная
+										meta(itemprop='position', content='1')
+								span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+									a(rel='nofollow', itemprop='item', title='Новости', href='news.html')
+										span(itemprop='name') Новости
+										meta(itemprop='position', content='2')
+								span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+									a(rel='nofollow', itemprop='item', title='Страница новости', href='#')
+										span(itemprop='name') Новость про время работы.
+										meta(itemprop='position', content='3')
+							.p-hero__bottom 16 августа 2019 
+
+					.content
+						p Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+						.f-row
+							.cols.col-1-2
+								img.img(src="img/img-article-hero.jpg", alt="alt")
+							.cols.col-1-2
+								img.img(src="img/img-article-hero.jpg", alt="alt")
+						p Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+
+						.p-labels.p-labels--static
+							.p-labels__title Предложение действует для:
+							span.p-label UP-квартал Московский
+							span.p-label UP-квартал Пушкинский
+							span.p-label UP-квартал Комендантский
+
+					h2.h1.page-title Другие акции и скидки
+
+					.p-list
+						.f-row
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-1.jpg", alt="news1")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="news-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-2.jpg", alt="news2")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="news-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+
+
+
+				// /.container
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+		
+
+

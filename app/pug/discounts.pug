@@ -1,0 +1,126 @@
+- var page = "discounts"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Главная', href='/')
+								span(itemprop='name') Главная
+								meta(itemprop='position', content='1')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Акции и скидки', href='#')
+								span(itemprop='name') Акции и скидки
+								meta(itemprop='position', content='2')
+
+					h1.page-title Акции и скидки
+
+					.p-list
+						.f-row
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-1.jpg", alt="news1")
+										.p-labels.p-labels--absolute
+											span.p-label UP-квартал Комендантский
+											span.p-label Zoom Apart
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="discounts-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="discounts-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-2.jpg", alt="news2")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="discounts-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="discounts-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-3.jpg", alt="news2")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="discounts-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="discounts-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-1.jpg", alt="news1")
+										.p-labels.p-labels--absolute
+											span.p-label UP-квартал Пушкинский
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="discounts-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="discounts-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-2.jpg", alt="news2")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="discounts-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="discounts-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-3.jpg", alt="news2")
+										.p-labels.p-labels--absolute
+											span.p-label Все объекты
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="discounts-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="discounts-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+						.p-list-more
+							button.btn.btn--transp(type="button")
+								img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+								| Показать ещё
+
+
+
+
+
+				// /.container
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+		
+
+

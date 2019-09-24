@@ -3,7 +3,9 @@
 	------------------------------------- */
 
 .wrapper
-	// padding-top: 60px
+	padding-top: 60px
+.page
+	padding-bottom: 50px
 
 	
 /* ---------- Grid ---------- */
@@ -20,15 +22,17 @@
 
 @media (min-width: 768px)
 	.container
-		max-width: 758px
+		max-width: 768px
+		padding-right: 24px
+		padding-left: 24px
 
-@media (min-width: 992px)
+@media (min-width: 1024px)
 	.container
-		max-width: 960px
+		max-width: 1024px
 
 @media (min-width: 1200px)
 	.container
-		max-width: 1230px
+		max-width: 1248px
 
 .flex
 	display: flex
@@ -66,11 +70,21 @@ h1, .h1
 	font-weight: 300
 h2, h3, h4, h5, h6
 	font-weight: 500
-h2
+h2, .h2
 	font-size: 25px
 h3, h4, h5
 	font-size: 20px
 
+.page-title
+	padding-left: 0.5em
+	border-left: 3px solid v(accent-color)
+h1.page-title
+	margin-bottom: 1em
+
+.content
+	padding-bottom: 1.25rem
+	.img
+		margin-bottom: 1.25rem
 
 
 /* ----- Buttons ----- */
@@ -80,24 +94,37 @@ h3, h4, h5
 	justify-content: center
 	min-width: 228px
 	height: 50px
-	padding: .25em 1.375em
+	padding: .25em 1em
 	border-width: 1px
 	border-style: solid
 	border-radius: $bd-r
 	font-size: 16px
+	font-weight: 300
 	@include trs(.1s)
 	&--bg
 		background-color: v(accent-color)
 		border-color: v(accent-color)
 		color: $white
+		.btn__ic
+			fill: $white
+			stroke: $white
+			border-color: $white
 		&:hover
 			box-shadow: 0 5px 10px rgba(233, 66, 0, 0.4)
 	&--transp
 		background-color: $white
 		border-color: v(border-color)
 		color: v(text-color)
+		.btn__ic
+			fill: v(accent-color)
+			stroke: v(accent-color)
+			border-color: v(accent-color)
 		&:hover
 			box-shadow: $shadow1
+			.btn__ic
+				fill: $white
+				stroke: $white
+				border-color: $white
 	&--border
 		background-color: $white
 		border-color: v(accent-color)
@@ -107,16 +134,78 @@ h3, h4, h5
 	&:hover
 		background-color: v(accent-color)
 		color: $white
+	&:focus
+		box-shadow: 0 0 0 0 transparent
+
+	&__ic
+		display: inline-block
+		margin-right: 7px
+		@include trs(.1s)
+
+/* ----- Icons ----- */
+.ic-home, .ic-arrow
+	border-radius: 50%
+	border-width: 1.25px
+	border-style: solid
+.ic-arrow--down
+	transform: rotate(90deg)
 
 
 
 
 
+/* ----- breadcrumbs ----- */
+.breadcrumbs
+	padding-bottom: 20px
+	font-size: 14px
+	color: $sub-text-color
+	>
+		span
+			display: inline-block
+			+ span:before
+				content: ">"
+				padding: 0 5px
+				font-weight: 500
+				color: v(accent-color)
+			a
+				color: inherit
+				&:hover
+					color: v(accent-color)
+
+			&:last-child
+				a
+					cursor: default
+					&:hover
+						color: $sub-text-color
 
 
 
 @include max-screen($lg)
-	h1
+	h1, .h1
 		font-size: 25px
 	h2
 		font-size: 20px
+
+
+
+
+@include max-screen($md)
+	.content
+		.f-row
+			margin: 0
+		.cols
+			padding: 0
+		.col-1-2
+			width: 100%
+
+
+
+
+
+
+
+
+
+
+
+

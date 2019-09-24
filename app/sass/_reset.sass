@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6
 
 p
 	margin-top: 0
-	margin-bottom: 1rem
+	margin-bottom: 1.25rem
 
 address
 	margin-bottom: 1rem
@@ -85,7 +85,7 @@ a
 	@include trs(.05s)
 	&:hover
 		text-decoration: none
-		color: $link-color-hover
+		color: v(accent-color)
 	&:focus
 		box-shadow: 0 0 .5px v(accent-color)
 	&:not([href]):not([tabindex])
@@ -107,7 +107,7 @@ img
 	text-transform: uppercase
 	color: $add-accent-color
 	&::selection
-		background: none
+		background: none !important
 
 svg:not(:root)
 	overflow: hidden
@@ -218,3 +218,20 @@ textarea
 
 [hidden]
 	display: none !important
+
+::selection
+	background-color: v(accent-color)
+	color: $white
+
+
+
+
+
+
+
+
+
+
+
+
+
