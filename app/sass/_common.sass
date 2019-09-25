@@ -131,11 +131,20 @@ h1.page-title
 		color: v(accent-color)
 		&:hover
 			box-shadow: $shadow1
+	&--cta
+		background-color: v(cta-color)
+		border-color: v(cta-color)
+		font-weight: 500
+		color: $white
+		&:hover
+			background-color: v(cta-color) !important
+			box-shadow: 0 2px 7px -3px v(cta-color)
+
 	&:hover
 		background-color: v(accent-color)
 		color: $white
 	&:focus
-		box-shadow: 0 0 0 0 transparent
+		box-shadow: 0 0 5px v(accent-color)
 
 	&__ic
 		display: inline-block

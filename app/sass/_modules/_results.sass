@@ -1,0 +1,278 @@
+/* ----- Результаты поиска на стр ЖК ----- */
+
+.results
+	border: 1px solid v(border-color)
+	border-bottom-left-radius: $bd-r
+	border-bottom-right-radius: $bd-r
+	// overflow: hidden
+
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-left: 44px
+		padding-right: 38px
+		font-weight: 500
+
+	&__header
+		height: 50px
+		padding-left: 0
+		padding-right: 15px
+		box-shadow: $shadow1
+		background-color: v(additional-color)
+		position: relative
+		z-index: 1
+		
+	&__col
+		width: 660px
+		margin-right: 20px
+
+	&__cell
+		text-align: center
+	&-cell
+		&-1
+			min-width: 40px
+		&-2
+			flex: 1 0 0
+			max-width: 222px
+		&-3
+			min-width: 65px
+		&-4
+			min-width: 170px
+		&-5
+			min-width: 100px
+
+	&__body
+		display: flex
+		.results__row
+			padding-top: 11px
+			padding-bottom: 10px
+			&:not(:last-child)
+				border-bottom: 1px solid v(border-color)
+			
+	&-screen
+		width: calc(100% + 8px)
+		max-height: 640px
+		border-right: 1px solid v(border-color)
+		&__header
+			height: 50px
+			background-color: v(additional-color)
+			.filter-data
+				color: v(accent-color)
+
+		.simplebar-vertical
+			right: -13px
+			border-right: 1px solid v(border-color)
+
+
+	&__offer
+		flex: 1 0 0
+		max-width: 100%
+		padding: 12px 25px 25px
+	&__img
+		position: relative
+		max-height: 523px
+		.img
+			margin: 0 auto
+
+
+
+
+
+.sort
+	.svg
+		margin-right: 5px
+	&--active
+		color: v(accent-color)
+		.svg
+			fill: v(accent-color)
+	&--flip
+		.svg
+			transform: rotate(180deg)
+
+
+.results__cell .plan-thumb
+	margin: 0 auto
+
+
+.interactive
+	&-btns
+		display: flex
+		align-items: center
+	&-btn
+		display: block
+		margin-left: 16px
+		background-repeat: no-repeat
+		background-size: 100%
+		will-change: transform
+		@include trs(.1s)
+		&:hover
+			transform: translateY(-3px)
+	&-download
+		width: 16px
+		height: 21px
+		background-image: url('../img/icons/ic-download.svg')
+	&-print
+		width: 20px
+		height: 20px
+		background-image: url('../img/icons/ic-print.svg')
+	&-favorite
+		width: 22px
+		height: 21px
+		.svg
+			display: block
+			width: 100%
+			height: 100%
+		&:hover
+			.svg *
+				fill: v(accent-color)
+
+
+.results-refresh
+	margin-top: 20px
+	font-size: 14px
+	line-height: 1
+	color: v(sub-text-color)
+	.btn__ic
+		vertical-align: middle
+
+
+.results-offer
+	&__footer
+		display: flex
+		align-items: center
+		margin-top: 30px
+	&__text
+		flex: 1 0 0
+		max-width: 100%
+		p
+			margin: 0
+		a
+			font-weight: 500
+			border-bottom: 1px dotted v(accent-color)
+			color: v(accent-color)
+			&:hover
+				border-bottom-color: transparent
+	&__btn .btn
+		min-width: 218px
+	&__modal
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 90px
+		height: 90px
+		border-radius: 50%
+		background-color: rgba($black, .7)
+		box-shadow: 0 3px10px rgba($black, .5)
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -45px 0 0 -45px
+		@include trs(.1s)
+		&:hover
+			background-color: $black
+
+
+
+.results-cell-mob, .results-cell-btns, .results-more
+	display: none
+
+.results-cell-mob
+	.data-1
+		font-size: 14px
+		color: v(sub-text-color)
+	.data-2
+		font-size: 16px
+		font-weight: 500
+
+.results-cell-btns .interactive-follow
+	display: none
+
+@include max-screen($xl)
+	.results__offer
+		display: none
+	.results__col
+		width: 100%
+		margin-right: 0
+	.results__header
+		padding-right: 62px
+		.interactive-btns
+			display: none
+
+	.results-screen__header
+		padding-right: 93px
+	
+	.results-screen
+		overflow: hidden
+		width: 100%
+		max-height: 616px
+		border-right: none
+
+	.results-cell-2
+		max-width: 180px
+	.results-cell-4
+		min-width: 150px
+
+	.results-cell-btns
+		display: block
+		flex: 0 0 38px
+		width: 38px
+		.interactive-btn
+			margin: 0 auto
+
+	.results-more
+		display: block
+		text-align: center
+		margin-top: 30px
+	
+
+@include max-screen($md)
+	.filter
+		border: none
+		padding-top: 0
+		padding-bottom: 30px
+	.filter__row
+		padding: 0
+
+	.filter__field
+		flex-basis: 100%
+
+	.ui-checkbox-group
+		padding-left: 1px
+
+	.filter__tech
+		flex-direction: column
+	
+	.filter-additional
+		justify-content: center
+		height: 50px
+		width: 290px
+		margin: 0 0 20px
+		border: 1px solid v(border-color)
+		border-radius: $bd-r
+
+	.filter-reset
+		margin-bottom: 20px
+	.filter__tech .btn
+		width: 290px
+
+	.filter-field-result
+		padding-top: 0
+
+	.results-screen__header
+		padding-right: 0
+
+
+
+
+
+
+
+
+
+
+/* ----- Результаты поиска на главной стр ----- */
+
+
+
+
