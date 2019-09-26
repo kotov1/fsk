@@ -117,10 +117,10 @@ html(lang="ru")
 
 
 					.results
-
 						.results__row.results__header
 							.results__col
 								.results__row
+									// десктопная сортировка
 									.results__cell.results-cell-1
 										span План
 									.results__cell.results-cell-2
@@ -138,9 +138,20 @@ html(lang="ru")
 										button.sort(type="button")
 											img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
 											span Цена
+									
+									// мобильная сортировка
+									.mob-sort
+										span.mob-sort__hint Сортировать
+										select.ui-select(name="mob_sort", data-placeholder="по цене")
+											option.active(value="2020") по цене
+											option(value="2021") по площади
+											option(value="2022") по готовности
+										img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
+
+									
 								
 							.interactive-btns
-								a.interactive-btn.interactive-download(href="#", title="Скачать")
+								a.interactive-btn.interactive-download(href="#", title="Скачать", download)
 								a.interactive-btn.interactive-print(href="#", title="Распечатать")
 								a.interactive-btn.interactive-favorite(href="#")
 									img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
@@ -171,14 +182,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 24
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -193,14 +205,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -215,14 +228,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -237,14 +251,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -259,14 +274,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -281,14 +297,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -303,14 +320,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									
 									.results__row.results-screen__header
 										div Однокомнатные квартиры от 
@@ -335,14 +353,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -357,14 +376,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -379,14 +399,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -401,14 +422,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -423,14 +445,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -445,14 +468,15 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -467,19 +491,20 @@ html(lang="ru")
 										.results-cell-mob
 											p.data-1 Студия на 5 этаже
 											p.data-2 
-												span 22 
-												| м<sup>2<sup> за 
+												span 22
+												| м<sup>2</sup> за 
 												span 2 376 200 
 												| р.
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 											a.interactive-btn.interactive-follow(href="#")
+												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 								
 							.results__offer.results-offer
 								.results__img
 									img.img(src="img/img-plan.jpg", alt="plan")
-									button.results-offer__modal(type="button")
+									button.results-offer__modal.js-call-card(type="button")
 										img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
 								.results-offer__footer
 									.results-offer__text
@@ -491,8 +516,8 @@ html(lang="ru")
 											img.svg.btn__ic(src="img/icons/ic-phone.svg", alt="phone", width="20", height="20") 
 											| Позвоните мне
 
-
 					// /.results
+
 					.results-refresh 
 						img.svg.btn__ic(src="img/icons/ic-refresh.svg", alt="refresh", width="14", height="14") 
 						| Информация обновлена 
@@ -509,17 +534,89 @@ html(lang="ru")
 
 
 
-
-
-
-
 				// /.container
+
+			// /.page
+
+
+			// Карточка
+			.card.mfp-hide#card-example
+				.card__inner
+					button.close-btn.mfp-close(type="button")
+					.h1.card__title 3-комнатная квартира, 42 м² за 7,2 млн руб.
+					.card__body.js-tab-wrapper
+						.card__col-1
+							.card__tabs.js-tabs
+								button.js-tab.js-tab--active(type="button") Планировка
+								button.js-tab(type="button") На этаже
+								button.js-tab(type="button") Схема корпусов
+								button.js-tab(type="button") Отделка
+							.tooltip
+								.tooltip__icon
+								.tooltip__hidden Информация на данном сайте, и в частности, на текущей странице не является офертой и размещена для ознакомления. Данная планировка не является технической документацией представлена для ознакомления.
+						.card__col-2
+							.card__img.js-tab-item
+								button.zoom-link(data-mfp-src="img/img-plan-big.jpg")
+									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
+								img.img(src="img/img-plan.jpg", alt="plan")
+							.card__img.js-tab-item
+							.card__img.js-tab-item
+							.card__img.js-tab-item
+						.card__col-3
+							.card__info
+								.interactive-btns
+									a.interactive-btn.interactive-download(href="#", title="Скачать", download)
+									a.interactive-btn.interactive-print(href="#", title="Распечатать")
+									a.interactive-btn.interactive-favorite(href="#")
+										img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+								.card-data
+									.card-data__col-1
+										.h3.card-data__title Студия
+										ul.card-data__list
+											li
+												span Общая площадь
+												span 27 м<sup>2</sup>
+											li
+												span Жилая площадь
+												span 16 м<sup>2</sup>
+											li
+												span Площадь кухни
+												span 5 м<sup>2</sup>
+											li
+												span Этаж / этажей
+												span 8/26
+											li
+												span Корпус
+												span 3.1
+											li
+												span Секция
+												span 2
+											li
+												span Отделка
+												span Предчистовая
+
+									.card-data__col-2
+										p.card-price-1 Цена по акции: 
+											span 7 200 360 
+											| р.
+										p.card-price-2 Стандартная цена: 
+											span 7 200 360 
+											| р.
+										span.card-id ID квартиры: 45 702
+										.card-btn
+											button.btn.btn--cta(type="button") 
+												img.svg.btn__ic(src="img/icons/ic-phone.svg", alt="phone", width="20", height="20") 
+												| Позвоните мне
+			
+			// /.card
 
 
 			// footer
 			include pug-modules/footer
 			// /.footer
 			
+
+		// /.wrapper
 
 		
 

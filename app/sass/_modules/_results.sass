@@ -1,10 +1,11 @@
 /* ----- Результаты поиска на стр ЖК ----- */
 
 .results
+	margin-top: -1px
 	border: 1px solid v(border-color)
 	border-bottom-left-radius: $bd-r
 	border-bottom-right-radius: $bd-r
-	// overflow: hidden
+	position: relative
 
 	&__row
 		display: flex
@@ -59,6 +60,7 @@
 			background-color: v(additional-color)
 			.filter-data
 				color: v(accent-color)
+				white-space: nowrap
 
 		.simplebar-vertical
 			right: -13px
@@ -89,11 +91,41 @@
 	&--flip
 		.svg
 			transform: rotate(180deg)
+.mob-sort
+	display: none
+	width: 100%
+	align-items: center
+	&__hint
+		display: inline-block
+		margin-right: 8px
+	.ui-select__trigger
+		height: auto
+		padding: 0
+		color: v(accent-color)
+		border: none
+		border-radius: 0
+		border-bottom: 1px dotted v(accent-color)
+		&::after
+			display: none
+	.ui-select__options
+		min-width: 120px
+	.ui-select__option
+		white-space: nowrap
+		padding: 5px
+	.svg
+		display: block
+		margin-left: 8px
+		fill: v(accent-color)
+		position: relative
+		top: 1px
+
+
 
 
 .results__cell .plan-thumb
 	margin: 0 auto
-
+	max-width: 30px
+	max-height: 60px
 
 .interactive
 	&-btns
@@ -126,7 +158,13 @@
 		&:hover
 			.svg *
 				fill: v(accent-color)
-
+	&-follow
+		width: 20px
+		height: 20px
+		.svg
+			fill: v(accent-color)
+			stroke: v(accent-color)
+			border-color: v(accent-color)
 
 .results-refresh
 	margin-top: 20px
@@ -135,7 +173,6 @@
 	color: v(sub-text-color)
 	.btn__ic
 		vertical-align: middle
-
 
 .results-offer
 	&__footer
@@ -179,14 +216,101 @@
 
 .results-cell-mob
 	.data-1
+		margin-bottom: .3em
 		font-size: 14px
 		color: v(sub-text-color)
 	.data-2
+		margin-bottom: 0
 		font-size: 16px
 		font-weight: 500
 
 .results-cell-btns .interactive-follow
 	display: none
+
+
+
+.results-geo
+	height: 100px
+	background: url('../img/img-map.jpg') no-repeat 50% 50% / cover
+	&__label
+		display: inline-flex
+		align-items: center
+		padding: 26px 24px
+		font-weight: 500
+		&::after
+			content: ''
+			display: block
+			width: 42px
+			flex: 0 0 42px
+			height: 48px
+			margin-left: 18px
+			background: url('../img/map-pin.svg') no-repeat 0 0
+			background-size: 100%
+	&__result
+		display: inline-block
+		color: v(accent-color)
+		margin-left: .5em
+		white-space: nowrap
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 50px
+		height: 50px
+		border-radius: $bd-r
+		background-color: $white
+		border: 1px solid v(accent-color)
+		cursor: pointer
+		position: absolute
+		top: 25px
+		right: 35px
+		.svg, .svg *
+			display: block
+			stroke: v(accent-color)
+			@include trs(.1s)
+		&:hover
+			border-color: v(accent-color)
+			background-color: v(accent-color)
+			box-shadow: 0 8px 15px 0 rgba(233,66,0,.3)
+			.svg, .svg *
+				stroke: $white
+			
+	&-map
+		background: none
+		height: 617px
+		.results-geo__label
+			display: none
+		.results-geo__btn
+			transform: scale(-1)
+		.map
+			height: 100%
+			overflow: hidden
+
+
+.results-empty
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 200px
+	margin: 30px 0 50px
+	padding: 0 30px
+	border: 2px dotted v(border-color)
+	border-radius: $bd-r
+	font-size: 20px
+	&::before
+		content: ''
+		display: block
+		width: 70px	
+		height: 70px
+		flex: 0 0 70px
+		margin-right: 20px
+		background: url('../img/icons/ic-results-search.svg') no-repeat 0 0
+		background-size: 100%
+
+
+
+
+
 
 @include max-screen($xl)
 	.results__offer
@@ -205,7 +329,7 @@
 	.results-screen
 		overflow: hidden
 		width: 100%
-		max-height: 616px
+		max-height: 100%
 		border-right: none
 
 	.results-cell-2
@@ -224,46 +348,62 @@
 		display: block
 		text-align: center
 		margin-top: 30px
+
+	.results-geo-map
+		height: 450px
 	
 
 @include max-screen($md)
-	.filter
+
+	.results
 		border: none
-		padding-top: 0
-		padding-bottom: 30px
-	.filter__row
+		padding-bottom: 10px
+		border-bottom: 1px solid v(border-color)
+	.results__row
+		padding-left: 15px
+		padding-right: 15px
+	.results__header
 		padding: 0
+		.results-cell-1
+			display: none
 
-	.filter__field
-		flex-basis: 100%
-
-	.ui-checkbox-group
-		padding-left: 1px
-
-	.filter__tech
-		flex-direction: column
-	
-	.filter-additional
-		justify-content: center
-		height: 50px
-		width: 290px
-		margin: 0 0 20px
-		border: 1px solid v(border-color)
-		border-radius: $bd-r
-
-	.filter-reset
-		margin-bottom: 20px
-	.filter__tech .btn
-		width: 290px
-
-	.filter-field-result
-		padding-top: 0
 
 	.results-screen__header
-		padding-right: 0
+		display: block
+		height: auto
+		border-bottom: none !important
+		padding-right: 15px
+		padding-left: 15px
+		> * 
+			display: inline
+
+	.results__cell:not(.results-cell-1)
+		display: none
+	.results-cell-mob
+		display: block
+
+	.results-cell-btns
+		.interactive-favorite
+			display: none
+		.interactive-follow
+			display: block
 
 
+	.mob-sort
+		display: flex
 
+
+	.results-geo-map
+		height: 360px
+
+	.results-empty
+		height: 150px
+		font-size: 16px
+		&::before
+			width: 50px
+			height: 50px
+			flex-basis: 50px
+			margin-right: 15px
 
 
 

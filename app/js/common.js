@@ -152,11 +152,75 @@ $(function() {
 
 
 
+	// Инициализая кастомного скролбара
 	if( $(window).width() > 1200 ) {
-		new SimpleBar(document.getElementById('results-screen'), {
-			autoHide: false
-		});
+		if( $('#results-screen').length ) {
+			new SimpleBar(document.getElementById('results-screen'), {
+				autoHide: false
+			});
+		}
 	}
+
+	// Инициализая кастомного скролбара при ресайзе
+	var addEvent = function(object, type, callback) {
+		if (object == null || typeof(object) == 'undefined') return;
+		if (object.addEventListener) {
+			object.addEventListener(type, callback, false);
+		} else if (object.attachEvent) {
+			object.attachEvent("on" + type, callback);
+		} else {
+			object["on"+type] = callback;
+		}
+	};
+	addEvent(window, "resize", function(event) {
+		if( $('#results-screen').length ) {
+			new SimpleBar(document.getElementById('results-screen'), {
+				autoHide: false
+			});
+		}
+	});
+
+
+	// Тогл блок в вакансиях
+	$('.btn-vacancy').click(function (e) { 
+		$(this).closest('.vacancy').toggleClass('vacancy--open');
+	});
+
+	// Вызов карточки квартиры
+	$('.js-call-card').magnificPopup({
+		items: {
+			src: '#card-example',
+			type: 'inline'
+		}
+	});
+
+
+	// Jquery табы
+	$(".js-tab").click(function() {
+		var index = $(this).index();
+		  $(this).closest('.js-tab-wrapper').find(".js-tab").removeClass("js-tab--active").eq(index).addClass("js-tab--active");
+		  $(this).closest('.js-tab-wrapper').find(".js-tab-item").hide().eq(index).fadeIn("normal");
+	});
+
+
+	// Кнопка зума в карточке
+	$('.zoom-link').on('click', function(e){
+		e.preventDefault();
+		var item = $(this);
+		$.magnificPopup.open({
+			items: {
+			  src: item.data('mfp-src'),
+			  type: 'image',
+			}
+		});
+	});
+
+
+	$('.results-geo__btn').click(function (e) { 
+		
+		$('.results-geo').toggleClass('results-geo-map');
+		
+	});
 
 
 

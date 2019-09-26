@@ -40,7 +40,6 @@ gulp.task('scripts', function() {
 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'app/libs/slick-carousel/slick/slick.min.js',
 		'app/libs/simplebar/simplebar.min.js',
-		'app/libs/jquery.ui.touch-punch.js',
 		'app/libs/inlineSVG.min.js',
 		'app/js/common.js',
 		])

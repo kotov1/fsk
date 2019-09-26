@@ -1,0 +1,152 @@
+/* ----- Страница вакансий----- */
+
+.vacancy
+	margin-bottom: 30px
+	border-radius: $bd-r
+	overflow: hidden
+	border: 1px solid v(border-color)
+	@include trs(.1s)
+	&__img
+		height: 300px
+		.img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__content
+		padding: 24px
+		max-height: 300px
+		position: relative
+		overflow: hidden
+		@include trs(.1s)
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 130px
+			position: absolute
+			left: 0
+			bottom: 0
+			background: linear-gradient(to top, $white 0%, rgba(255, 255, 255, 0) 100%)
+			z-index: 0
+			@include trs(.1s)
+	&__title
+		position: relative
+		margin-bottom: 0.75em
+		padding-bottom: 1rem
+		&::after
+			content: ''
+			display: block
+			width: 50px
+			height: 3px
+			position: absolute
+			left: 0
+			bottom: 0
+			background: v(accent-color)
+	&__text
+		p
+			margin-bottom: 0
+		ul
+			margin: 0
+			padding: 0
+			list-style: none
+		&:not(:last-child)
+			margin-bottom: 1.2rem
+	
+	&__footer
+		display: flex
+		align-items: center
+		background-color: v(additional-color)
+		.email-row
+			display: none
+			flex: 1 0 0
+			align-items: center
+			max-width: 100%
+			p
+				margin: 0
+		.btn-vacancy
+			width: 100%
+			margin: 0 auto
+			border: none
+			background-color: transparent
+			transition: none
+			&:hover
+				background-color: darken($additional-color, 3)
+				box-shadow: none
+				color: $black
+			&:focus
+				box-shadow: none
+			.svg
+				border-color: v(accent-color)
+				fill: v(accent-color)
+				stroke: v(accent-color)
+
+	&--open
+		box-shadow: $shadow1
+		.vacancy__content
+			max-height: 100%
+			&::after
+				visibility: hidden
+		.vacancy__footer
+			padding: 0 24px
+			justify-content: space-between
+		.email-row
+			display: flex
+		.btn-vacancy
+			width: auto
+			min-width: 1px
+			font-size: 0
+			&::after
+				content: 'Свернуть'
+				font-size: 16px
+			&:hover
+				background-color: v(additional-color)
+			.ic-arrow
+				transform: rotate(-90deg)
+
+
+@include max-screen($lg)
+	.page-vacancy
+		.f-row
+			display: block
+			margin-left: 0
+			margin-right: 0
+		.cols
+			padding-left: 0
+			padding-right: 0
+		.col-1-2
+			width: 100%
+
+
+@include max-screen($lg)
+	.vacancy__img
+		height: 56.25vw
+		max-height: 250px
+	.vacancy__content
+		padding: 20px
+	.vacancy--open 
+		.vacancy__footer
+			padding: 6px 20px
+		.btn-vacancy::after
+			content: ''
+
+	.email-row 
+		.btn__ic
+			margin-right: 12px
+		p
+			max-width: 75%
+		a
+			border-bottom: 1px dotted currentColor
+
+
+
+
+
+
+
+
+
+
+
+
+
+

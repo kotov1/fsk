@@ -72,7 +72,7 @@ h2, h3, h4, h5, h6
 	font-weight: 500
 h2, .h2
 	font-size: 25px
-h3, h4, h5
+h3, h4, h5, .h3
 	font-size: 20px
 
 .page-title
@@ -188,11 +188,47 @@ h1.page-title
 						color: $sub-text-color
 
 
+.close-btn
+	width: 30px
+	height: 30px
+	opacity: .9
+	padding: 0
+	cursor: pointer
+	color: $white
+	&:hover
+		opacity: 1
+	&::before, &::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 15px
+		width: 2px
+		height: 100%
+		border-radius: 1px
+		background-color: currentColor
+		transition: all .1s
+	&::before
+		transform: rotate(45deg)
+	&::after
+		transform: rotate(-45deg)
+
+
+
+.js-tab-item:not(:first-child)
+	display: none
+
+
+
+
+
+
+
+
 
 @include max-screen($lg)
 	h1, .h1
 		font-size: 25px
-	h2
+	h2, .h2
 		font-size: 20px
 
 

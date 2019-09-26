@@ -276,6 +276,66 @@
 			display: block
 
 
+.ui-toggle
+	height: 50px
+	display: flex
+	border: 1px solid v(border-color)
+	border-radius: $bd-r
+	&__item
+		width: 50%
+		&:first-child
+			.ui-toggle__label
+				&::before, &::after
+					right: -7px
+					border-right: 1px solid v(border-color)
+				&::before
+					transform: skew(25deg, 0deg)
+				&::after
+					transform: skew(-25deg, 0deg)
+		&:last-child
+			.ui-toggle__label
+				&::before, &::after
+					left: -7px
+					border-left: 1px solid v(border-color)
+				&::before
+					transform: skew(-25deg, 0deg)
+				&::after
+					transform: skew(25deg, 0deg)
+	&__input 
+		display: none
+		&:checked
+			+ .ui-toggle__label
+				background-color: v(accent-color)
+				color: $white
+				&::before, &::after
+					visibility: visible
+
+	&__label
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		height: 100%
+		margin: 0
+		font-weight: 500
+		cursor: pointer
+		@include trs(.1s)
+		&::before, &::after
+			content: ''
+			display: block
+			width: 50%
+			height: 50%
+			position: absolute
+			background: v(accent-color)
+			z-index: -1
+			visibility: hidden
+		&::before
+			top: 0
+		&::after
+			bottom: 0
+
+
+
 
 
 @include max-screen($xl)
@@ -286,7 +346,38 @@
 
 
 
+@include max-screen($md)
+	.filter
+		border: none
+		padding-top: 0
+		padding-bottom: 30px
+	.filter__row
+		padding: 0
 
+	.filter__field
+		flex-basis: 100%
+
+	.ui-checkbox-group
+		padding-left: 1px
+
+	.filter__tech
+		flex-direction: column
+	
+	.filter-additional
+		justify-content: center
+		height: 50px
+		width: 290px
+		margin: 0 0 20px
+		border: 1px solid v(border-color)
+		border-radius: $bd-r
+
+	.filter-reset
+		margin-bottom: 20px
+	.filter__tech .btn
+		width: 290px
+
+	.filter-field-result
+		padding-top: 0
 
 
 
