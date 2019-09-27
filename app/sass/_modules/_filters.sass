@@ -5,8 +5,7 @@
 	border: 1px solid v(border-color)
 	border-top-left-radius: $bd-r
 	border-top-right-radius: $bd-r
-	overflow: hidden
-	&__row
+	&-row
 		padding: 0 24px
 	&__hidden
 		display: none
@@ -17,13 +16,13 @@
 		padding-bottom: 24px
 		.btn
 			margin-left: 24px
-	&__fields
+	&-fields
 		display: flex
-		justify-content: space-between
 		flex-wrap: wrap
+		justify-content: space-between
 	&__field
 		margin-bottom: 30px
-		flex-basis: calc(25% - 12px)
+		flex-basis: calc(25% - 18px)
 
 	&-field
 		&__label
@@ -123,6 +122,11 @@
 		position: relative
 		cursor: pointer
 		@include trs(.1s)
+		&:hover
+			border-color: $black
+			color: $black
+			z-index: 1
+
 
 
 .ui-range
@@ -131,6 +135,7 @@
 	border: 1px solid $border-color
 	border-radius: $bd-r
 	position: relative
+	@include trs(.1s)
 	&__col
 		width: 50%
 		display: flex
@@ -208,7 +213,12 @@
 			margin: 0 .5px
 			background-color: $white
 			opacity: 0.8
-
+	&--focus
+		border-color: v(accent-color)
+		.ui-range__slider
+			visibility: hidden
+		.ui-range__col:first-child::after
+			background-image: url('../img/icons/divider-accent.svg')
 
 .ui-select
 	position: relative
@@ -229,6 +239,8 @@
 		text-overflow: ellipsis
 		white-space: nowrap
 		cursor: pointer
+		&:hover
+			border-color: v(sub-text-color)
 		&::after
 			content: ''
 			display: inline-block
@@ -238,10 +250,11 @@
 			right: 14px
 			top: 50%
 			background: url('../img/icons/ic-dropdown-arrow.svg') no-repeat 0 0 / 100%
-			filter: grayscale(1)
+			opacity: 0.5
 			@include trs(.1s)
 	&__options
 		display: none
+		max-height: 300px
 		z-index: 1
 		width: 100%
 		margin: 0
@@ -249,31 +262,48 @@
 		list-style: none
 		position: absolute
 		top: 100%
-		margin-top: 10px
+		padding-top: 10px
 		left: 0
 		background-color: $white
 		box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15)
 		border-radius: $bd-r
 		overflow: hidden
 	&__option
+		position: relative
 		display: block
-		padding: 10px 20px
+		padding: 8px 20px 8px 40px
 		font-size: 14px
-		@include trs(.1s)
 		cursor: pointer
+		@include trs(.1s)
+		&::before
+			content: ''
+			display: block
+			width: 11px
+			height: 8px
+			position: absolute
+			left: 20px
+			top: 50%
+			margin-top: -4px
+			background: url('../img/icons/ic-check.svg') no-repeat 0 0
+			background-size: 100%
+			visibility: hidden
+			@include trs(.1s)
 		&:hover
 			background-color: v(additional-color)
 		&.active
-			background-color: v(accent-color)
-			color: $white
+			color: v(accent-color)
+			&::before
+				visibility: visible
 	&.opened
 		z-index: 1
 		.ui-select__trigger
+			border-color: #cfd4d4
 			&::after
 				transform: rotate(180deg)
 				margin-top: -1px
 		.ui-select__options
 			display: block
+			
 
 
 .ui-toggle
@@ -335,6 +365,73 @@
 			bottom: 0
 
 
+.ui-quantity
+	display: flex
+	align-items: center
+	height: 50px
+	padding: 8px 11px
+	background-color: $white
+	border-radius: $bd-r
+	border: 1px solid $white
+	@include trs(.1s)
+	&:hover
+		border-color: v(accent-color)
+	input
+		width: 100%
+		padding: 0 10px
+		text-align: center
+		border: none
+		font-size: 16px
+		font-weight: 500
+		outline: none
+		
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 35px
+		min-width: 35px
+		height: 35px
+		border-radius: 2px
+		background-color: $additional-color
+		opacity: 0.8
+		@include trs(.1s)
+		&:hover
+			border-color: v(accent-color)
+			background-color: v(accent-color)
+			box-shadow: 0 8px 15px 0 rgba(233,66,0,.3)
+			opacity: 1
+			.svg, .svg *
+				stroke: $white
+				fill: $white
+
+
+
+
+.filter-mob
+	display: none
+	align-items: center
+	height: 50px
+	padding-left: 44px
+	padding-right: 50px
+	font-weight: 500
+	background: $additional-color url('../img/icons/ic-filters.svg') no-repeat 17px 50%
+	position: relative
+	&-show
+		.ui-btn
+			transform: scale(-1)
+	.ui-btn
+		position: absolute
+		right: 0
+		border: none
+		background: none
+		box-shadow: none
+		@include trs(.1s)
+		.svg *
+			stroke: v(accent-color)
+			
+.filter-mob-collapse
+	margin-top: 25px
 
 
 
@@ -343,15 +440,11 @@
 		flex-basis: calc(50% - 12px)
 
 
-
-
-
 @include max-screen($md)
 	.filter
 		border: none
 		padding-top: 0
-		padding-bottom: 30px
-	.filter__row
+	.filter-row
 		padding: 0
 
 	.filter__field
@@ -375,9 +468,15 @@
 		margin-bottom: 20px
 	.filter__tech .btn
 		width: 290px
+		margin: 0
 
 	.filter-field-result
 		padding-top: 0
+
+	.filter-mob
+		display: flex
+	.filter-mob-collapse
+		display: none
 
 
 

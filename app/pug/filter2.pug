@@ -21,8 +21,8 @@ html(lang="ru")
 					h1 Фильтр на странице ЖК
 
 					.filter
-						.filter__row
-							.filter__fields
+						.filter-row
+							.filter-fields
 								.filter__field.filter-field
 									.filter-field__label Количество комнат
 									.ui-checkbox-group
@@ -79,8 +79,8 @@ html(lang="ru")
 											input.ui-range__val.ui-range__to(value="26") 
 										.ui-range__slider.ui-range-floor
 						
-						.filter__row.filter__hidden
-							.filter__fields
+						.filter-row.filter__hidden
+							.filter-fields
 								.filter__field.filter-field
 									.filter-field__label Площадь кухни, м
 										sup 2
@@ -109,7 +109,7 @@ html(lang="ru")
 										span.filter-count 150 
 										| квартир
 					
-						.filter__row.filter__tech
+						.filter-row.filter__tech
 							button.filter-additional(type="button") Дополнительные параметры
 							button.filter-reset(type="button") Сбросить фильтр
 							a.btn.btn--bg(href="#") Показать результаты
@@ -148,8 +148,6 @@ html(lang="ru")
 											option(value="2022") по готовности
 										img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
 
-									
-								
 							.interactive-btns
 								a.interactive-btn.interactive-download(href="#", title="Скачать", download)
 								a.interactive-btn.interactive-print(href="#", title="Распечатать")
@@ -189,7 +187,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -212,7 +210,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -235,7 +233,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -258,7 +256,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -281,7 +279,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -304,7 +302,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -327,7 +325,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									
 									.results__row.results-screen__header
@@ -360,7 +358,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -383,7 +381,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -406,7 +404,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -429,7 +427,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -452,7 +450,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -475,7 +473,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									.results__row
 										.results__cell.results-cell-1
@@ -498,7 +496,7 @@ html(lang="ru")
 										.results-cell-btns
 											a.interactive-btn.interactive-favorite(href="#")
 												img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
-											a.interactive-btn.interactive-follow(href="#")
+											button.interactive-btn.interactive-follow.js-call-card(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 								
 							.results__offer.results-offer
@@ -556,7 +554,7 @@ html(lang="ru")
 								.tooltip__hidden Информация на данном сайте, и в частности, на текущей странице не является офертой и размещена для ознакомления. Данная планировка не является технической документацией представлена для ознакомления.
 						.card__col-2
 							.card__img.js-tab-item
-								button.zoom-link(data-mfp-src="img/img-plan-big.jpg")
+								button.ui-btn.zoom-link(data-mfp-src="img/img-plan-big.jpg")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 								img.img(src="img/img-plan.jpg", alt="plan")
 							.card__img.js-tab-item

@@ -1,0 +1,197 @@
+/* ----- Страница ипотеки ----- */
+
+.ipo-adv
+	margin: 30px 0 20px
+	padding: 0
+	list-style: none
+	&__item
+		display: flex
+		align-items: center
+		width: 25%
+		padding-right: 60px
+		margin-bottom: 30px
+	&__img
+		margin-right: 20px
+	&__txt
+		flex: 1
+		max-width: 100%
+		
+
+.ipo
+	border: 1px solid v(border-color)
+	border-radius: $bd-r
+	margin-bottom: 30px
+
+	&-calc
+		padding: 25px 0 0
+		background-color: $additional-color
+
+
+	&-table
+		&__row
+			display: flex
+			align-items: center
+			padding: 10px 24px
+			@include trs(.1s)
+			&:not(:last-child)
+				border-bottom: 1px solid v(border-color)
+			&:not(.ipo-table__header)
+				min-height: 80px
+				&:hover
+					box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+					border-radius: $bd-r
+		&__header
+			background-color: $additional-color
+			font-size: 14px
+			font-weight: 500
+			color: v(sub-text-color)
+
+
+	&-bank
+		width: 130px
+		.img
+			max-height: 35px
+
+	&-licence
+		flex: 1 0 0
+		max-width: 100%
+		padding: 0 8% 0 12%
+		&__title
+			margin-bottom: .2em
+		&__data
+			font-size: 14px
+			color: v(sub-text-color)
+
+
+
+	&-info
+		display: flex
+		width: 50%
+		margin-left: auto
+		text-align: center
+		&__col
+			width: 33%
+			&:nth-child(1)
+				order: 2
+			&:nth-child(2)
+				order: 1
+
+	
+
+	&-block
+		border: 1px solid v(border-color)
+		border-radius: $bd-r
+		&:not(:last-child)
+			margin-bottom: 50px
+		.img
+			margin-bottom: 0
+		.sub-text
+			margin-bottom: 0.8em
+		&__content
+			padding: 24px
+			.content-list li
+				max-width: 250px
+
+
+.ipo-more
+	text-align: center
+	margin-bottom: 30px
+
+@include max-screen($xl)
+	.ipo-adv__item
+		width: 33%
+
+	.ipo-bank
+		width: 100px
+		.img
+			max-height: 25px
+	.ipo-licence
+		padding: 0 2% 0 4%
+	.ipo-licence__title
+		margin-bottom: 0
+	.ipo-info
+		width: 45%
+	.ipo-block__content .content-list li
+		width: 33%
+		padding-right: 30px
+
+	.ipo-table__header .ipo-info__col
+		text-transform: capitalize
+
+
+@include max-screen($md)
+
+	.ipo
+		border: none
+		border-radius: none
+	.ipo-calc
+		width: calc(100% + 30px)
+		margin-left: -15px
+		padding-left: 15px
+		padding-right: 15px
+
+	.ipo-table__header
+		display: none !important
+
+	.ipo-table
+		padding-top: 30px
+		&__row
+			display: block
+			margin-bottom: 20px
+			padding: 20px
+			border: 1px solid v(border-color)
+			border-radius: $bd-r
+	.ipo-bank
+		width: 100%
+		margin-bottom: 20px
+	.ipo-licence
+		max-width: 100%
+		margin-bottom: 15px
+		padding: 0
+
+	.ipo-info
+		width: 100%
+		flex-wrap: wrap
+		text-align: left
+	.ipo-info__col::before
+		content: attr(data-title)
+		display: block
+		font-size: 14px
+		color: v(sub-text-color)
+	.ipo-info__col:nth-child(1)
+		width: 100%
+		margin-bottom: 15px
+		order: 0
+	.ipo-info__col:nth-child(2), .ipo-info__col:nth-child(3)
+		width: 50%
+
+
+	.ipo-adv__item, .ipo-block__content .content-list li
+		width: 50%
+
+	.ipo-block__content
+		padding: 20px
+
+
+@include max-screen($sm)
+	.ipo-adv__item, .ipo-block__content .content-list li
+		width: 100%
+	.ipo-adv__img
+		min-width: 52px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

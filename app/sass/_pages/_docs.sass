@@ -1,0 +1,177 @@
+/* ----- Страница документы ----- */
+
+.docs
+	&-hero
+		height: 300px
+		&__inner
+			width: 761px
+			min-height: 106px
+			position: absolute
+			bottom: 0
+			left: 0
+			padding: 50px 15% 10px 24px
+			background: url("../img/svg-bg-el-2.svg") no-repeat 50% 0 /cover
+			.h1
+				font-weight: 500
+				color: $white
+
+
+.doc
+	margin-bottom: 24px
+	border-radius: $bd-r
+	border: 1px solid $border-color
+	@include trs(.1s)
+	&-list
+		&:not(:last-child)
+			margin-bottom: 26px
+	&__title
+		min-height: 100px
+		padding: 24px
+		font-size: 18px
+		font-weight: 500
+	.ui-select__trigger
+		padding: 0 35px 0 24px
+		&::after
+			right: 24px
+	&:focus
+		box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15)
+		outline: none
+
+
+
+.ui-select-docs
+	.ui-select__trigger
+		border: none
+		background-color: v(additional-color)
+		.svg
+			margin-right: 8px
+	.ui-select__options
+		width: calc(100% + 2px)
+		left: -1px
+		margin-top: 0
+		// box-shadow: none
+		.ui-select__simplebar
+			max-height: 300px
+			padding: 0 24px
+		.simplebar-track.simplebar-vertical
+			right: 2px
+		// &::before
+		// 	content: ''
+		// 	display: block
+		// 	width: 100%
+		// 	height: 100px
+		// 	position: absolute
+		// 	left: 0
+		// 	bottom: 0
+		// 	background: linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, $white 100%)
+		// 	z-index: 1
+		// 	@include trs(.2s)
+		// &:hover::before
+		// 	visibility: hidden
+
+
+	.ui-select__doc
+		padding: 18px 0
+		&:not(:last-child)
+			border-bottom: 1px solid v(border-color)
+
+	.doc-title
+		display: block
+		margin-bottom: .25em
+		font-weight: 500
+		
+	&.opened
+		.ui-select__trigger
+			background-color: v(accent-color)
+			color: $white
+			.svg *
+				stroke: $white
+			&::after
+				filter: invert(1)
+
+
+
+@include max-screen($xl)
+
+	.docs
+		&-hero
+			height: 220px
+	.docs-hero__inner
+		width: 615px
+
+	.doc-list .col-1-4
+		width: 50%
+
+
+
+@include max-screen($md)
+
+	.docs
+		&-hero
+			height: 180px
+			margin-bottom: 20px
+	.docs-hero__inner
+		width: calc(100% - 30px)
+		height: auto
+		left: 15px
+		padding: 50px 15% 10px 20px
+		background: url(../img/svg-bg-el-mob.svg) no-repeat 50% 0/cover
+		.h1
+			font-size: 20px
+
+	.doc-list .col-1-4
+		width: 100%
+
+	.doc__title
+		min-height: 90px
+		padding: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

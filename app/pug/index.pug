@@ -1,4 +1,4 @@
-- var page = "main"
+- var page = "links"
 
 doctype html
 html(lang="ru")
@@ -7,23 +7,29 @@ html(lang="ru")
 
 	body
 
-		.wrapper
+	.pages-nav
+		ul.pages-nav__list
+			li
+				a.pages-nav__item(href='filter1.html', target='_blank') Фильтр на главной
+			li
+				a.pages-nav__item(href='filter2.html', target='_blank') Фильтр на странице ЖК
+			li
+				a.pages-nav__item(href='news.html', target='_blank') Новости
+			li
+				a.pages-nav__item(href='news-page.html', target='_blank') Страница новости
+			li
+				a.pages-nav__item(href='discounts.html', target='_blank') Акции и скидки
+			li
+				a.pages-nav__item(href='discounts-page.html', target='_blank') Страница акции
+			li
+				a.pages-nav__item(href='ipo.html', target='_blank') Ипотека
+			li
+				a.pages-nav__item(href='docs.html', target='_blank') Документы
+			li
+				a.pages-nav__item(href='vacancy.html', target='_blank') Вакансии
+			li
+				a.pages-nav__item(href='404.html', target='_blank') 404
 
-			// header
-			include pug-modules/header
-			// /.header
-
-			
-			section.hero
-
-
-
-			// footer
-			include pug-modules/footer
-			// /.footer
-
-
-		// /.wrapper
 		
 
 		

@@ -1,0 +1,241 @@
+- var page = "ipo"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Главная', href='/')
+								span(itemprop='name') Главная
+								meta(itemprop='position', content='1')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Ипотека', href='#')
+								span(itemprop='name') Ипотека
+								meta(itemprop='position', content='2')
+
+					h1.title.title-margin Ипотека с ФСК
+
+					p Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+
+					ul.ipo-adv.flex
+						li.ipo-adv__item
+							.ipo-adv__img
+								img.img(src="img/ipo/ic-electronic.svg", width="52", height="44", alt="alt")
+							span.ipo-adv__txt Электронная регистрация сделки
+						li.ipo-adv__item
+							.ipo-adv__img
+								img.img(src="img/ipo/ic-calendar.svg", width="35", height="43", alt="alt")
+							span.ipo-adv__txt Решение банка <span class="nowrap">за 1-2 дня</span>
+						li.ipo-adv__item
+							.ipo-adv__img
+								img.img(src="img/ipo/ic-file-text.svg", width="35", height="44", alt="alt")
+							span.ipo-adv__txt Единая анкета <span class="nowrap">для всех банков</span>
+						li.ipo-adv__item
+							.ipo-adv__img
+								img.img(src="img/ipo/ic-percentage.svg", width="44", height="44", alt="alt")
+							span.ipo-adv__txt Процентная ставка <span class="nowrap">от 6%</span>
+
+					// /.ipo-adv
+
+					.ipo
+						.ipo-calc
+							.filter-row
+								.filter-fields
+									.filter__field.filter-field
+										.filter-field__label Стоимость, р. 
+										.ui-quantity(data-step="100000")
+											button.ui-quantity__btn.ui-quantity__minus
+												img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+											input(type='text', value='2 500 000')
+											button.ui-quantity__btn.ui-quantity__plus
+												img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+									.filter__field.filter-field
+										.filter-field__label Первоначальный взнос
+										.ui-quantity(data-step="100000")
+											button.ui-quantity__btn.ui-quantity__minus
+												img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+											input(type='text', value='1 500 000')
+											button.ui-quantity__btn.ui-quantity__plus
+												img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+									.filter__field.filter-field
+										.filter-field__label Срок
+										.ui-quantity.ui-quantity--years(data-step="1")
+											button.ui-quantity__btn.ui-quantity__minus
+												img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+											input.years(type='text', value='10 лет')
+											button.ui-quantity__btn.ui-quantity__plus
+												img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+									.filter__field.filter-field-result
+										button.btn.btn--bg(type="button")
+											img.svg.btn__ic(src="img/icons/ic-btn-percentage.svg", width="20", height="20", alt="Минус") 
+											| Рассчитать платеж
+						
+						// /.ipo-calc
+
+						.ipo-table
+							.ipo-table__row.ipo-table__header
+								.ipo-bank Банк
+								.ipo-info
+									.ipo-info__col
+										span.hide-on-mob Ежемесячный 
+										| платёж, р.
+									.ipo-info__col Ставка
+									.ipo-info__col Срок
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/sber.png", alt="Сбербанк")
+								.ipo-licence
+									.ipo-licence__title Сбербанк России ПАО
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/vtb.png", alt="ВТБ")
+								.ipo-licence
+									.ipo-licence__title Банк ВТБ
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/absolute-bank.png", alt="Абсолют банк АКБ")
+								.ipo-licence
+									.ipo-licence__title Абсолют банк АКБ (ЗАО)
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/vozrojdenie-bank.png", alt="Банк Возрождение")
+								.ipo-licence
+									.ipo-licence__title Банк Возрождение
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/sber.png", alt="Сбербанк")
+								.ipo-licence
+									.ipo-licence__title Сбербанк России ПАО
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/vtb.png", alt="ВТБ")
+								.ipo-licence
+									.ipo-licence__title Банк ВТБ
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/absolute-bank.png", alt="Абсолют банк АКБ")
+								.ipo-licence
+									.ipo-licence__title Абсолют банк АКБ (ЗАО)
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+							.ipo-table__row
+								.ipo-bank
+									img.img(src="img/ipo/vozrojdenie-bank.png", alt="Банк Возрождение")
+								.ipo-licence
+									.ipo-licence__title Банк Возрождение
+									span.ipo-licence__data Лицензия № 1481 от 11.08.2015
+								.ipo-info
+									.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+									.ipo-info__col(data-title="Срок") до 30 лет
+									.ipo-info__col(data-title="Ставка") 6%
+
+						// /.ipo-table
+
+					
+					// /.ipo
+
+					.ipo-more
+						button.btn.btn--transp(type="button")
+							img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+							| Показать ещё
+
+
+					.content
+						h2.title.title-margin Материнский капитал
+						.ipo-block
+							img.img(src="img/img-ipo-1.jpg", alt="Материнский капитал")
+							.ipo-block__content
+								p Для поддержки семей с двумя и болле детьми государство с 2007 года реализует специальную социальную программу — материнский капитал. Использовать материнский капитал можно при покупке жилья в любом из наших объектов.
+								p.sub-text Кто имеет право на получение материнского капитала:
+								ul.list
+									li Мать или Отец ребенка на имя которого выдан сертификат на материнский капитал;
+								p.sub-text Кто имеет право на получение материнского капитала:
+								ul.list
+									li Паспорт гражданина РФ;
+									li Свидетельства о рождении всех детей (для усыновлённых — свидетельства об усыновлении);
+									li Документы подтверждающие Российское гражданство второго ребёнка.
+						h2.title.title-margin Военная ипотека
+						.ipo-block
+							img.img(src="img/img-ipo-2.jpg", alt="Военная ипотека")
+							.ipo-block__content
+								p Военная ипотека позволяет приобрести квартиру участникам накопительно-ипотечной системы жилищного обеспечения военнослужащих в проектах ГК ФСК.
+								p.sub-text Кто имеет право на получение материнского капитала:
+								ul.content-list
+									li
+										.content-list__img
+											img.img(src="img/ipo/ic-file-text-2.svg", width="31", height="38", alt="alt")
+										span.content-list__txt Свид-во участника программы НИС
+									li
+										.content-list__img
+											img.img(src="img/ipo/ic-file-text-3.svg", width="32", height="40", alt="alt")
+										span.content-list__txt Российский паспорт
+									li
+										.content-list__img
+											img.img(src="img/ipo/ic-file-text-4.svg", width="31", height="40", alt="alt")
+										span.content-list__txt Заполненная анкета
+					
+
+
+
+				// /.container
+
+			// /.page
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+
+
+		// /.wrapper
+			
+
+		
+
+

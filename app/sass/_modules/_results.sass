@@ -229,87 +229,6 @@
 
 
 
-.results-geo
-	height: 100px
-	background: url('../img/img-map.jpg') no-repeat 50% 50% / cover
-	&__label
-		display: inline-flex
-		align-items: center
-		padding: 26px 24px
-		font-weight: 500
-		&::after
-			content: ''
-			display: block
-			width: 42px
-			flex: 0 0 42px
-			height: 48px
-			margin-left: 18px
-			background: url('../img/map-pin.svg') no-repeat 0 0
-			background-size: 100%
-	&__result
-		display: inline-block
-		color: v(accent-color)
-		margin-left: .5em
-		white-space: nowrap
-	&__btn
-		display: flex
-		align-items: center
-		justify-content: center
-		width: 50px
-		height: 50px
-		border-radius: $bd-r
-		background-color: $white
-		border: 1px solid v(accent-color)
-		cursor: pointer
-		position: absolute
-		top: 25px
-		right: 35px
-		.svg, .svg *
-			display: block
-			stroke: v(accent-color)
-			@include trs(.1s)
-		&:hover
-			border-color: v(accent-color)
-			background-color: v(accent-color)
-			box-shadow: 0 8px 15px 0 rgba(233,66,0,.3)
-			.svg, .svg *
-				stroke: $white
-			
-	&-map
-		background: none
-		height: 617px
-		.results-geo__label
-			display: none
-		.results-geo__btn
-			transform: scale(-1)
-		.map
-			height: 100%
-			overflow: hidden
-
-
-.results-empty
-	display: flex
-	align-items: center
-	justify-content: center
-	height: 200px
-	margin: 30px 0 50px
-	padding: 0 30px
-	border: 2px dotted v(border-color)
-	border-radius: $bd-r
-	font-size: 20px
-	&::before
-		content: ''
-		display: block
-		width: 70px	
-		height: 70px
-		flex: 0 0 70px
-		margin-right: 20px
-		background: url('../img/icons/ic-results-search.svg') no-repeat 0 0
-		background-size: 100%
-
-
-
-
 
 
 @include max-screen($xl)
@@ -357,8 +276,10 @@
 
 	.results
 		border: none
-		padding-bottom: 10px
-		border-bottom: 1px solid v(border-color)
+		margin-top: 30px
+		&:not(.results-geo)
+			padding-bottom: 10px
+			border-bottom: 1px solid v(border-color)
 	.results__row
 		padding-left: 15px
 		padding-right: 15px
@@ -412,6 +333,119 @@
 
 
 /* ----- Результаты поиска на главной стр ----- */
+
+.results-geo
+	height: 100px
+	background: url('../img/img-map.jpg') no-repeat 50% 50% / cover
+	&__label
+		height: 100%
+		display: inline-flex
+		align-items: center
+		padding: 26px 24px
+		font-weight: 500
+		&::after
+			content: ''
+			display: block
+			width: 42px
+			flex: 0 0 42px
+			height: 48px
+			margin-left: 18px
+			background: url('../img/icons/ic-map-pin.svg') no-repeat 0 0
+			background-size: 100%
+	&__result
+		display: inline-block
+		color: v(accent-color)
+		margin-left: .5em
+		white-space: nowrap
+	&__btn
+		position: absolute
+		top: 25px
+		right: 35px
+
+			
+	&-map
+		background: none
+		height: 617px
+		.results-geo__label
+			display: none
+		.results-geo__btn
+			transform: scale(-1)
+		.map
+			height: 100%
+			overflow: hidden
+
+
+.results-empty
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 200px
+	margin: 30px 0 50px
+	padding: 0 30px
+	border: 2px dotted v(border-color)
+	border-radius: $bd-r
+	font-size: 20px
+	&::before
+		content: ''
+		display: block
+		width: 70px	
+		height: 70px
+		flex: 0 0 70px
+		margin-right: 20px
+		background: url('../img/icons/ic-results-search.svg') no-repeat 0 0
+		background-size: 100%
+
+
+@include max-screen($xl)
+	.results-geo__btn
+		right: 24px
+
+@include max-screen($md)
+	.results-geo
+		background: none
+		border: none
+		height: auto
+		&__label
+			width: 100%
+			height: 50px
+			background: $additional-color
+			&::after
+				display: none
+			&::before
+				content: ''
+				display: block
+				width: 15px
+				flex: 0 0 15px
+				height: 17px
+				margin-right: 10px
+				background: url('../img/icons/ic-map-pin-sm.svg') no-repeat 0 0
+				background-size: 100%
+		.results-geo__btn
+			border: none
+			background: none
+			box-shadow: none
+			top: 0
+			right: 0
+			.svg *
+				stroke: v(accent-color)
+		.map
+			display: none
+			height: 361px
+			width: calc(100% + 30px)
+			margin-left: -15px
+			margin-top: 15px
+			background: $additional-color
+		&-map
+			height: auto
+			.results-geo__label
+				display: flex
+			.map
+				display: block
+
+
+
+
+
 
 
 

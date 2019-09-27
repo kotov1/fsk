@@ -1,0 +1,515 @@
+- var page = "docs"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page.docs
+				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Главная', href='/')
+								span(itemprop='name') Главная
+								meta(itemprop='position', content='1')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Документы', href='#')
+								span(itemprop='name') Документы
+								meta(itemprop='position', content='2')
+
+					h1.title.title-margin Документы
+
+
+
+					.p-hero.docs-hero(style="background-image: url('img/img-docs-1.jpg')")
+						.docs-hero__inner
+							.h1 UP-квартал "Комендантский"
+
+					.doc-list
+						.f-row
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Разрешение на строительство
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Проектная декларация
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Документы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Заключение экспертизы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Разрешение на строительство
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Проектная декларация
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Документы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Заключение экспертизы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+
+					// /.doc-list
+
+
+
+					.p-hero.docs-hero(style="background-image: url('img/img-docs-2.jpg')")
+						.docs-hero__inner
+							.h1 UP-квартал "Московский"
+
+					.doc-list
+						.f-row
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Разрешение на строительство
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Проектная декларация
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Документы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Заключение экспертизы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Разрешение на строительство
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Проектная декларация
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Документы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Заключение экспертизы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+
+					// /.doc-list
+
+
+
+					.p-hero.docs-hero(style="background-image: url('img/img-docs-2.jpg')")
+						.docs-hero__inner
+							.h1 UP-квартал "Комендантский"
+
+					.doc-list
+						.f-row
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Разрешение на строительство
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Проектная декларация
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Документы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Заключение экспертизы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Разрешение на строительство
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Проектная декларация
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Документы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+							.cols.col-1-4
+								.doc(tabindex="0")
+									.doc__title Заключение экспертизы на земельный участок
+									.ui-select.ui-select-docs
+										.ui-select__trigger 
+											img.svg(src="img/icons/ic-doc.svg", width="15", height="18", alt="")
+											| Подробнее
+										.ui-select__options
+											div.ui-select__simplebar(data-simplebar, data-simplebar-auto-hide="false")
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+												.ui-select__doc
+													a.doc-title(href="#", target="_blank") Проектная декларация с изменениями от 07.08.2019
+													.sub-text Братковский М.М (15.09.2019)
+
+					// /.doc-list
+
+
+
+
+
+				// /.container
+
+			// /.page
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+
+
+		// /.wrapper
+			
+
+		
+
+

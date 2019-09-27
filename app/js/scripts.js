@@ -21,8 +21,8 @@ $(function() {
 	// img.svg to inline svg
 	inlineSVG.init();
 
-	// Custom select
-	$(".ui-select").each(function() {
+	// Кастомные селекты
+	$("select.ui-select").each(function() {
 		var classes = $(this).attr("class"),
 				id      = $(this).attr("id"),
 				name    = $(this).attr("name");
@@ -160,8 +160,16 @@ $(function() {
 
 	// Инициализация ползунков в фильтре при наличии таковых на странице
 	initRanges();
-	
 
+
+	$('.ui-range__val').focusin(function () { 
+		$(this).closest('.ui-range').addClass('ui-range--focus');
+	});
+	$('.ui-range__val').focusout(function () { 
+		$(this).closest('.ui-range').removeClass('ui-range--focus');
+	});
+
+	// Тогл блок дополнительных фильтров
 	$('.filter-additional').click(function (e) { 
 		$(this).toggleClass('filter-additional--opened');
 		$(this).closest('.filter').toggleClass('filter--toggle');
@@ -234,12 +242,43 @@ $(function() {
 	});
 
 
+	// Раскрытие карты в блоке результатов
 	$('.results-geo__btn').click(function (e) { 
-		
 		$('.results-geo').toggleClass('results-geo-map');
-		
 	});
 
+	// Тогл блок фильтров в мобильной версии
+	$('.filter-mob').click(function (e) { 
+		$(this).toggleClass('filter-mob-show');
+		$('.filter-mob-collapse').slideToggle('100');
+	});
+
+
+	// Инпут с "плюс" "минус"
+	$('.ui-quantity__btn').click(function(){
+		var $_inp = $(this).closest('.ui-quantity').find('input');
+		var $_step = +$(this).closest('.ui-quantity').data('step');
+		if( $(this).hasClass('ui-quantity__minus') ) {
+			var $_val = parseInt( $(this).closest('.ui-quantity').find('input').val().replace(/\s/g, '') ) - $_step;
+		} else {
+			var $_val = parseInt( $(this).closest('.ui-quantity').find('input').val().replace(/\s/g, '') ) + $_step;
+		}
+		$_val = ("" + $_val).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+
+		if( $_inp.hasClass('years') ) {
+			$_inp.val( $_val + " лет" );
+		} else {
+			$_inp.val($_val);
+		}
+
+		$_inp.trigger('propertychange');
+		return false;
+	});
+	$('.ui-quantity input').bind('input propertychange', function () {
+		var $this = $(this);
+		if ( $this.val().length == 0 || parseInt( $this.val() ) <= 0 )
+		$this.val(1);
+	});
 
 
 
