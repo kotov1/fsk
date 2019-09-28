@@ -1,0 +1,97 @@
+- var page = "print"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+	.print
+		.container
+			.print-hero
+				img.img.print-hero__img(src="img/img-docs-1.jpg", alt="alt")
+				.print-center
+					.print-header
+						h1.h1.p-hero__title UP-квартал "Пушкинский"
+						img.img.print-header__el(src="img/print-hero-el.png", alt="alt")
+						.print-data.flex
+							.print-metro.flex
+								.print-metro__branch(style="border-color: #33B7FB;")
+								span Московская
+							.print-distance.flex
+								img.img(src="img/icons/ic-walk-dist.svg", width="8", height="13", alt="alt")
+								span 5 
+									| минут
+						.print-discount.flex
+							.print-discount__ic %
+							p.print-discount__txt Супер акция! Три строчки уточняющего текста с подробными условиями
+
+			.print-center
+				.content
+					.content-margin
+						h2.h1.title О проекте
+						p Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+					.content-margin
+						h2.h1.title Однокомнатная квартира
+						.f-row
+							.cols.col-1-3
+								ul.card-data__list
+									li
+										span Общая площадь
+										span 27 м<sup>2</sup>
+									li
+										span Жилая площадь
+										span 16 м<sup>2</sup>
+									li
+										span Площадь кухни
+										span 5 м<sup>2</sup>
+									li
+										span Этаж / этажей
+										span 8/26
+							.cols.col-1-3
+								ul.card-data__list
+									li
+										span Корпус
+										span 3.1
+									li
+										span Секция
+										span 2
+									li
+										span Отделка
+										span Предчистовая
+							.cols.col-1-3.print-col
+								p.print-info.accent-color Цена по акции: <span>7 200 360</span> р.
+								p.print-info Стандартная цена: <span>7 900 360</span> р.
+								p.print-info.sub-color ID квартиры: <span>45 702</span>
+
+
+						.print-table
+							.print-img.print-img-1
+								img.img(src="img/img-plan-big.jpg", alt="alt")
+							div
+								.print-img.print-img-2
+									img.img(src="img/img-plan-2.jpg", alt="alt")
+								.print-img.print-img-3
+									img.img(src="img/img-plan-3.jpg", alt="alt")
+
+				.print-footer
+					.print-footer__logo
+						img.img(src="img/svg-logo.svg", alt="alt")
+					.print-footer__col
+						.print-footer__address
+							p.text-bold Центральный офис продаж:
+							p Санкт-Петербург, Большой пр. ПС, д.48, лит.А, 1 этаж
+						.print-data.flex
+							.print-contact
+								.print-contact__ic
+									img.img(src="img/icons/ic-mail.svg", width="33", height="17", alt="alt")
+								span info@fsknw.ru
+							.print-contact
+								.print-contact__ic
+									img.img(src="img/icons/ic-tel.svg", width="14", height="23", alt="alt")
+								span +7 (812) 703-55-55
+
+
+
+			
