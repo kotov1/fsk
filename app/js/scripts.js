@@ -161,7 +161,6 @@ $(function() {
 	// Инициализация ползунков в фильтре при наличии таковых на странице
 	initRanges();
 
-
 	$('.ui-range__val').focusin(function () { 
 		$(this).closest('.ui-range').addClass('ui-range--focus');
 	});
@@ -169,12 +168,70 @@ $(function() {
 		$(this).closest('.ui-range').removeClass('ui-range--focus');
 	});
 
+
 	// Тогл блок дополнительных фильтров
 	$('.filter-additional').click(function (e) { 
 		$(this).toggleClass('filter-additional--opened');
 		$(this).closest('.filter').toggleClass('filter--toggle');
 		$(this).closest('.filter').find('.filter__hidden').slideToggle(200);
 	});
+
+
+
+
+
+	// Слайдер на главной
+	$('.bg-slider').slick({
+		speed: 1200,
+		asNavFor: '.main-slider',
+		prevArrow: '<button type="button" class="slider-arrow slider-prev"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
+		nextArrow: '<button type="button" class="slider-arrow slider-next"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
+		responsive: [
+			{
+			  breakpoint: 768,
+			  settings: {
+				arrows: false
+			  }
+			}
+		]
+	});
+
+	$('.main-slider').slick({
+		arrows: false,
+		dots: true,
+		dotsClass: 'slider-dots',
+		speed: 1200,
+		fade: true,
+		asNavFor: '.bg-slider',
+	});
+
+
+	$('.bg-slider .slider-next').hover(function () {
+			$('.main-hero').addClass('slide-next');
+		}, function () {
+			$('.main-hero').removeClass('slide-next');
+		}
+	);
+	$('.bg-slider .slider-prev').hover(function () {
+			$('.main-hero').addClass('slide-prev');
+		}, function () {
+			$('.main-hero').removeClass('slide-prev');
+		}
+	);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,6 +264,16 @@ $(function() {
 	});
 
 
+
+	// Jquery табы
+	$(".js-tab").click(function() {
+		var index = $(this).index();
+		  $(this).closest('.js-tab-wrapper').find(".js-tab").removeClass("js-tab--active").eq(index).addClass("js-tab--active");
+		  $(this).closest('.js-tab-wrapper').find(".js-tab-item").hide().eq(index).fadeIn("normal");
+	});
+
+
+
 	// Тогл блок в вакансиях
 	$('.btn-vacancy').click(function (e) { 
 		$(this).closest('.vacancy').toggleClass('vacancy--open');
@@ -217,17 +284,8 @@ $(function() {
 		items: {
 			src: '#card-example',
 			type: 'inline'
-		}
+		},
 	});
-
-
-	// Jquery табы
-	$(".js-tab").click(function() {
-		var index = $(this).index();
-		  $(this).closest('.js-tab-wrapper').find(".js-tab").removeClass("js-tab--active").eq(index).addClass("js-tab--active");
-		  $(this).closest('.js-tab-wrapper').find(".js-tab-item").hide().eq(index).fadeIn("normal");
-	});
-
 
 	// Кнопка зума в карточке
 	$('.zoom-link').on('click', function(e){
@@ -235,9 +293,11 @@ $(function() {
 		var item = $(this);
 		$.magnificPopup.open({
 			items: {
-			  src: item.data('mfp-src'),
-			  type: 'image',
-			}
+				src: item.data('mfp-src'),
+				type: 'image',
+			},
+			showCloseBtn: false,
+			enableEscapeKey: false,
 		});
 	});
 

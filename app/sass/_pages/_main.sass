@@ -1,0 +1,373 @@
+/* ---------- Главная страница ---------- */
+
+.main-hero
+	position: relative
+	margin-bottom: 50px
+	&::before, &::after
+		content: ''
+		display: block
+		width: 14%
+		height: 100%
+		position: absolute
+		top: 0
+		z-index: 1
+		will-change: transform
+		transition: all .3s ease-in
+	&::before
+		left: 0
+		background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, $white 100%)
+	&::after
+		right: 0
+		background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 30%, $white 100%)
+
+	&.slide-prev
+		&::before
+			transform: translate3d(-80%, 0, 0)
+	&.slide-next
+		&::after
+			transform: translate3d(80%, 0, 0)
+
+	.container
+		position: relative
+
+.bg-slider
+	.slick-list
+		overflow: visible
+	.slide
+		margin-left: 12px
+		margin-right: 12px
+	.img
+		width: 1200px
+		height: 500px
+		object-fit: cover
+	.slider-arrow
+		position: absolute
+		top: 50%
+		margin-top: -25px
+		opacity: 0.9
+		z-index: 2
+		&:hover
+			opacity: 1
+	.slider-prev
+		left: -10vw
+	.slider-next
+		right: -10vw
+
+.main-slider
+	width: 493px
+	height: 287px
+	padding: 90px 58px 24px 24px
+	position: absolute
+	bottom: 0
+	left: 36px
+	z-index: 1
+	color: $white
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background: url('../img/svg-bg-el-3.svg') no-repeat 50% 0 / cover
+		opacity: 0.9
+		z-index: -1
+	.btn
+		margin-top: 25px
+		color: $white
+		.btn__ic
+			fill: $white
+			stroke: $white
+			border-color: $white
+
+	.slider-dots
+		position: absolute
+		left: 19px
+		top: 65px
+	
+
+@include max-screen(1600px)
+	.main-hero
+		&::before, &::after
+			width: 0
+
+	.bg-slider
+		.slider-arrow
+			top: auto
+			bottom: 24px
+		.slider-prev
+			left: auto
+			right: 102px
+		.slider-next
+			right: 36px
+
+@include max-screen($xl)
+
+	.bg-slider
+		width: calc(100% + 48px)
+		margin-left: -24px
+		.slick-list
+			overflow: hidden
+		.slide
+			margin: 0
+		.img
+			height: 400px
+
+	.main-slider
+		width: 450px
+		height: 262px
+		padding-top: 84px
+		.h2
+			font-size: 20px
+			min-height: 78px
+
+@include max-screen($lg)
+
+	.bg-slider
+		.img
+			height: 320px
+
+	.main-slider
+		width: 410px
+		height: 238px
+		padding-top: 65px
+		.slider-dots
+			top: 50px
+		.btn
+			margin-top: 20px
+
+@include max-screen($md)
+
+	.bg-slider 
+		width: calc(100% + 30px)
+		margin-left: -15px
+		.img
+			height: 200px
+
+	.main-slider
+		width: calc(100% - 30px)
+		height: auto
+		left: 15px
+		transform: translateY(50%)
+		padding: 70px 15px 15px
+		.btn
+			display: none
+		&::before
+			background: url("../img/svg-bg-el-mob.svg") no-repeat 50% 0 /cover
+
+
+
+
+.quarter
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 30px
+	border: 1px solid v(border-color)
+	border-radius: $bd-r
+	overflow: hidden
+	@include trs(.1s)
+	&__img-wrap
+		flex: 1
+		max-width: 100%
+		position: relative
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__overlay
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		height: 100%
+		padding: 40px
+		position: absolute
+		left: 0
+		top: 0
+		background-color: rgba($black, .5)
+		opacity: 0
+		@include trs(.1s)
+		.img
+			opacity: 0
+			@include trs(.1s)
+			transition-delay: .1s
+	&__content
+		flex: 1
+		max-width: 100%
+		min-width: 50%
+		padding: 24px
+		.p-discount
+			margin-top: 25px
+	&__title
+		font-weight: 500
+		margin-bottom: .2em
+	&__transport
+		margin-bottom: 22px
+		.p-distance
+			margin-left: 15px
+			.svg *
+				fill: #bebebe
+	&__info
+		p
+			margin-bottom: 0
+	&__footer
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-top: 22px
+		.btn
+			min-width: 170px
+			margin-left: auto
+
+	&:hover
+		box-shadow: 0 $bd-r 10px rgba(0, 0, 0, 0.16)
+		.quarter__overlay
+			opacity: 1
+			.img
+				opacity: 1
+
+.view-1
+	.quarter__title
+		font-size: 25px
+	.quarter__info
+		max-height: 63px
+		overflow: hidden
+	.quarter__footer
+		.p-key
+			margin-right: 35px
+			max-width: 25%
+.view-2
+	.quarter__title
+		font-size: 18px
+
+
+.p-key
+	display: flex
+	align-items: center
+	&__ic
+		width: 30px
+		flex: 0 0 30px
+		height: 30px
+		border-radius: 50%
+		margin-right: 11px
+		background-repeat: no-repeat
+		background-image: url('../img/icons/ic-key.svg')
+		background-size: 14px 14px
+		background-position: 50% 50%
+	&__txt
+		line-height: 1.25
+
+	&--blue
+		.p-key__ic
+			background-color: #26295a
+	&--green
+		.p-key__ic
+			background-color: #87b700
+
+
+.accent-link
+	font-weight: 500
+	color: v(accent-color)
+	border-bottom: 1px dashed currentColor
+	&:hover
+		border-bottom-color: transparent
+
+.sub-link
+	color: v(sub-text-color)
+
+
+@include max-screen($xl)
+	.quarter__img-wrap
+		width: 100%
+
+	.quarter__transport
+		margin-bottom: 15px
+	.quarter__content .p-discount
+		margin-top: 20px
+	.quarter__footer
+		margin-top: 15px
+
+	.quarter-list
+		&.view-1
+			.quarter__img-wrap
+				flex: 0 0 100%
+				height: 320px
+		&.view-2
+			.f-row
+				display: block
+				margin-left: 0
+				margin-right: 0
+			.cols
+				padding-left: 0
+				padding-right: 0
+			.col-1-2
+				width: 100%
+
+	
+
+@include max-screen($md)
+	.quarter__img-wrap
+		height: 56.25vw
+		max-height: 220px
+
+	.quarter__transport
+		display: block
+		.p-distance
+			margin-left: 0
+			margin-top: 3px
+	.quarter__content
+		padding: 20px
+	.quarter__info
+		max-height: 100%
+	.quarter__footer
+		display: block
+		margin-top: 0
+		.p-key
+			margin-top: 17px
+		.btn
+			display: flex
+			width: 250px
+			margin: 20px 0 0
+
+
+	.quarter-list
+		&.view-1
+			.quarter__title
+				font-size: 20px
+			.quarter__footer
+				.p-key
+					max-width: 100%
+					margin-right: 0
+		&.view-2
+			.quarter__img-wrap
+				flex: 0 0 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
