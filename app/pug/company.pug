@@ -1,0 +1,168 @@
+- var page = "company"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+				.container
+
+					.p-hero(style="background-image: url('img/img-main-1.jpg')")
+						.p-hero__inner
+							h1.h2.p-hero__title Супер выгодная акция на квартиры в UP "Комендантский" с длинным продлжением!
+							.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+								span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+									a(rel='nofollow', itemprop='item', title='Главная', href='/')
+										span(itemprop='name') Главная
+										meta(itemprop='position', content='1')
+								span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+									a(rel='nofollow', itemprop='item', title='Новости', href='news.html')
+										span(itemprop='name') Новости
+										meta(itemprop='position', content='2')
+								span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+									a(rel='nofollow', itemprop='item', title='Страница новости', href='#')
+										span(itemprop='name') Новость про время работы.
+										meta(itemprop='position', content='3')
+							.p-hero__bottom 16 августа 2019 
+
+					.content
+						p Группа компаний ФСК (ранее ФСК «Лидер») является одной из крупнейших строительных компаний России, входит в десятку крупнейших девелоперов страны1 и пятерку социально ответственных строительных компаний2.
+						.advantages-list
+							.advantage
+								img.img(src="img/img-advantage-1.svg", alt="alt")
+								.advantage__content
+									.advantage__data
+										span.advantage__number 13
+										span.advantage__label.advantage__units лет
+									p.advantage__txt стабильного роста бизнеса
+							.advantage
+								img.img(src="img/img-advantage-2.svg", alt="alt")
+								.advantage__content
+									.advantage__data
+										span.advantage__number 6,2
+										span.advantage__label.advantage__units млн м<sup>2<sup>
+									p.advantage__txt совокупный объем проектов за 13 лет
+							.advantage
+								img.img(src="img/img-advantage-3.svg", alt="alt")
+								.advantage__content
+									.advantage__data
+										span.advantage__number 971 
+										span.advantage__label.advantage__units тыс м<sup>2<sup>
+									p.advantage__txt введено в&nbsp;эксплуатацию в&nbsp;2017 году
+							.advantage
+								img.img(src="img/img-advantage-4.svg", alt="alt")
+								.advantage__content
+									.advantage__data
+										span.advantage__number 27
+										span.advantage__label жилых комплексов
+									p.advantage__txt 14 построено и&nbsp;введено в&nbsp;эксплуатацию
+							.advantage
+								img.img(src="img/img-advantage-5.svg", alt="alt")
+								.advantage__content
+									.advantage__data
+										span.advantage__number 7 580
+									p.advantage__txt мест в детских садах и школах
+							.advantage
+								img.img(src="img/img-advantage-6.svg", alt="alt")
+								.advantage__content
+									.advantage__data
+										span.advantage__number 12 600
+									p.advantage__txt человек – общее количество сотрудников
+						p ГК ФСК работает не только в Москве и Московской области, но также в Санкт-Петербурге и Ленинградской области, Калужской области и Краснодарском крае.
+						p В структуру холдинга входят собственные производственные мощности, генподрядные организации, технический заказчик, агентство недвижимости, сервисные службы.
+						p Компания, основанная в 2005 году, зарекомендовала себя надежным партнером, который всегда выполняет обязательства. Вертикально интегрированная структура ФСК позволяет в короткие сроки своими силами проектировать и строить объекты любого уровня сложности, используя преимущественно собственное финансирование. Именно поэтому бизнес компании очень устойчив, а кредитная нагрузка минимальна.
+						p В 2016 году в структуру холдинга вошел ДСК-1 – крупнейшее предприятие по производству панельных домов с полувековой историей. В результате этой сделки компания вышла на новый для нее рынок индустриального домостроения, а также укрепила свои позиции и расширила ассортимент в сегментах стандарт и комфорт.
+						ol.list
+							li По версии журналов Forbes и «РБК»
+							li По версии издания «Московская перспектива»
+
+					.content
+						h2.h1.title Награды и рейтинги
+						p Компания, основанная в 2005 году, зарекомендовала себя надежным партнером, который всегда выполняет обязательства. Вертикально интегрированная структура ФСК позволяет в короткие сроки своими силами проектировать и строить объекты любого уровня сложности, используя преимущественно собственное финансирование. Именно поэтому бизнес компании очень устойчив, а кредитная нагрузка минимальна.
+						p В 2016 году в структуру холдинга вошел ДСК-1 – крупнейшее предприятие по производству панельных домов с полувековой историей. В результате этой сделки компания вышла на новый для нее рынок индустриального домостроения, а также укрепила свои позиции и расширила ассортимент в сегментах стандарт и комфорт.
+
+						.awards
+							.f-row
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-1.jpg", alt="alt")
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-2.jpg", alt="alt")
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-3.jpg", alt="alt")
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-4.jpg", alt="alt")
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-1.jpg", alt="alt")
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-2.jpg", alt="alt")
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-3.jpg", alt="alt")
+								.cols.col-1-4
+									.awards__img
+										img.img(src="img/awards/img-awards-4.jpg", alt="alt")
+						.awards-more
+							button.btn.btn--transp(type="button")
+								img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+								| Показать ещё
+
+					
+					.content
+						h2.h1.title Контакты
+						.p-item.page-block
+							.p-item__img
+								img.img(src="img/img-vacancy-1.jpg", alt="alt")
+							.p-item__content
+								.p-item__title Хотите присоединиться к нашей команде? В данном разделе вы сможете подробно ознакомиться с актуальными вакансиями нашей компании или подать заявку на зачисление в кадровый резерв.
+								a.btn.btn--transp(href="#")
+									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+									| Подробнее
+
+					
+					.content
+						h2.h1.title Вакансии
+						.p-item.page-block
+							.p-item__img
+								img.img(src="img/img-vacancy-1.jpg", alt="alt")
+							.p-item__content
+								.p-item__title Хотите присоединиться к нашей команде? В данном разделе вы сможете подробно ознакомиться с актуальными вакансиями нашей компании или подать заявку на зачисление в кадровый резерв.
+								a.btn.btn--transp(href="#")
+									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+									| Подробнее
+
+					.content
+						p.sub-color ГК ФСК работает не только в Москве и Московской области, но также в Санкт-Петербурге и Ленинградской области, Калужской области и Краснодарском крае. В структуру холдинга входят собственные производственные мощности, генподрядные организации, технический заказчик, агентство недвижимости, сервисные службы. Компания, основанная в 2005 году, зарекомендовала себя надежным партнером, который всегда выполняет обязательства. Вертикально интегрированная структура ФСК позволяет в короткие сроки своими силами проектировать и строить объекты любого уровня сложности, используя преимущественно собственное финансирование. Именно поэтому бизнес компании очень устойчив, а кредитная нагрузка минимальна. В 2016 году в структуру холдинга вошел ДСК-1 – крупнейшее предприятие по производству панельных домов с полувековой историей. В результате этой сделки компания вышла на новый для нее рынок индустриального домостроения, а также укрепила свои позиции и расширила ассортимент в сегментах стандарт и комфорт.
+
+
+
+				// /.container
+
+
+			// /.page
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+		// /.wrapper
+		
+
+

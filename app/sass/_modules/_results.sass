@@ -131,9 +131,10 @@
 	&-btns
 		display: flex
 		align-items: center
+		.interactive-btn
+			margin-left: 16px
 	&-btn
 		display: block
-		margin-left: 16px
 		background-repeat: no-repeat
 		background-size: 100%
 		will-change: transform
@@ -158,6 +159,10 @@
 		&:hover
 			.svg *
 				fill: v(accent-color)
+		&.favourited
+			.svg *
+				fill: v(accent-color)
+
 	&-follow
 		width: 20px
 		height: 20px

@@ -139,6 +139,9 @@
 
 @include max-screen($md)
 
+	.main-hero
+		margin-bottom: 120px
+
 	.bg-slider 
 		width: calc(100% + 30px)
 		margin-left: -15px
@@ -155,8 +158,6 @@
 			display: none
 		&::before
 			background: url("../img/svg-bg-el-mob.svg") no-repeat 50% 0 /cover
-
-
 
 
 .quarter
@@ -265,7 +266,6 @@
 		.p-key__ic
 			background-color: #87b700
 
-
 .accent-link
 	font-weight: 500
 	color: v(accent-color)
@@ -304,7 +304,6 @@
 			.col-1-2
 				width: 100%
 
-	
 
 @include max-screen($md)
 	.quarter__img-wrap
@@ -346,13 +345,100 @@
 
 
 
+.advantages-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: 20px
+	.advantage
+		// width: calc(16.66666% - 86px)
+		max-width: 150px
+		margin-bottom: 40px
+
+	.slider-dots
+		width: 100%
+		justify-content: center
+		button
+
+
+.advantage
+	font-weight: 500
+	.img
+		height: 75px
+	&__data
+		display: flex
+		align-items: flex-end
+		margin-top: 19px
+	&__number
+		display: inline-block
+		line-height: .9
+		margin-right: .2em
+		font-size: 40px
+		letter-spacing: -.02em
+	&__label
+		display: inline-block
+		font-size: 16px
+		line-height: 1.1
+	&__units
+		white-space: nowrap
+		font-size: 17px
+	&__txt
+		margin: 10px 0 0
+		font-size: 14px
+		color: #363839
 
 
 
 
+@include max-screen($xl)
+	.advantages-list
+		.advantage
+			width: calc(33.33333% - 50px)
+			max-width: 33.33333% 
+	.advantage .img
+		height: 108px
 
+@include max-screen($lg)
+	.advantages-list
+		.advantage
+			width: calc(50% - 30px)
+			max-width: 50% 
 
+	.advantage
+		display: flex
+		.img
+			margin-right: 30px
+			flex: 0 0 130px
+		&__number
+			font-size: 50px
+			line-height: .8	
+		&__label
+			font-size: 18px
+		&__units
+			font-size: 23px
 
+@include max-screen($md)
+	.advantages-list
+		margin-bottom: 50px
+		.advantage
+			width: 100%
+			max-width: 100%
+
+	.advantage
+		display: block
+		text-align: center
+		.img
+			height: 100px
+			margin: 0 auto
+		&__data
+			justify-content: center
+		&__number
+			font-size: 40px
+			line-height: .9	
+		&__label
+			font-size: 16px
+		&__units
+			font-size: 27px
 
 
 

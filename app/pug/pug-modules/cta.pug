@@ -1,0 +1,17 @@
+.cta
+	.container
+		.cta__inner
+			.h2.cta__title Нужна консультация специалиста?
+			.cta__form.cta-form
+				form(action="#")
+					.cta-form__row.f-row
+						.cols.col-1-3
+							input.input(type="text", name="name", placeholder="Ваше имя", reqiured)
+						.cols.col-1-3
+							input.input(type="tel", name="tel", placeholder="Номер телефона", reqiured)
+						.cols.col-1-3
+							button.btn.btn--cta(type="submit") 
+								img.svg.btn__ic(src="img/icons/ic-phone.svg", alt="phone", width="20", height="20") 
+								| Позвоните мне
+					p.privacy Отправляя форму, вы подтверждаете своё согласие на 
+						a(href="confidence.html", target="_blank") обработку персональных данных

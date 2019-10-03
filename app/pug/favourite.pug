@@ -1,0 +1,367 @@
+- var page = "favourite"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Главная', href='/')
+								span(itemprop='name') Главная
+								meta(itemprop='position', content='1')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Избранное', href='#')
+								span(itemprop='name') Избранное
+								meta(itemprop='position', content='2')
+
+					h1.title.title-margin Избранное
+
+					// favourite-list
+					.favourite-list
+						.f-row
+							.cols.col-1-4
+								.favourite-item
+									.favourite-item__img
+										img.img(src="img/img-plan.jpg", alt="alt")
+										button.results-offer__modal.js-call-card(type="button")
+											img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+									.favourite-item__content
+										.favourite-item__padding
+											.favourite-item__header
+												.h3.text-bold 3к квартира
+												a.interactive-btn.interactive-favorite.favourited(href="#")
+													img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+											.data-row.flex
+												.data-col
+													.data-label Площадь:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Этаж:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Готовность:
+													.data-value
+														span 2021
+												.data-col.data-price
+													.data-label Стоимость:
+													.data-value
+														span 2 230 450 
+														| р.
+											.data-col.data-object
+												.data-label Объект:
+												.data-value
+													a(href="#") UP-квартал Комендантский
+										.favourite-item__footer
+											a.btn.btn--cta(href="#") 
+												img.svg.btn__ic(src="img/icons/ic-bag.svg", alt="phone", width="19", height="24") 
+												| Забронировать
+							
+							// /.cols.col-1-4
+						
+							.cols.col-1-4
+								.favourite-item
+									.favourite-item__img
+										img.img(src="img/img-plan.jpg", alt="alt")
+										button.results-offer__modal.js-call-card(type="button")
+											img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+									.favourite-item__content
+										.favourite-item__padding
+											.favourite-item__header
+												.h3.text-bold 3к квартира
+												a.interactive-btn.interactive-favorite.favourited(href="#")
+													img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+											.data-row.flex
+												.data-col
+													.data-label Площадь:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Этаж:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Готовность:
+													.data-value
+														span 2021
+												.data-col.data-price
+													.data-label Стоимость:
+													.data-value
+														span 2 230 450 
+														| р.
+											.data-col.data-object
+												.data-label Объект:
+												.data-value
+													a(href="#") UP-квартал Комендантский
+										.favourite-item__footer
+											a.btn.btn--cta(href="#") 
+												img.svg.btn__ic(src="img/icons/ic-bag.svg", alt="phone", width="19", height="24") 
+												| Забронировать
+							
+							// /.cols.col-1-4
+						
+							.cols.col-1-4
+								.favourite-item
+									.favourite-item__img
+										img.img(src="img/img-plan.jpg", alt="alt")
+										button.results-offer__modal.js-call-card(type="button")
+											img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+									.favourite-item__content
+										.favourite-item__padding
+											.favourite-item__header
+												.h3.text-bold 3к квартира
+												a.interactive-btn.interactive-favorite.favourited(href="#")
+													img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+											.data-row.flex
+												.data-col
+													.data-label Площадь:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Этаж:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Готовность:
+													.data-value
+														span 2021
+												.data-col.data-price
+													.data-label Стоимость:
+													.data-value
+														span 2 230 450 
+														| р.
+											.data-col.data-object
+												.data-label Объект:
+												.data-value
+													a(href="#") UP-квартал Комендантский
+										.favourite-item__footer
+											a.btn.btn--cta(href="#") 
+												img.svg.btn__ic(src="img/icons/ic-bag.svg", alt="phone", width="19", height="24") 
+												| Забронировать
+							
+							// /.cols.col-1-4
+						
+							.cols.col-1-4
+								.favourite-item
+									.favourite-item__img
+										img.img(src="img/img-plan.jpg", alt="alt")
+										button.results-offer__modal.js-call-card(type="button")
+											img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+									.favourite-item__content
+										.favourite-item__padding
+											.favourite-item__header
+												.h3.text-bold 3к квартира
+												a.interactive-btn.interactive-favorite.favourited(href="#")
+													img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+											.data-row.flex
+												.data-col
+													.data-label Площадь:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Этаж:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Готовность:
+													.data-value
+														span 2021
+												.data-col.data-price
+													.data-label Стоимость:
+													.data-value
+														span 2 230 450 
+														| р.
+											.data-col.data-object
+												.data-label Объект:
+												.data-value
+													a(href="#") UP-квартал Комендантский
+										.favourite-item__footer
+											a.btn.btn--cta(href="#") 
+												img.svg.btn__ic(src="img/icons/ic-bag.svg", alt="phone", width="19", height="24") 
+												| Забронировать
+							
+							// /.cols.col-1-4
+						
+							.cols.col-1-4
+								.favourite-item
+									.favourite-item__img
+										img.img(src="img/img-plan.jpg", alt="alt")
+										button.results-offer__modal.js-call-card(type="button")
+											img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+									.favourite-item__content
+										.favourite-item__padding
+											.favourite-item__header
+												.h3.text-bold 3к квартира
+												a.interactive-btn.interactive-favorite.favourited(href="#")
+													img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+											.data-row.flex
+												.data-col
+													.data-label Площадь:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Этаж:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Готовность:
+													.data-value
+														span 2021
+												.data-col.data-price
+													.data-label Стоимость:
+													.data-value
+														span 2 230 450 
+														| р.
+											.data-col.data-object
+												.data-label Объект:
+												.data-value
+													a(href="#") UP-квартал Комендантский
+										.favourite-item__footer
+											a.btn.btn--cta(href="#") 
+												img.svg.btn__ic(src="img/icons/ic-bag.svg", alt="phone", width="19", height="24") 
+												| Забронировать
+							
+							// /.cols.col-1-4
+						
+							.cols.col-1-4
+								.favourite-item
+									.favourite-item__img
+										img.img(src="img/img-plan.jpg", alt="alt")
+										button.results-offer__modal.js-call-card(type="button")
+											img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+									.favourite-item__content
+										.favourite-item__padding
+											.favourite-item__header
+												.h3.text-bold 3к квартира
+												a.interactive-btn.interactive-favorite.favourited(href="#")
+													img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+											.data-row.flex
+												.data-col
+													.data-label Площадь:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Этаж:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Готовность:
+													.data-value
+														span 2021
+												.data-col.data-price
+													.data-label Стоимость:
+													.data-value
+														span 2 230 450 
+														| р.
+											.data-col.data-object
+												.data-label Объект:
+												.data-value
+													a(href="#") UP-квартал Комендантский
+										.favourite-item__footer
+											a.btn.btn--cta(href="#") 
+												img.svg.btn__ic(src="img/icons/ic-bag.svg", alt="phone", width="19", height="24") 
+												| Забронировать
+							
+							// /.cols.col-1-4
+						
+							.cols.col-1-4
+								.favourite-item
+									.favourite-item__img
+										img.img(src="img/img-plan.jpg", alt="alt")
+										button.results-offer__modal.js-call-card(type="button")
+											img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+									.favourite-item__content
+										.favourite-item__padding
+											.favourite-item__header
+												.h3.text-bold 3к квартира
+												a.interactive-btn.interactive-favorite.favourited(href="#")
+													img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+											.data-row.flex
+												.data-col
+													.data-label Площадь:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Этаж:
+													.data-value
+														span 22 
+														| м<sup>2</sup>
+												.data-col
+													.data-label Готовность:
+													.data-value
+														span 2021
+												.data-col.data-price
+													.data-label Стоимость:
+													.data-value
+														span 2 230 450 
+														| р.
+											.data-col.data-object
+												.data-label Объект:
+												.data-value
+													a(href="#") UP-квартал Комендантский
+										.favourite-item__footer
+											a.btn.btn--cta(href="#") 
+												img.svg.btn__ic(src="img/icons/ic-bag.svg", alt="phone", width="19", height="24") 
+												| Забронировать
+							
+							// /.cols.col-1-4
+
+					// /.favourite-list
+
+				// /.container
+
+
+
+
+				// form
+				include pug-modules/cta
+				// /.form
+
+
+
+			// /.page
+
+
+			// Карточка
+			include pug-modules/card
+			// /.card
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+
+
+		// /.wrapper
+			
+
+		
+
+

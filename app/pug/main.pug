@@ -192,7 +192,6 @@ html(lang="ru")
 
 					.results-empty По вашему запросу ничего не найдено :(
 
-
 				// /.container
 
 
@@ -346,18 +345,89 @@ html(lang="ru")
 
 					// /.quarter-list 2
 					
+				// /.container
+
+
+				// form
+				include pug-modules/cta
+				// /.form
+
+
+				.container
+					h2.h1.title ФСК «Лидер» в цифрах
+					.advantages-list
+						.advantage
+							img.img(src="img/img-advantage-1.svg", alt="alt")
+							.advantage__content
+								.advantage__data
+									span.advantage__number 13
+									span.advantage__label.advantage__units лет
+								p.advantage__txt стабильного роста бизнеса
+						.advantage
+							img.img(src="img/img-advantage-2.svg", alt="alt")
+							.advantage__content
+								.advantage__data
+									span.advantage__number 6,2
+									span.advantage__label.advantage__units млн м<sup>2<sup>
+								p.advantage__txt совокупный объем проектов за 13 лет
+						.advantage
+							img.img(src="img/img-advantage-3.svg", alt="alt")
+							.advantage__content
+								.advantage__data
+									span.advantage__number 971 
+									span.advantage__label.advantage__units тыс м<sup>2<sup>
+								p.advantage__txt введено в&nbsp;эксплуатацию в&nbsp;2017 году
+						.advantage
+							img.img(src="img/img-advantage-4.svg", alt="alt")
+							.advantage__content
+								.advantage__data
+									span.advantage__number 27
+									span.advantage__label жилых комплексов
+								p.advantage__txt 14 построено и&nbsp;введено в&nbsp;эксплуатацию
+						.advantage
+							img.img(src="img/img-advantage-5.svg", alt="alt")
+							.advantage__content
+								.advantage__data
+									span.advantage__number 7 580
+								p.advantage__txt мест в детских садах и школах
+						.advantage
+							img.img(src="img/img-advantage-6.svg", alt="alt")
+							.advantage__content
+								.advantage__data
+									span.advantage__number 12 600
+								p.advantage__txt человек – общее количество сотрудников
 
 				// /.container
 
 
-				.cta
-					.container
-						.cta__inner
-							.h2.cta__title Нужна консультация специалиста?
-							.cta__form.cta-form
-								form(action="#")
-									.cta-form__row.flex
+				.container
+					h2.h1.title Новости
+					.p-list
+						.f-row
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-1.jpg", alt="news1")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="news-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										img.img(src="img/img-thumb-2.jpg", alt="news2")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="news-page.html")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
 
+				// /.container
 
 
 			// /.page

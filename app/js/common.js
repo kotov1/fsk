@@ -1,3 +1,4 @@
+
 $(function() {
 
 	// img.svg to inline svg
@@ -203,8 +204,27 @@ $(function() {
 
 
 
-
-
+    /* Slick needs no get Reinitialized on window Resize after it was destroyed */
+    $(window).on('load resize orientationchange', function() {
+        $('.advantages-list').each(function(){
+            var $carousel = $(this);
+            if ($(window).width() > 767) {
+                if ($carousel.hasClass('slick-initialized')) {
+                    $carousel.slick('unslick');
+                }
+            }
+            else{
+                if (!$carousel.hasClass('slick-initialized')) {
+                    $carousel.slick({
+						arrows: false,
+						dots: true,
+						dotsClass: 'slider-dots slider-dots--dark',
+                        mobileFirst: true,
+                    });
+                }
+            }
+        });
+    });
 
 
 

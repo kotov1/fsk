@@ -84,6 +84,7 @@ h2, h3, h4, h5, h6
 	font-weight: 500
 h2, .h2
 	font-size: 25px
+	line-height: 1.2
 h3, h4, h5, .h3
 	font-size: 20px
 
@@ -103,12 +104,12 @@ h3, h4, h5, .h3
 	padding: 0
 	list-style: none
 	li
-		position: relative
-		padding-left: 15px
 		&:not(:last-child)
 			margin-bottom: .2em
 ul.list
 	li
+		position: relative
+		padding-left: 15px
 		&::before
 			content: ''
 			display: block
@@ -119,6 +120,15 @@ ul.list
 			top: .5em
 			left: 0
 			background: v(accent-color)
+ol.list
+	counter-reset: li
+	li
+		&::before
+			counter-increment: li
+			content: counter(li)'.'
+			display: inline-block
+			margin-right: .2em
+			color: v(accent-color)
 
 .content-list
 	display: flex
@@ -148,6 +158,10 @@ ul.list
 		margin-bottom: 1.25rem
 	&-margin:not(:last-child)
 		margin-bottom: 3rem
+	.advantages-list
+		margin: 1rem 0 0
+	+ .content
+		margin-top: 2rem
 
 
 
@@ -356,6 +370,7 @@ ul.list
 			width: 5px
 			height: 5px
 			background: $white
+			border: none
 			border-radius: 50%
 			margin: 0 6.5px
 			opacity: 0.5
@@ -365,6 +380,14 @@ ul.list
 		.slick-active button
 			transform: scale(1.4)
 			opacity: 1
+		&--dark
+			button
+				background: #DFDFDF
+				opacity: 1
+			.slick-active button
+				transform: scale(1.8)
+				background: v(accent-color)
+
 
 
 
@@ -434,6 +457,8 @@ ul.list
 			padding: 0
 		.col-1-2
 			width: 100%
+	.content .advantages-list
+		margin-bottom: 2rem
 
 
 

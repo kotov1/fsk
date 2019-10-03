@@ -1,21 +1,62 @@
 /* ----- Форма обратной связи  ----- */
 
 .cta
-	margin-top: 50px
+	margin: 50px 0
 	&__inner
 		display: flex
 		align-items: center
-		padding: 50px 30px
+		padding: 37px 30px
 		background-color: v(accent-color)
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
 		border-radius: $bd-r
 		color: $white
+	&__title
+		width: 25%
+		padding-right: 24px
+	&__form
+		width: 75%
 
 
+@include max-screen($xl)
+	.cta
+		background-color: v(accent-color)
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+		&__inner
+			display: block
+			background: none
+			box-shadow: none
+			padding: 23px 0 20px
+		&__title
+			width: 100%
+			margin-bottom: 1.2em
+			padding-right: 0
+			font-size: 20px
+		&__form
+			width: 100%
 
 
-
-
+@include max-screen($md)
+	.cta
+		&__inner
+			max-width: 350px
+			margin: 0 auto
+			padding-bottom: 30px
+		&-form
+			&__row
+				display: block
+				margin-left: 0
+				margin-right: 0
+				.cols
+					padding-left: 0
+					padding-right: 0
+				.col-1-3
+					width: 100%
+		&__form 
+			.input
+				margin-bottom: 20px
+			.btn
+				width: 100%
+		
 
 
 
