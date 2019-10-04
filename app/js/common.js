@@ -165,7 +165,7 @@ $(function() {
 
 	// Слайдер на главной
 	$('.bg-slider').slick({
-		speed: 1200,
+		speed: 1800,
 		asNavFor: '.main-slider',
 		prevArrow: '<button type="button" class="slider-arrow slider-prev"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
 		nextArrow: '<button type="button" class="slider-arrow slider-next"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
@@ -183,24 +183,24 @@ $(function() {
 		arrows: false,
 		dots: true,
 		dotsClass: 'slider-dots',
-		speed: 1200,
+		speed: 1500,
 		fade: true,
 		asNavFor: '.bg-slider',
 	});
 
 
-	$('.bg-slider .slider-next').hover(function () {
-			$('.main-hero').addClass('slide-next');
-		}, function () {
-			$('.main-hero').removeClass('slide-next');
-		}
-	);
-	$('.bg-slider .slider-prev').hover(function () {
-			$('.main-hero').addClass('slide-prev');
-		}, function () {
-			$('.main-hero').removeClass('slide-prev');
-		}
-	);
+	// $('.bg-slider .slider-next').hover(function () {
+	// 		$('.main-hero').addClass('slide-next');
+	// 	}, function () {
+	// 		$('.main-hero').removeClass('slide-next');
+	// 	}
+	// );
+	// $('.bg-slider .slider-prev').hover(function () {
+	// 		$('.main-hero').addClass('slide-prev');
+	// 	}, function () {
+	// 		$('.main-hero').removeClass('slide-prev');
+	// 	}
+	// );
 
 
 
@@ -289,18 +289,11 @@ $(function() {
 		},
 	});
 
-	// Кнопка зума в карточке
-	$('.zoom-link').on('click', function(e){
-		e.preventDefault();
-		var item = $(this);
-		$.magnificPopup.open({
-			items: {
-				src: item.data('mfp-src'),
-				type: 'image',
-			},
-			showCloseBtn: false,
-			enableEscapeKey: false,
-		});
+
+	$('.zoom-link').fancybox({
+		buttons: [
+			"close"
+		]
 	});
 
 

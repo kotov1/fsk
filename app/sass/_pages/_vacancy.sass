@@ -68,20 +68,25 @@
 			margin: 0 auto
 			border: none
 			background-color: transparent
-			transition: none
-			&:hover
-				background-color: darken($additional-color, 3)
-				box-shadow: none
-				color: $black
-			&:focus
-				box-shadow: none
+			transition: color .1s linear
 			.svg
 				border-color: v(accent-color)
 				fill: v(accent-color)
 				stroke: v(accent-color)
+			&:hover
+				background-color: v(accent-color)
+				box-shadow: none
+				color: $white
+				.svg
+					border-color: $white
+					fill: $white
+					stroke: $white
+			&:focus
+				box-shadow: none
 
-	&--open
+	&:hover
 		box-shadow: $shadow1
+	&--open
 		.vacancy__content
 			max-height: 100%
 			&::after
@@ -100,6 +105,11 @@
 				font-size: 16px
 			&:hover
 				background-color: v(additional-color)
+				color: v(accent-color)
+				.svg
+					border-color: v(accent-color)
+					fill: v(accent-color)
+					stroke: v(accent-color)
 			.ic-arrow
 				transform: rotate(-90deg)
 

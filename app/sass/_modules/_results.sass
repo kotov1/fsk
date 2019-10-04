@@ -23,6 +23,12 @@
 		background-color: v(additional-color)
 		position: relative
 		z-index: 1
+		.ui-select__option
+			padding: 5px 10px
+			&::before
+				display: none
+		.ui-select__options
+			padding-top: 5px
 		
 	&__col
 		width: 660px
@@ -58,13 +64,20 @@
 		&__header
 			height: 50px
 			background-color: v(additional-color)
+			font-weight: 300
+			line-height: 1.5
 			.filter-data
-				color: v(accent-color)
+				font-weight: 500
 				white-space: nowrap
 
 		.simplebar-vertical
 			right: -13px
 			border-right: 1px solid v(border-color)
+
+		.results__row
+			@include trs(.1s)
+			&:hover
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
 
 
 	&__offer
@@ -364,8 +377,8 @@
 		white-space: nowrap
 	&__btn
 		position: absolute
-		top: 25px
-		right: 35px
+		top: 24px
+		right: 25px
 
 			
 	&-map

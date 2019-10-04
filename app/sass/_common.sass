@@ -151,7 +151,6 @@ ol.list
 
 
 .content
-	padding-bottom: 1.25rem
 	.img
 		margin-bottom: 1.25rem
 	.list:not(:last-child)
@@ -284,10 +283,12 @@ ol.list
 		span
 			display: inline-block
 			+ span:before
-				content: ">"
-				padding: 0 5px
-				font-weight: 500
-				color: v(accent-color)
+				content: ""
+				display: inline-block
+				width: 4px
+				height: 7px
+				background: url('../img/icons/ic-dropdown-arrow-accent.svg') no-repeat
+				margin: 0 4px
 			a
 				color: inherit
 				&:hover
