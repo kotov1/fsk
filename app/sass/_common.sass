@@ -148,7 +148,8 @@ ol.list
 		margin-right: 10px
 
 
-
+.section-margin
+	margin-top: 50px
 
 .content
 	.img
@@ -160,10 +161,10 @@ ol.list
 	.advantages-list
 		margin: 1rem 0 0
 	+ .content
-		margin-top: 2rem
+		margin-top: 50px
 
-
-
+.content-m-top
+	margin-top: calc(50px - 1rem)
 
 
 
@@ -205,6 +206,8 @@ ol.list
 				fill: $white
 				stroke: $white
 				border-color: $white
+			.ic-read *
+				stroke: $white
 	&--border
 		background-color: $white
 		border-color: v(accent-color)
@@ -219,6 +222,8 @@ ol.list
 		&:hover
 			background-color: v(cta-color) !important
 			box-shadow: 0 2px 7px -3px v(cta-color)
+		.ic-tel *
+			stroke: $white
 
 	&:hover
 		background-color: v(accent-color)
@@ -291,14 +296,16 @@ ol.list
 				margin: 0 4px
 			a
 				color: inherit
+				border-bottom: 1px dashed transparent
 				&:hover
-					color: v(accent-color)
+					color: inherit
+					border-bottom-color: currentColor
 
 			&:last-child
 				a
 					cursor: default
 					&:hover
-						color: $sub-text-color
+						border-bottom-color: transparent
 
 
 .close-btn

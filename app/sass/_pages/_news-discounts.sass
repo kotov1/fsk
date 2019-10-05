@@ -50,6 +50,7 @@
 			@include trs(3s)
 	&__img
 		width: 306px
+		min-height: 220px
 		overflow: hidden
 		position: relative
 		.img
@@ -129,7 +130,6 @@
 
 	.p-item__img
 		width: 50%
-		max-height: 250px
 
 
 
@@ -170,6 +170,9 @@
 		margin-right: auto
 		&__img
 			width: 100%
+			height: 56.25vw
+			min-height: 1px
+			max-height: 220px
 		&__content 
 			display: block
 			.btn
@@ -177,6 +180,9 @@
 				width: 100%
 				max-width: 290px
 				margin: 0 auto
+		&__title
+			max-height: 100%
+			margin-bottom: 20px
 
 	.p-label
 		margin-bottom: 10px

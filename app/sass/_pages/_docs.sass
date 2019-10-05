@@ -2,14 +2,31 @@
 .docs
 	&-hero
 		height: 300px
+		margin-bottom: 30px
 		&__inner
-			width: 761px
-			min-height: 106px
 			position: absolute
-			bottom: 0
+			bottom: 50px
 			left: 0
-			padding: 50px 15% 10px 24px
-			background: url("../img/svg-bg-el-2.svg") no-repeat 50% 0 /cover
+			padding: 19px 50px 19px 24px
+			background: rgba($accent-color, .9)
+			z-index: 1
+			&::before, &::after
+				content: ''
+				display: block
+				width: 50%
+				height: 50%
+				position: absolute
+				right: -10px
+				background: v(accent-color)
+				opacity: .9
+				z-index: -1
+			&::before
+				top: 0
+				transform: skew(25deg, 0deg)
+			&::after
+				bottom: 0
+				transform: skew(-25deg, 0deg)
+
 			.h1
 				font-weight: 500
 				color: $white
@@ -89,6 +106,38 @@
 				filter: invert(1)
 
 
+.doc-law
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+	padding: 24px
+	background: v(additional-color)
+	&__col-1
+		width: 52px
+		flex: 0 0 52px
+	&__txt
+		margin-bottom: 0
+		padding-left: 50px
+		padding-right: 25px
+		position: relative
+		font-size: 15px
+		line-height: 1.4
+		&::after
+			content: ''
+			display: block
+			width: 2px
+			height: 100%
+			position: absolute
+			left: 25px
+			top: 0
+			background: v(cta-color)
+	.btn
+		min-width: 142px
+
+
+
+
+
 
 @include max-screen($xl)
 
@@ -96,11 +145,30 @@
 		&-hero
 			height: 220px
 	.docs-hero__inner
-		width: 615px
+		.h1
+			font-size: 25px
 
 	.doc-list .col-1-4
 		width: 50%
 
+	.doc-law
+		flex-wrap: wrap
+	.doc-law__col-2
+		flex: 1 1 0
+		max-width: 100%
+	.doc-law__col-1, .doc-law__col-3
+		order: 1
+	.doc-law__col-3
+		width: 100%
+	.doc-law__txt
+		padding-left: 0
+		padding-right: 50px
+		&::after
+			left: auto
+			right: 25px
+	.doc-law .btn
+		min-width: 167px
+		margin-top: 30px
 
 
 @include max-screen($md)
@@ -111,10 +179,13 @@
 			margin-bottom: 20px
 	.docs-hero__inner
 		width: calc(100% - 30px)
+		bottom: 0
 		height: auto
 		left: 15px
-		padding: 50px 15% 10px 20px
+		padding: 50px 15% 15px 20px
 		background: url(../img/svg-bg-el-mob.svg) no-repeat 50% 0/cover
+		&::before, &::after
+			display: none
 		.h1
 			font-size: 20px
 
@@ -126,7 +197,35 @@
 		padding: 20px
 
 
-
+	.doc-law
+		flex-wrap: wrap
+		padding: 20px
+	.doc-law__col-1
+		margin-right: 48px
+	.doc-law__col-2
+		flex: 0 0 100%
+	.doc-law__col-3
+		flex: 1
+		width: auto
+	.doc-law__txt
+		padding-right: 0
+		margin-bottom: 30px
+		&::after
+			display: none
+	.doc-law__img
+		position: relative
+		&::after
+			content: ''
+			display: block
+			width: 2px
+			height: 100%
+			position: absolute
+			right: -24px
+			top: 0
+			background: $black
+	.doc-law .btn
+		min-width: 148px
+		margin-top: 0
 
 
 

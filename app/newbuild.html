@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>FSK - Новостройки</title>
+    <!-- Стили-->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header-->
+      <header class="header"></header>
+      <!-- /.header-->
+      <div class="page">
+        <div class="container">
+          <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList"><span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"> <a rel="nofollow" itemprop="item" title="Главная" href="/"> <span itemprop="name">Главная </span>
+                <meta itemprop="position" content="1"></a></span><span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"> <a rel="nofollow" itemprop="item" title="Новостройки" href="#"> <span itemprop="name">Новостройки</span>
+                <meta itemprop="position" content="2"></a></span></div>
+          <!-- /.breadcrumbs-->
+          <h2 class="h1 title">Выбор квартир</h2>
+          <div class="filter">
+            <div class="filter-mob">Фильтр по квартирам
+              <button class="ui-btn ui-btn--stroke" type="button"><img class="svg" src="img/icons/ic-dropdown-arrow.svg" alt="link" width="12" height="7"></button>
+            </div>
+            <div class="filter-mob-collapse">
+              <div class="filter-row">
+                <div class="filter-fields">
+                  <div class="filter__field filter-field">
+                    <div class="filter-field__label">Количество комнат</div>
+                    <div class="ui-checkbox-group">
+                      <div class="ui-checkbox">
+                        <input class="ui-checkbox__input" id="checkbox-rooms-0" type="checkbox" name="filter_rooms_C">
+                        <label class="ui-checkbox__label" for="checkbox-rooms-0">С</label>
+                      </div>
+                      <div class="ui-checkbox">
+                        <input class="ui-checkbox__input" id="checkbox-rooms-1" type="checkbox" name="filter_rooms_1">
+                        <label class="ui-checkbox__label" for="checkbox-rooms-1">1</label>
+                      </div>
+                      <div class="ui-checkbox">
+                        <input class="ui-checkbox__input" id="checkbox-rooms-2" type="checkbox" name="filter_rooms_2">
+                        <label class="ui-checkbox__label" for="checkbox-rooms-2">2</label>
+                      </div>
+                      <div class="ui-checkbox">
+                        <input class="ui-checkbox__input" id="checkbox-rooms-3" type="checkbox" name="filter_rooms_3">
+                        <label class="ui-checkbox__label" for="checkbox-rooms-3">3</label>
+                      </div>
+                      <div class="ui-checkbox">
+                        <input class="ui-checkbox__input" id="checkbox-rooms-4" type="checkbox" name="filter_rooms_4">
+                        <label class="ui-checkbox__label" for="checkbox-rooms-4">4</label>
+                      </div>
+                      <div class="ui-checkbox">
+                        <input class="ui-checkbox__input" id="checkbox-rooms-5" type="checkbox" name="filter_rooms_5">
+                        <label class="ui-checkbox__label" for="checkbox-rooms-5">5</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__field filter-field">
+                    <div class="filter-field__label">Стоимость, млн/р.</div>
+                    <div class="ui-range">
+                      <div class="ui-range__col"><span>от</span>
+                        <input class="ui-range__val ui-range__from" value="1.95">
+                      </div>
+                      <div class="ui-range__col"><span>до</span>
+                        <input class="ui-range__val ui-range__to" value="12.8">
+                      </div>
+                      <div class="ui-range__slider ui-range-cost"></div>
+                    </div>
+                  </div>
+                  <div class="filter__field filter-field">
+                    <div class="filter-field__label">Площадь, м<sup>2</sup></div>
+                    <div class="ui-range">
+                      <div class="ui-range__col"><span>от</span>
+                        <input class="ui-range__val ui-range__from" value="22">
+                      </div>
+                      <div class="ui-range__col"><span>до</span>
+                        <input class="ui-range__val ui-range__to" value="158">
+                      </div>
+                      <div class="ui-range__slider ui-range-size"></div>
+                    </div>
+                  </div>
+                  <div class="filter__field filter-field">
+                    <div class="filter-field__label">Готовность до</div>
+                    <select class="ui-select" name="select_period" data-placeholder="2021">
+                      <option value="2020">2020</option>
+                      <option class="active" value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- /.filter__row-->
+              <div class="filter-row filter__hidden">
+                <div class="filter-fields">
+                  <div class="filter__field filter-field">
+                    <div class="filter-field__label">Площадь кухни, м<sup>2</sup></div>
+                    <div class="ui-range">
+                      <div class="ui-range__col"><span>от</span>
+                        <input class="ui-range__val ui-range__from" value="12">
+                      </div>
+                      <div class="ui-range__col"><span>до</span>
+                        <input class="ui-range__val ui-range__to" value="46">
+                      </div>
+                      <div class="ui-range__slider ui-range-kitchen"></div>
+                    </div>
+                  </div>
+                  <div class="filter__field filter-field">
+                    <div class="filter-field__label">Этаж</div>
+                    <div class="ui-range">
+                      <div class="ui-range__col"><span>от</span>
+                        <input class="ui-range__val ui-range__from" value="1">
+                      </div>
+                      <div class="ui-range__col"><span>до</span>
+                        <input class="ui-range__val ui-range__to" value="26">
+                      </div>
+                      <div class="ui-range__slider ui-range-floor"></div>
+                    </div>
+                  </div>
+                  <div class="filter__field filter-field">
+                    <div class="filter-field__label">Корпус</div>
+                    <select class="ui-select" name="select_building" data-placeholder="2 корпус">
+                      <option value="1 корпус">1 корпус</option>
+                      <option class="active" value="2 корпус">2 корпус</option>
+                      <option value="3 корпус">3 корпус</option>
+                    </select>
+                  </div>
+                  <div class="filter__field filter-field-">
+                    <div class="filter-field__label">Апартаменты</div>
+                    <div class="ui-toggle">
+                      <div class="ui-toggle__item">
+                        <input class="ui-toggle__input" id="apartment-yes" type="radio" name="apartments" value="yes" checked>
+                        <label class="ui-toggle__label" for="apartment-yes">Отображать</label>
+                      </div>
+                      <div class="ui-toggle__item">
+                        <input class="ui-toggle__input" id="apartment-no" type="radio" name="apartments" value="no">
+                        <label class="ui-toggle__label" for="apartment-no">Скрыть</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.filter__row-->
+              <div class="filter-row filter__tech">
+                <button class="filter-additional" type="button">Дополнительные параметры</button>
+                <button class="filter-reset" type="button">Сбросить фильтр</button><a class="btn btn--bg" href="#"> <img class="svg btn__ic" src="img/icons/ic-search.svg" alt="phone" width="20" height="20">Показать результаты</a>
+              </div>
+              <!-- /.filter__row-->
+            </div>
+          </div>
+          <!-- /.filter-->
+          <div class="results results-geo">
+            <div class="results-geo__label">Показать <span class="results-geo__result">2 объекта</span></div>
+            <button class="ui-btn ui-btn--stroke results-geo__btn" type="button"><img class="svg" src="img/icons/ic-dropdown-arrow.svg" alt="link" width="12" height="7"></button>
+            <div class="map" id="map"></div>
+          </div>
+          <!-- /.results-->
+        </div>
+        <!-- /.container-->
+        <section class="section-margin">
+          <div class="container">
+            <h2 class="h1 title">Новостройки</h2>
+            <div class="quarter-list view-1">
+              <div class="quarter">
+                <div class="quarter__img-wrap"><img class="quarter__img" src="img/img-quarter.jpg" alt="alt">
+                  <div class="quarter__overlay"><img class="img" src="img/quarter-name.svg" width="277" height="70" alt="alt"></div>
+                </div>
+                <div class="quarter__content">
+                  <div class="quarter__title">UP-квартал Комендантский </div>
+                  <div class="quarter__transport flex">
+                    <div class="p-metro flex">
+                      <div class="p-metro__branch" style="border-color: #33B7FB;"></div><span>Московская</span>
+                    </div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-walk-dist.svg" width="8" height="13" alt="alt"><span>
+                        5 мин./пешком</span></div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-transport-dist.svg" width="15" height="16" alt="alt"><span>
+                        10 мин./транспортом</span></div>
+                  </div>
+                  <div class="quarter__info">
+                    <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.</p>
+                  </div>
+                  <div class="p-discount flex">
+                    <div class="p-discount__ic">%</div>
+                    <p class="p-discount__txt">Только до 15 сентября до 15%!</p>
+                  </div>
+                  <div class="quarter__footer">
+                    <div class="p-key p-key--blue">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Квартиры от <b>15.6 </b>млн/р.</div>
+                    </div>
+                    <div class="p-key p-key--green">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Ключи 1 оч. в 2020!</div>
+                    </div><a class="btn btn--bg" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="quarter">
+                <div class="quarter__img-wrap"><img class="quarter__img" src="img/img-quarter.jpg" alt="alt">
+                  <div class="quarter__overlay"><img class="img" src="img/quarter-name.svg" width="277" height="70" alt="alt"></div>
+                </div>
+                <div class="quarter__content">
+                  <div class="quarter__title">UP-квартал Комендантский </div>
+                  <div class="quarter__transport flex">
+                    <div class="p-metro flex">
+                      <div class="p-metro__branch" style="border-color: #33B7FB;"></div><span>Московская</span>
+                    </div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-walk-dist.svg" width="8" height="13" alt="alt"><span>
+                        5 мин./пешком</span></div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-transport-dist.svg" width="15" height="16" alt="alt"><span>
+                        10 мин./транспортом</span></div>
+                  </div>
+                  <div class="quarter__info">
+                    <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.</p>
+                  </div>
+                  <div class="p-discount flex">
+                    <div class="p-discount__ic">%</div>
+                    <p class="p-discount__txt">Только до 15 сентября до 15%!</p>
+                  </div>
+                  <div class="quarter__footer">
+                    <div class="p-key p-key--blue">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Квартиры от <b>15.6 </b>млн/р.</div>
+                    </div>
+                    <div class="p-key p-key--green">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Ключи 1 оч. в 2020!</div>
+                    </div><a class="btn btn--bg" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="quarter">
+                <div class="quarter__img-wrap"><img class="quarter__img" src="img/img-quarter.jpg" alt="alt">
+                  <div class="quarter__overlay"><img class="img" src="img/quarter-name.svg" width="277" height="70" alt="alt"></div>
+                </div>
+                <div class="quarter__content">
+                  <div class="quarter__title">UP-квартал Комендантский </div>
+                  <div class="quarter__transport flex">
+                    <div class="p-metro flex">
+                      <div class="p-metro__branch" style="border-color: #33B7FB;"></div><span>Московская</span>
+                    </div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-walk-dist.svg" width="8" height="13" alt="alt"><span>
+                        5 мин./пешком</span></div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-transport-dist.svg" width="15" height="16" alt="alt"><span>
+                        10 мин./транспортом</span></div>
+                  </div>
+                  <div class="quarter__info">
+                    <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.</p>
+                  </div>
+                  <div class="p-discount flex">
+                    <div class="p-discount__ic">%</div>
+                    <p class="p-discount__txt">Только до 15 сентября до 15%!</p>
+                  </div>
+                  <div class="quarter__footer">
+                    <div class="p-key p-key--blue">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Квартиры от <b>15.6 </b>млн/р.</div>
+                    </div>
+                    <div class="p-key p-key--green">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Ключи 1 оч. в 2020!</div>
+                    </div><a class="btn btn--bg" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="quarter">
+                <div class="quarter__img-wrap"><img class="quarter__img" src="img/img-quarter.jpg" alt="alt">
+                  <div class="quarter__overlay"><img class="img" src="img/quarter-name.svg" width="277" height="70" alt="alt"></div>
+                </div>
+                <div class="quarter__content">
+                  <div class="quarter__title">UP-квартал Комендантский </div>
+                  <div class="quarter__transport flex">
+                    <div class="p-metro flex">
+                      <div class="p-metro__branch" style="border-color: #33B7FB;"></div><span>Московская</span>
+                    </div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-walk-dist.svg" width="8" height="13" alt="alt"><span>
+                        5 мин./пешком</span></div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-transport-dist.svg" width="15" height="16" alt="alt"><span>
+                        10 мин./транспортом</span></div>
+                  </div>
+                  <div class="quarter__info">
+                    <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.</p>
+                  </div>
+                  <div class="p-discount flex">
+                    <div class="p-discount__ic">%</div>
+                    <p class="p-discount__txt">Только до 15 сентября до 15%!</p>
+                  </div>
+                  <div class="quarter__footer">
+                    <div class="p-key p-key--blue">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Квартиры от <b>15.6 </b>млн/р.</div>
+                    </div>
+                    <div class="p-key p-key--green">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Ключи 1 оч. в 2020!</div>
+                    </div><a class="btn btn--bg" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="quarter">
+                <div class="quarter__img-wrap"><img class="quarter__img" src="img/img-quarter.jpg" alt="alt">
+                  <div class="quarter__overlay"><img class="img" src="img/quarter-name.svg" width="277" height="70" alt="alt"></div>
+                </div>
+                <div class="quarter__content">
+                  <div class="quarter__title">UP-квартал Комендантский </div>
+                  <div class="quarter__transport flex">
+                    <div class="p-metro flex">
+                      <div class="p-metro__branch" style="border-color: #33B7FB;"></div><span>Московская</span>
+                    </div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-walk-dist.svg" width="8" height="13" alt="alt"><span>
+                        5 мин./пешком</span></div>
+                    <div class="p-distance flex"><img class="svg" src="img/icons/ic-transport-dist.svg" width="15" height="16" alt="alt"><span>
+                        10 мин./транспортом</span></div>
+                  </div>
+                  <div class="quarter__info">
+                    <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.</p>
+                  </div>
+                  <div class="p-discount flex">
+                    <div class="p-discount__ic">%</div>
+                    <p class="p-discount__txt">Только до 15 сентября до 15%!</p>
+                  </div>
+                  <div class="quarter__footer">
+                    <div class="p-key p-key--blue">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Квартиры от <b>15.6 </b>млн/р.</div>
+                    </div>
+                    <div class="p-key p-key--green">
+                      <div class="p-key__ic"> </div>
+                      <div class="p-key__txt">Ключи 1 оч. в 2020!</div>
+                    </div><a class="btn btn--bg" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.quarter-list 1-->
+          </div>
+          <!-- /.container-->
+        </section>
+        <!-- form-->
+        <div class="cta">
+          <div class="container">
+            <div class="cta__inner">
+              <div class="h2 cta__title">Нужна консультация специалиста?</div>
+              <div class="cta__form cta-form">
+                <form action="#">
+                  <div class="cta-form__row f-row">
+                    <div class="cols col-1-3">
+                      <input class="input" type="text" name="name" placeholder="Ваше имя" reqiured>
+                    </div>
+                    <div class="cols col-1-3">
+                      <input class="input" type="tel" name="tel" placeholder="Номер телефона" reqiured>
+                    </div>
+                    <div class="cols col-1-3">
+                      <button class="btn btn--cta" type="submit"> <img class="svg btn__ic" src="img/icons/ic-phone.svg" alt="phone" width="20" height="20">Позвоните мне</button>
+                    </div>
+                  </div>
+                  <p class="privacy">Отправляя форму, вы подтверждаете своё согласие на <a href="confidence.html" target="_blank">обработку персональных данных</a></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.form-->
+      </div>
+      <!-- /.page-->
+      <!-- footer-->
+      <footer class="footer"></footer>
+      <!-- Скрипты-->
+      <!-- Jquery с облака и замена в случае отсутствия доступа к облаку -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery || document.write('<script src="libs/jquery/jquery-3.4.1.min.js"><\/script>')
+        
+        
+      </script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+      <script src="libs/jquery.ui.touch-punch.js"></script>
+      <script src="js/scripts.js"></script>
+      <!-- /.footer-->
+    </div>
+    <!-- /.wrapper-->
+  </body>
+</html>

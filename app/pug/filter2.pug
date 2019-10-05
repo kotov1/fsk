@@ -105,14 +105,18 @@ html(lang="ru")
 										option.active(value="2 корпус") 2 корпус
 										option(value="3 корпус") 3 корпус
 								.filter__field.filter-field-result
-									a.btn.btn--bg(href="#") Найдено 
+									a.btn.btn--bg(href="#") 
+										img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
+										| Найдено 
 										span.filter-count 150 
 										| квартир
 					
 						.filter-row.filter__tech
 							button.filter-additional(type="button") Дополнительные параметры
 							button.filter-reset(type="button") Сбросить фильтр
-							a.btn.btn--bg(href="#") Показать результаты
+							a.btn.btn--bg(href="#") 
+								img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
+								| Показать результаты
 					// /.filter
 
 
@@ -509,15 +513,15 @@ html(lang="ru")
 								.results__img
 									img.img(src="img/img-plan.jpg", alt="plan")
 									button.results-offer__modal.js-call-card(type="button")
-										img.svg(src="img/icons/ic-flat-plan.svg", width="37", height="37", alt="flat plan")
+										img.svg(src="img/icons/ic-flat-plan.svg", width="36", height="44", alt="flat plan")
 								.results-offer__footer
 									.results-offer__text
 										p Интересует студия 22.3 м<sup>2</sup> ? 
 										p Посмотрите 
-											a(href="#") подробнее!
+											button.text-btn.js-call-card(button="button") подробнее!
 									.results-offer__btn
 										button.btn.btn--cta(type="button") 
-											img.svg.btn__ic(src="img/icons/ic-phone.svg", alt="phone", width="20", height="20") 
+											img.svg.btn__ic.ic-tel(src="img/icons/ic-tel.svg", alt="phone", width="12", height="20") 
 											| Позвоните мне
 							// /.results__offer
 						
