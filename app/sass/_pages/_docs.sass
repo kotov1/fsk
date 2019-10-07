@@ -179,13 +179,33 @@
 			margin-bottom: 20px
 	.docs-hero__inner
 		width: calc(100% - 30px)
+		max-width: 330px
 		bottom: 0
 		height: auto
 		left: 15px
-		padding: 50px 15% 15px 20px
-		background: url(../img/svg-bg-el-mob.svg) no-repeat 50% 0/cover
+		padding: 50px 10% 15px 15px
+		background: none
 		&::before, &::after
-			display: none
+			content: ''
+			display: block
+			width: 100%
+			position: absolute
+			left: 0
+			z-index: -1
+			transform: none
+		&::before
+			height: calc(100% - 67px)
+			bottom: 0
+			top: auto
+			background: v(accent-color)
+			opacity: 0.9
+		&::after
+			height: 67px
+			top: 0
+			right: 0
+			bottom: auto
+			background: url('../img/svg-el-top-gradient.svg') no-repeat 0 0 / cover
+			opacity: 1
 		.h1
 			font-size: 20px
 

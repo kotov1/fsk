@@ -22,6 +22,12 @@
   <body>
     <div class="wrapper">
       <!-- header-->
+      <div class="preloader">
+        <div class="pl">
+          <div class="pl__ball"></div>
+          <div class="pl__ball pl__ball--2"></div>
+        </div>
+      </div>
       <header class="header"></header>
       <!-- /.header-->
       <div class="page">
@@ -38,19 +44,19 @@
             <!-- main-slider-->
             <div class="main-slider">
               <div class="slide">
-                <div class="h2">Супер выгодная акция на&nbsp;квартиры в UP "Комендантский" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                <div class="h2 main-slider__title">Супер выгодная акция на&nbsp;квартиры в UP "Комендантский" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
               </div>
               <div class="slide">
-                <div class="h2">Супер выгодная акция на&nbsp;квартиры в UP "Московский" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                <div class="h2 main-slider__title">Супер выгодная акция на&nbsp;квартиры в UP "Московский" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
               </div>
               <div class="slide">
-                <div class="h2">Супер выгодная акция на&nbsp;квартиры в UP "Комендантский 2" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                <div class="h2 main-slider__title">Супер выгодная акция на&nbsp;квартиры в UP "Комендантский 2" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
               </div>
               <div class="slide">
-                <div class="h2">Супер выгодная акция на&nbsp;квартиры в UP "Московский 2" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                <div class="h2 main-slider__title">Супер выгодная акция на&nbsp;квартиры в UP "Московский 2" с&nbsp;продолжением продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
               </div>
               <div class="slide">
-                <div class="h2">Супер выгодная акция на&nbsp;квартиры в UP "Московский 3" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                <div class="h2 main-slider__title">Супер выгодная акция на&nbsp;квартиры в UP "Московский 3" с&nbsp;продолжением!</div><a class="btn btn--transp" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
               </div>
             </div>
           </div>
@@ -190,7 +196,32 @@
           <div class="results results-geo">
             <div class="results-geo__label">Показать <span class="results-geo__result">2 объекта</span></div>
             <button class="ui-btn ui-btn--stroke results-geo__btn" type="button"><img class="svg" src="img/icons/ic-dropdown-arrow.svg" alt="link" width="12" height="7"></button>
-            <div class="map" id="map"></div>
+            <div class="map" id="map"><img class="img" src="img/img-map.jpg" alt="alt" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="marker" style="top: 50px; left: 50px;"><svg class="marker__ic" xmlns="http://www.w3.org/2000/svg" width="51.97" height="56.362" viewBox="0 0 51.97 56.362"><g transform="translate(-1146.5 -1134)"><path d="M27.482,55.821a78.984,78.984,0,0,1,10.827-7.374c7.938-4.625,13.661-12.88,13.661-22.688a25.986,25.986,0,0,0-51.97,0c0,9.829,5.817,18.118,13.713,22.715A77.947,77.947,0,0,1,24.5,55.821,2.331,2.331,0,0,0,27.482,55.821Z" transform="translate(1146.5 1134)" fill="#030048"/><ellipse cx="12" cy="11.5" rx="12" ry="11.5" transform="translate(1160.296 1148.785)" fill="#fff"/></g></svg>
+                <div class="marker__hint">
+                  <div class="marker__title">Комендантский квартал</div>
+                  <div class="p-metro flex">
+                    <div class="p-metro__branch" style="border-color: #FFA7AF;"></div><span>Окружная</span>
+                  </div>
+                </div>
+              </div>
+              <div class="marker" style="top: 150px; left: 90px;"><svg class="marker__ic" xmlns="http://www.w3.org/2000/svg" width="51.97" height="56.362" viewBox="0 0 51.97 56.362"><g transform="translate(-1146.5 -1134)"><path d="M27.482,55.821a78.984,78.984,0,0,1,10.827-7.374c7.938-4.625,13.661-12.88,13.661-22.688a25.986,25.986,0,0,0-51.97,0c0,9.829,5.817,18.118,13.713,22.715A77.947,77.947,0,0,1,24.5,55.821,2.331,2.331,0,0,0,27.482,55.821Z" transform="translate(1146.5 1134)" fill="#030048"/><ellipse cx="12" cy="11.5" rx="12" ry="11.5" transform="translate(1160.296 1148.785)" fill="#fff"/></g></svg>
+                <div class="marker__hint">
+                  <div class="marker__title">Дыхание</div>
+                  <div class="p-metro flex">
+                    <div class="p-metro__branch" style="border-color: #A7CDFF;"></div><span>Окружная</span>
+                  </div>
+                </div>
+              </div>
+              <div class="marker" style="top: 250px; left: 130px;"><svg class="marker__ic" xmlns="http://www.w3.org/2000/svg" width="51.97" height="56.362" viewBox="0 0 51.97 56.362"><g transform="translate(-1146.5 -1134)"><path d="M27.482,55.821a78.984,78.984,0,0,1,10.827-7.374c7.938-4.625,13.661-12.88,13.661-22.688a25.986,25.986,0,0,0-51.97,0c0,9.829,5.817,18.118,13.713,22.715A77.947,77.947,0,0,1,24.5,55.821,2.331,2.331,0,0,0,27.482,55.821Z" transform="translate(1146.5 1134)" fill="#030048"/><ellipse cx="12" cy="11.5" rx="12" ry="11.5" transform="translate(1160.296 1148.785)" fill="#fff"/></g></svg>
+                <div class="marker__hint">
+                  <div class="marker__title">Римский</div>
+                  <div class="p-metro flex">
+                    <div class="p-metro__branch" style="border-color: #A7FFB0;"></div><span>Окружная</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- /.results-->
           <div class="results-empty">По вашему запросу ничего не найдено :(</div>
@@ -214,8 +245,8 @@
                   <div class="p-distance flex"><img class="svg" src="img/icons/ic-transport-dist.svg" width="15" height="16" alt="alt"><span>
                       10 мин./транспортом</span></div>
                 </div>
-                <div class="quarter__info">
-                  <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.</p>
+                <div class="quarter__info my-readmore">
+                  <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие. 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие</p>
                 </div>
                 <div class="p-discount flex">
                   <div class="p-discount__ic">%</div>
@@ -229,7 +260,7 @@
                   <div class="p-key p-key--green">
                     <div class="p-key__ic"> </div>
                     <div class="p-key__txt">Ключи 1 оч. в 2020!</div>
-                  </div><a class="btn btn--bg" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                  </div><a class="btn btn--bg quarter-link" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -248,7 +279,7 @@
                   <div class="p-distance flex"><img class="svg" src="img/icons/ic-transport-dist.svg" width="15" height="16" alt="alt"><span>
                       10 мин./транспортом</span></div>
                 </div>
-                <div class="quarter__info">
+                <div class="quarter__info my-readmore">
                   <p>240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.</p>
                 </div>
                 <div class="p-discount flex">
@@ -263,7 +294,7 @@
                   <div class="p-key p-key--green">
                     <div class="p-key__ic"> </div>
                     <div class="p-key__txt">Ключи 1 оч. в 2020!</div>
-                  </div><a class="btn btn--bg" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
+                  </div><a class="btn btn--bg quarter-link" href="#"> <img class="svg btn__ic ic-arrow" src="img/icons/ic-arrow.svg" alt="link" width="20" height="20">Подробнее</a>
                 </div>
               </div>
             </div>

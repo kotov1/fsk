@@ -139,6 +139,7 @@ button
 	background-color: transparent
 	border: none
 	border-radius: 0
+	appearance: none
 	cursor: pointer
 	&:focus
 		box-shadow: 0 0 .5px v(accent-color)
@@ -226,6 +227,20 @@ textarea
 
 .mfp-wrap ~ *
 	filter: blur(5px)
+
+.mfp-card
+	background: rgba($white, .5)
+.fancybox-bg
+	background: $white
+@include max-screen($xl)
+	.mfp-card
+		opacity: 1
+		background: $white
+		~ *
+			filter: none
+		+ .mfp-wrap	
+			.mfp-container
+				padding: 0
 
 @media (max-width: 900px)
 	.mfp-container

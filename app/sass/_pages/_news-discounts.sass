@@ -9,17 +9,30 @@
 	border-radius: $bd-r
 	&__inner
 		width: 511px
-		height: 251px
-		padding: 60px 100px 24px 24px
+		padding: 64px 100px 24px 24px
 		position: absolute
-		bottom: -1px
-		left: 0
+		bottom: 0
+		left: 24px
 		z-index: 1
 		color: $white
-		background: url('../img/svg-bg-el.svg') no-repeat 50% 100% / cover
+		&::before, &::after
+			content: ''
+			display: block
+			width: 100%
+			position: absolute
+			left: 0
+			z-index: -1
+		&::before
+			height: calc(100% - 126px)
+			bottom: 0
+			background: v(accent-color)
+			opacity: 0.9
+		&::after
+			height: 126px
+			top: 0
+			background: url('../img/svg-el-top.svg') no-repeat 0 0 / cover
 	&__title
-		margin-top: 23px
-		margin-bottom: 1em
+		margin: 22px 0
 		line-height: 1.2
 	&__top, &__bottom, .breadcrumbs
 		opacity: 0.8
@@ -28,10 +41,11 @@
 		// margin-bottom: 23px
 	&__bottom
 		font-size: 14px
-	.breadcrumbs, .breadcrumbs > span + span:before
-		color: inherit
 	.breadcrumbs
 		padding-bottom: 2px
+		color: inherit
+		> span + span::before
+			background-image: url('../img/icons/ic-breadcrumb-white.svg') 
 
 
 .p-item
@@ -137,26 +151,36 @@
 
 	.p-hero
 		width: calc(100% + 30px)
-		height: auto
+		height: 200px
 		margin-left: -15px
 		padding-left: 15px
 		padding-right: 15px
-		padding-top: 100px
-		background-size: auto 200px
+		margin-bottom: 125px
 		
 		&__inner
-			width: 100%
-			height: auto
-			margin-bottom: 100px
-			position: relative
-			left: auto
-			bottom: auto
-			padding: 58px 34% 15px 15px
-			background: url("../img/svg-bg-el-mob.svg") no-repeat 50% 0 /cover
+			width: calc(100% - 30px)
+			max-width: 330px
+			padding: 36px 10% 15px 15px
+			left: 15px
+			bottom: -50px
+			&::before
+				height: calc(100% - 67px)
+				opacity: 1
+			&::after
+				height: 67px
+				background-image: url('../img/svg-el-top-gradient.svg')
+
+		.breadcrumbs
+			> span + span::before
+				background-image: url('../img/icons/ic-breadcrumb-accent.svg') 
+
+				
 		&__title
-			margin: 0
+			margin: 10px 0 0
 			font-size: 20px
-		&__top, &__bottom
+		&__top
+			font-size: 14px
+		&__bottom
 			display: none
 		.breadcrumbs
 			position: absolute
@@ -175,6 +199,7 @@
 			max-height: 220px
 		&__content 
 			display: block
+			padding: 20px
 			.btn
 				display: flex
 				width: 100%
@@ -191,8 +216,8 @@
 
 @include max-screen($sm)
 	.p-hero
-		&__inner
-			padding-right: 17%
+		border-radius: 0
+
 
 
 

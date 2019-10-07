@@ -264,8 +264,6 @@
 		font-size: 16px
 		font-weight: 500
 
-.results-cell-btns .interactive-follow
-	display: none
 
 
 
@@ -300,7 +298,8 @@
 		display: block
 		flex: 0 0 38px
 		width: 38px
-		.interactive-btn
+		.interactive-follow
+			display: block
 			margin: 0 auto
 
 	.results-more
@@ -343,13 +342,6 @@
 	.results-cell-mob
 		display: block
 
-	.results-cell-btns
-		.interactive-favorite
-			display: none
-		.interactive-follow
-			display: block
-
-
 	.mob-sort
 		display: flex
 
@@ -376,7 +368,21 @@
 
 .results-geo
 	height: 100px
-	background: url('../img/img-map.jpg') no-repeat 50% 50% / cover
+	background: url('../img/img-map-min.jpg') no-repeat 50% 50% / cover
+	position: relative
+	z-index: 1
+	&::after
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background: $white
+		opacity: 0.7
+		z-index: -1
+		@include trs(.1s)
 	&__label
 		height: 100%
 		display: inline-flex
@@ -401,18 +407,63 @@
 		position: absolute
 		top: 24px
 		right: 25px
+		z-index: 2
 
+	.map
+		visibility: hidden
+		position: relative
+
+	
 			
 	&-map
 		background: none
 		height: 617px
+		&::after
+			visibility: hidden
 		.results-geo__label
 			display: none
 		.results-geo__btn
 			transform: scale(-1)
 		.map
 			height: 100%
+			visibility: visible
 			overflow: hidden
+
+
+
+
+
+.marker
+	display: flex
+	align-items: 
+	position: absolute
+	&__ic
+		width: 52px
+		height: 57px
+		position: relative
+		z-index: 1
+	&__hint
+		height: 49px
+		padding: 5px 18px 8px 40px
+		margin: 5px 0 0 -30px
+		background: $white
+		box-shadow: 0 8px 15px rgba(#938F8A, .1)
+		border-top-right-radius: 6px
+		border-bottom-right-radius: 6px
+	&__title
+		font-weight: 500
+		white-space: nowrap
+	.p-metro
+		font-size: 10px
+		&__branch
+			width: 12px
+			flex: 0 0 12px
+			height: 12px
+			margin-right: 5px
+
+
+
+
 
 
 .results-empty
@@ -436,6 +487,8 @@
 		background-size: 100%
 
 
+
+
 @include max-screen($xl)
 	.results-geo__btn
 		right: 24px
@@ -448,6 +501,7 @@
 		&__label
 			width: 100%
 			height: 50px
+			padding: 0 15px
 			background: $additional-color
 			&::after
 				display: none

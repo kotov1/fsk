@@ -34,27 +34,27 @@ html(lang="ru")
 						// main-slider
 						.main-slider
 							.slide
-								.h2 Супер выгодная акция на&nbsp;квартиры в UP "Комендантский" с&nbsp;продолжением!
+								.h2.main-slider__title Супер выгодная акция на&nbsp;квартиры в UP "Комендантский" с&nbsp;продолжением!
 								a.btn.btn--transp(href="#") 
 									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 									| Подробнее
 							.slide
-								.h2 Супер выгодная акция на&nbsp;квартиры в UP "Московский" с&nbsp;продолжением!
+								.h2.main-slider__title Супер выгодная акция на&nbsp;квартиры в UP "Московский" с&nbsp;продолжением!
 								a.btn.btn--transp(href="#") 
 									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 									| Подробнее
 							.slide
-								.h2 Супер выгодная акция на&nbsp;квартиры в UP "Комендантский 2" с&nbsp;продолжением!
+								.h2.main-slider__title Супер выгодная акция на&nbsp;квартиры в UP "Комендантский 2" с&nbsp;продолжением!
 								a.btn.btn--transp(href="#") 
 									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 									| Подробнее
 							.slide
-								.h2 Супер выгодная акция на&nbsp;квартиры в UP "Московский 2" с&nbsp;продолжением!
+								.h2.main-slider__title Супер выгодная акция на&nbsp;квартиры в UP "Московский 2" с&nbsp;продолжением продолжением!
 								a.btn.btn--transp(href="#") 
 									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 									| Подробнее
 							.slide
-								.h2 Супер выгодная акция на&nbsp;квартиры в UP "Московский 3" с&nbsp;продолжением!
+								.h2.main-slider__title Супер выгодная акция на&nbsp;квартиры в UP "Московский 3" с&nbsp;продолжением!
 								a.btn.btn--transp(href="#") 
 									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 									| Подробнее
@@ -189,6 +189,29 @@ html(lang="ru")
 
 
 						.map#map
+							img.img(src="img/img-map.jpg", alt="alt", style="width: 100%; height: 100%; object-fit: cover;")
+							.marker(style="top: 50px; left: 50px;")
+								<svg class="marker__ic" xmlns="http://www.w3.org/2000/svg" width="51.97" height="56.362" viewBox="0 0 51.97 56.362"><g transform="translate(-1146.5 -1134)"><path d="M27.482,55.821a78.984,78.984,0,0,1,10.827-7.374c7.938-4.625,13.661-12.88,13.661-22.688a25.986,25.986,0,0,0-51.97,0c0,9.829,5.817,18.118,13.713,22.715A77.947,77.947,0,0,1,24.5,55.821,2.331,2.331,0,0,0,27.482,55.821Z" transform="translate(1146.5 1134)" fill="#030048"/><ellipse cx="12" cy="11.5" rx="12" ry="11.5" transform="translate(1160.296 1148.785)" fill="#fff"/></g></svg>
+								.marker__hint
+									div.marker__title Комендантский квартал
+									.p-metro.flex
+										.p-metro__branch(style="border-color: #FFA7AF;")
+										span Окружная
+							.marker(style="top: 150px; left: 90px;")
+								<svg class="marker__ic" xmlns="http://www.w3.org/2000/svg" width="51.97" height="56.362" viewBox="0 0 51.97 56.362"><g transform="translate(-1146.5 -1134)"><path d="M27.482,55.821a78.984,78.984,0,0,1,10.827-7.374c7.938-4.625,13.661-12.88,13.661-22.688a25.986,25.986,0,0,0-51.97,0c0,9.829,5.817,18.118,13.713,22.715A77.947,77.947,0,0,1,24.5,55.821,2.331,2.331,0,0,0,27.482,55.821Z" transform="translate(1146.5 1134)" fill="#030048"/><ellipse cx="12" cy="11.5" rx="12" ry="11.5" transform="translate(1160.296 1148.785)" fill="#fff"/></g></svg>
+								.marker__hint
+									div.marker__title Дыхание
+									.p-metro.flex
+										.p-metro__branch(style="border-color: #A7CDFF;")
+										span Окружная
+							.marker(style="top: 250px; left: 130px;")
+								<svg class="marker__ic" xmlns="http://www.w3.org/2000/svg" width="51.97" height="56.362" viewBox="0 0 51.97 56.362"><g transform="translate(-1146.5 -1134)"><path d="M27.482,55.821a78.984,78.984,0,0,1,10.827-7.374c7.938-4.625,13.661-12.88,13.661-22.688a25.986,25.986,0,0,0-51.97,0c0,9.829,5.817,18.118,13.713,22.715A77.947,77.947,0,0,1,24.5,55.821,2.331,2.331,0,0,0,27.482,55.821Z" transform="translate(1146.5 1134)" fill="#030048"/><ellipse cx="12" cy="11.5" rx="12" ry="11.5" transform="translate(1160.296 1148.785)" fill="#fff"/></g></svg>
+								.marker__hint
+									div.marker__title Римский
+									.p-metro.flex
+										.p-metro__branch(style="border-color: #A7FFB0;")
+										span Окружная
+
 
 					// /.results
 
@@ -220,8 +243,8 @@ html(lang="ru")
 										img.svg(src="img/icons/ic-transport-dist.svg", width="15", height="16", alt="alt")
 										span 10 
 											| мин./транспортом
-								.quarter__info
-									p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.
+								.quarter__info.my-readmore
+									p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие. 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие
 								.p-discount.flex
 									.p-discount__ic %
 									p.p-discount__txt Только до 15 сентября до 15%!
@@ -234,7 +257,7 @@ html(lang="ru")
 									.p-key.p-key--green
 										.p-key__ic 
 										.p-key__txt Ключи 1 оч. в 2020!
-									a.btn.btn--bg(href="#") 
+									a.btn.btn--bg.quarter-link(href="#") 
 										img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 										| Подробнее
 						.quarter
@@ -256,7 +279,7 @@ html(lang="ru")
 										img.svg(src="img/icons/ic-transport-dist.svg", width="15", height="16", alt="alt")
 										span 10 
 											| мин./транспортом
-								.quarter__info
+								.quarter__info.my-readmore
 									p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.
 								.p-discount.flex
 									.p-discount__ic %
@@ -270,7 +293,7 @@ html(lang="ru")
 									.p-key.p-key--green
 										.p-key__ic 
 										.p-key__txt Ключи 1 оч. в 2020!
-									a.btn.btn--bg(href="#") 
+									a.btn.btn--bg.quarter-link(href="#") 
 										img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 										| Подробнее
 										
@@ -442,6 +465,10 @@ html(lang="ru")
 			
 
 		// /.wrapper
+
+
+	
+
 		
 
 

@@ -31,11 +31,14 @@
 		position: relative
 
 .bg-slider
+	width: calc(100% + 24px)
+	margin-left: -12px
 	.slick-list
 		overflow: visible
 	.slide
 		margin-left: 12px
 		margin-right: 12px
+
 	.img
 		width: 1200px
 		height: 500px
@@ -54,25 +57,32 @@
 		right: -10vw
 
 .main-slider
-	width: 493px
-	height: 287px
+	width: 511px
 	padding: 90px 58px 24px 24px
 	position: absolute
 	bottom: 0
-	left: 36px
+	left: 44px
 	z-index: 1
 	color: $white
-	&::before
+	&::before, &::after
 		content: ''
 		display: block
 		width: 100%
-		height: 100%
 		position: absolute
 		left: 0
-		top: 0
-		background: url('../img/svg-bg-el-3.svg') no-repeat 50% 0 / cover
-		opacity: 0.9
 		z-index: -1
+	&::before
+		height: calc(100% - 126px)
+		bottom: 0
+		background: v(accent-color)
+		opacity: 0.9
+	&::after
+		height: 126px
+		top: 0
+		background: url('../img/svg-el-top.svg') no-repeat 0 0 / cover
+	&__title
+		padding-right: 5%
+		letter-spacing: -.005em
 	.btn
 		margin-top: 25px
 		color: $white
@@ -80,6 +90,14 @@
 			fill: $white
 			stroke: $white
 			border-color: $white
+		&:hover
+			background-color: rgba($white, .8)
+			border-color: rgba($white, .8)
+			color: v(accent-color)
+			.btn__ic
+				fill: v(accent-color)
+				stroke: v(accent-color)
+				border-color: v(accent-color)
 
 	.slider-dots
 		position: absolute
@@ -116,11 +134,11 @@
 
 	.main-slider
 		width: 450px
-		height: 262px
 		padding-top: 84px
-		.h2
-			font-size: 20px
-			min-height: 78px
+	.main-slider__title
+		font-size: 20px
+		padding-right: 1%
+
 
 @include max-screen($lg)
 
@@ -130,17 +148,18 @@
 
 	.main-slider
 		width: 410px
-		height: 238px
-		padding-top: 65px
+		padding-top: 70px
 		.slider-dots
-			top: 50px
+			top: 55px
 		.btn
 			margin-top: 20px
 
 @include max-screen($md)
 
 	.main-hero
-		margin-bottom: 120px
+		padding-bottom: 120px
+		.container
+			position: static
 
 	.bg-slider 
 		width: calc(100% + 30px)
@@ -150,14 +169,31 @@
 
 	.main-slider
 		width: calc(100% - 30px)
-		height: auto
-		left: 15px
-		transform: translateY(50%)
+		max-width: 330px
+		left: 50%
+		transform: translateX(-77.5%)
 		padding: 70px 15px 15px
+		&__title
+			min-height: 96px
 		.btn
-			display: none
+			display: flex
 		&::before
-			background: url("../img/svg-bg-el-mob.svg") no-repeat 50% 0 /cover
+			height: calc(100% - 67px)
+			opacity: 1
+		&::after
+			height: 67px
+			background-image: url('../img/svg-el-top-gradient.svg')
+	
+	.main-slider .slider-dots
+		left: 10px
+
+@include max-screen($sm)
+	.main-slider
+		transform: none
+		left: 15px
+
+
+
 
 
 .quarter
@@ -210,8 +246,18 @@
 			.svg *
 				fill: #bebebe
 	&__info
+		position: relative
 		p
 			margin-bottom: 0
+		a
+			display: inline-block
+			margin-left: .1em
+			color: v(sub-text-color)
+			line-height: 1
+			border-bottom: 1px dashed transparent
+			&:hover
+				border-bottom-color: currentColor
+
 	&__footer
 		display: flex
 		flex-wrap: wrap
@@ -232,7 +278,7 @@
 	.quarter__title
 		font-size: 25px
 	.quarter__info
-		max-height: 63px
+		max-height: 64px
 		overflow: hidden
 	.quarter__footer
 		.p-key
@@ -447,8 +493,9 @@
 
 
 
-
-
+@include max-screen($sm)
+	.view-1 .quarter__info
+		max-height: 105px
 
 
 

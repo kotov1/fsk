@@ -1,21 +1,25 @@
 .card.mfp-hide#card-example
 	.card__inner
 		button.close-btn.mfp-close(type="button")
-		.h1.card__title 3-комнатная квартира, 42 м² за 7,2 млн руб.
+		.h1.card__title 3-к квартира, 42 м<sup>2</sup>.
 		.card__body.js-tab-wrapper
 			.card__col-1
-				.card__tabs.js-tabs
-					button.js-tab.js-tab--active(type="button") Планировка
-					button.js-tab(type="button") На этаже
-					button.js-tab(type="button") Схема корпусов
-					button.js-tab(type="button") Отделка
+				.card__tabs-wrap
+					.card__tabs.js-tabs
+						button.js-tab.js-tab--active(type="button") Планировка
+						button.js-tab(type="button") На этаже
+						button.js-tab(type="button") Схема корпусов
+						button.js-tab(type="button") Отделка
 				.tooltip
 					.tooltip__icon
 					.tooltip__hidden Информация на данном сайте, и в частности, на текущей странице не является офертой и размещена для ознакомления. Данная планировка не является технической документацией представлена для ознакомления.
 			.card__col-2
 				.card__img.js-tab-item
-					button.ui-btn.zoom-link(href="img/img-plan-big.jpg")
-						img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
+					.card-img-btns
+						button.ui-btn.zoom-link(href="img/img-plan-big.jpg")
+							img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
+						a.interactive-btn.interactive-favorite(href="#")
+							img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 					img.img(src="img/img-plan.jpg", alt="plan")
 				.card__img.js-tab-item
 				.card__img.js-tab-item
@@ -63,7 +67,7 @@
 							span.card-id ID квартиры: 45 702
 							.card-btn
 								button.btn.btn--cta(type="button") 
-									img.svg.btn__ic(src="img/icons/ic-phone.svg", alt="phone", width="20", height="20") 
+									img.svg.btn__ic.ic-tel(src="img/icons/ic-tel.svg", alt="phone", width="12", height="20") 
 									| Позвоните мне
 		// /.card__body
 		
