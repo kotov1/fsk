@@ -146,6 +146,8 @@ ol.list
 	&__img
 		min-width: 32px
 		margin-right: 10px
+		.img
+			margin-bottom: 0 !important
 
 
 .section-margin
@@ -170,6 +172,7 @@ ol.list
 
 /* ----- Buttons ----- */
 .btn
+	position: relative
 	display: inline-flex
 	align-items: center
 	justify-content: center
@@ -182,6 +185,11 @@ ol.list
 	font-size: 16px
 	font-weight: 300
 	@include trs(.1s)
+	&:hover
+		@include trs(.1s)
+		color: $white
+	&:focus
+		box-shadow: 0 0 5px v(accent-color)
 	&--bg
 		background-color: v(accent-color)
 		border-color: v(accent-color)
@@ -196,6 +204,7 @@ ol.list
 		background-color: transparent
 		border-color: v(border-color)
 		color: v(text-color)
+		transition-delay: .2s
 		.btn__ic
 			fill: v(accent-color)
 			stroke: v(accent-color)
@@ -221,15 +230,13 @@ ol.list
 		color: $white
 		&:hover
 			background-color: v(cta-color) !important
-			box-shadow: 0 2px 7px -3px v(cta-color)
+			box-shadow: 0 0 7px 2px v(cta-color)
 		.ic-tel *
 			stroke: $white
+		.ripple-effect
+			display: none !important
 
-	&:hover
-		background-color: v(accent-color)
-		color: $white
-	&:focus
-		box-shadow: 0 0 5px v(accent-color)
+
 
 	&__ic
 		display: inline-block
@@ -281,7 +288,7 @@ ol.list
 
 /* ----- breadcrumbs ----- */
 .breadcrumbs
-	padding-bottom: 20px
+	padding: 20px 0
 	font-size: 14px
 	color: $sub-text-color
 	>
@@ -439,6 +446,37 @@ ol.list
 		flex: 1
 		max-width: 100%
 		font-weight: 500
+
+
+	
+.lk-link, .vk-link 
+	display: inline-flex
+	align-items: center
+	&::before
+		content: ''
+		display: inline-block
+		margin-right: 10px
+		background-repeat: no-repeat
+		background-size: 100%
+		@include trs(.1s)
+	&:hover::before
+		transform: translateX(2px)
+.lk-link
+	&::before
+		width: 19px
+		flex: 0 0 19px
+		height: 19px
+		background-image: url('../img/icons/ic-login.svg')
+.vk-link
+	&::before
+		width: 20px
+		flex: 0 0 20px
+		height: 12px
+		background-image: url('../img/icons/ic-vk.svg')
+
+
+
+
 
 
 

@@ -2,6 +2,7 @@
 
 .main-hero
 	position: relative
+	overflow: hidden
 	margin-bottom: 50px
 	&::before, &::after
 		content: ''
@@ -86,18 +87,24 @@
 	.btn
 		margin-top: 25px
 		color: $white
+		transition-delay: 0s
+		&::before
+			display: none
+		&::after
+			background: rgba($black, .8)
 		.btn__ic
 			fill: $white
 			stroke: $white
 			border-color: $white
 		&:hover
 			background-color: rgba($white, .8)
-			border-color: rgba($white, .8)
+			border-color: transparent
 			color: v(accent-color)
 			.btn__ic
 				fill: v(accent-color)
 				stroke: v(accent-color)
 				border-color: v(accent-color)
+				
 
 	.slider-dots
 		position: absolute
@@ -157,7 +164,7 @@
 @include max-screen($md)
 
 	.main-hero
-		padding-bottom: 120px
+		padding-bottom: 180px
 		.container
 			position: static
 
@@ -191,11 +198,20 @@
 	.main-slider
 		transform: none
 		left: 15px
+		background: linear-gradient(180deg, transparent 11vw, v(accent-color) 7vw)
+		max-width: 100%
+		&::after
+			height: 21vw
+			top: -8.5vw
 
+@include max-screen(420px)
+	.main-slider
+		background: linear-gradient(180deg, transparent 16vw, v(accent-color) 7vw)
+		&::after
+			top: -3vw
 
-
-
-
+.quarter-list
+	margin-bottom: -30px
 .quarter
 	display: flex
 	flex-wrap: wrap
@@ -212,6 +228,8 @@
 		width: 100%
 		height: 100%
 		object-fit: cover
+		border-top-left-radius: $bd-r
+		border-bottom-left-radius: $bd-r
 	&__overlay
 		display: flex
 		align-items: center
@@ -249,14 +267,6 @@
 		position: relative
 		p
 			margin-bottom: 0
-		a
-			display: inline-block
-			margin-left: .1em
-			color: v(sub-text-color)
-			line-height: 1
-			border-bottom: 1px dashed transparent
-			&:hover
-				border-bottom-color: currentColor
 
 	&__footer
 		display: flex
@@ -287,6 +297,16 @@
 .view-2
 	.quarter__title
 		font-size: 18px
+
+.my-readmore
+	a
+		display: inline-block
+		margin-left: .1em
+		color: v(sub-text-color)
+		line-height: 1
+		border-bottom: 1px dashed transparent
+		&:hover
+			border-bottom-color: currentColor
 
 
 .p-key
@@ -326,6 +346,8 @@
 @include max-screen($xl)
 	.quarter__img-wrap
 		width: 100%
+	.quarter__img
+		border-radius: 0
 
 	.quarter__transport
 		margin-bottom: 15px
@@ -372,7 +394,7 @@
 			margin-top: 17px
 		.btn
 			display: flex
-			width: 250px
+			width: 100%
 			margin: 20px 0 0
 
 

@@ -2,7 +2,263 @@
 
 .header
 	width: 100%
+	height: 60px
 	position: fixed
 	left: 0
 	top: 0
+	z-index: 10000
+	&__top
+		height: 100%
+		display: flex
+		align-items: center
+		padding: 0 2% 0 3.5%
+		position: relative
+		z-index: 1
+		background-color: $white
+		box-shadow: $shadow1
+
+	.logo
+		width: 128px
+		height: 43px
+
+
+
+.header-call
+	display: flex
+	align-items: center
+	margin-left: auto
+	&__ic
+		width: 40px
+		flex: 0 0 40px
+		height: 40px
+		border-radius: 50%
+		background: v(cta-color) url('../img/icons/ic-tel-white.svg') no-repeat 50% 50% / 12px 20px
+	&__data
+		padding-left: 10px
+		a
+			display: block
+			margin-bottom: 2px
+			font-weight: 500
+	&__btn
+		display: block
+		font-size: 10px
+		color: v(sub-text-color)
+		border-bottom: 1px dashed currentColor
+		&:hover
+			border-bottom-color: transparent
+
+
+
+.header-top__link
+	width: 200px
+	min-width: 1px
+	height: 40px
+	margin-left: 33px
+	font-weight: 500
+
+
+
+
+
+.menu-trigger
+	display: block
+	position: relative
+	width: 30px
+	height: 30px
+	margin: 0 22px
+	color: $black
+	&:focus
+		box-shadow: none
+	&__ic
+		width: 12px
+		height: 2px
+		border-radius: 15px
+		background-color: currentColor
+		border-radius: 30px
+		position: absolute
+		top: 50%
+		margin: -1px 0 0 7.5px
+		left: 0
+		z-index: 10
+		transition: all .25s
+		&::before, &::after  
+			content: ""
+			width: 15px
+			height: 2px
+			position: absolute
+			left: 0
+			border-radius: 15px
+			background-color: currentColor
+			border-radius: 30px
+			transition: all .25s					
+		&::before
+			top: -6px
+		&::after 
+			top: 6px
+
+	&.menu-open
+		.menu-trigger__ic
+			background: transparent
+			&::before, &::after 
+				width: 20px
+				top: 0
+				left: -3px
+				background-color: v(accent-color)
+			&::before
+				transform: rotate(45deg)
+			&::after 
+				transform: rotate(-45deg)
+
+
+.main-menu
+	display: flex
+	align-items: center
+	margin: 0
+	padding: 0
+	list-style: none
+	li
+		margin-right: 30px
+	a
+		display: flex
+		align-items: center
+		height: 60px
+		font-weight: 500
+		text-transform: uppercase
+		position: relative
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 2px
+			position: absolute
+			left: 0
+			bottom: 0
+			background: v(accent-color)
+			transform: scale(0)
+			opacity: 0
+			@include trs(.1s)
+		&:hover
+			color: v(accent-color)
+	.active
+		a
+			&::after
+				transform: scale(1)
+				opacity: 1
+
+
+
+.sub-menu
+	padding: 50px 0 0
+	&__title
+		font-size: 18px
+		font-weight: 500
+		text-transform: uppercase
+		position: relative
+		padding-bottom: 17px
+		margin-bottom: 17px
+		&::after
+			content: ''
+			display: block
+			width: 40px
+			height: 3px
+			position: absolute
+			left: 0
+			bottom: 0
+			background: v(accent-color)
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		li
+			margin-bottom: .6em
+		+ .sub-menu__title
+			margin-top: 35px
+
+
+
+.toggle-menu
+	width: 100%
+	position: absolute
+	left: 0
+	top: 100%
+	background-color: rgba($white, .95)
+	transform-origin: 100% 50%
+	will-change: transform
+	transform: translate3d(0, -100%, 0)
+	opacity: 0
+	transition: transform .4s ease, opacity .5s ease-in
+	.sub-menu__title, .sub-menu__list
+		transform: translate3d(0, -30px, 0)
+		opacity: 0
+		transition: transform .3s linear, opacity .35s linear
+	.sub-contacts
+		opacity: 0
+		transition: opacity .7s ease
+
+	&.menu-open
+		transform: translate3d(0, 0, 0)
+		opacity: 1
+		.sub-menu__title, .sub-menu__list
+			transform: translate3d(0, 0, 0)
+			opacity: 1
+		.sub-menu__title
+			transition-delay: .3s
+		.sub-menu__list
+			transition-delay: .4s
+		.sub-contacts
+			opacity: 1
+			transition-delay: .7s
+
+
+
+
+
+
+.sub-contacts
+	margin-top: 40px
+	background-color: v(add-accent-color)
+	&__row
+		display: flex
+		align-items: center
+		height: 60px
+		color: $white
+		.sub-objects
+			margin-left: auto
+	&__link
+		margin-right: 50px
+		display: inline-flex
+		align-items: center
+		color: inherit
+		&:hover
+			color: inherit
+		.btn__ic
+			margin-right: 10px
+		.svg-stroke *
+			stroke: currentColor
+
+.sub-objects
+	span
+		border-bottom: 1px dashed currentColor
+		@include trs(.1s)
+	&:hover
+		span
+			border-bottom-color: transparent
+
+
+
+@include max-screen(1439px)
+	.header, .footer
+		display: none !important
+
+
+
+
+
+
+
+
+
+
+
+
 	
