@@ -2,8 +2,13 @@
 	Common styles 
 	------------------------------------- */
 
-.wrapper
-	padding-top: 60px
+// .wrapper
+
+.page
+	&:not(.page-main)
+		padding-top: 80px
+	&-main
+		padding-top: 60px
 .page
 	padding-bottom: 50px
 
@@ -72,7 +77,8 @@
 	color: v(sub-text-color)
 .text-bold
 	font-weight: 500
-
+.p-relative
+	position: relative
 
 
 
@@ -288,7 +294,7 @@ ol.list
 
 /* ----- breadcrumbs ----- */
 .breadcrumbs
-	padding: 20px 0
+	padding-bottom: 20px
 	font-size: 14px
 	color: $sub-text-color
 	>
@@ -483,6 +489,7 @@ ol.list
 
 
 @include max-screen($xl)
+
 	.hide-on-mob
 		display: none
 

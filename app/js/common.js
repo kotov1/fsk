@@ -170,7 +170,7 @@ $(function() {
 
 
 
-	// Слайдер на главной
+	// Слайдеры на главной
 	$('.bg-slider').slick({
 		speed: 1800,
 		autoplay: true,
@@ -238,6 +238,7 @@ $(function() {
 		});
 
 
+		// ограничение количетсва символов в тексте карточки ЖК
 		var symbolsCount;
 		if ($(window).width() >= 1200) {
 			symbolsCount = 205;
@@ -332,11 +333,24 @@ $(function() {
 		}
 	});
 
-
+	// Зум изображения в карточке квартиры
 	$('.zoom-link').fancybox({
 		buttons: [
 			"close"
 		]
+	});
+
+	$('.ipo-table__row').magnificPopup({
+		items: {
+			src: '#ipo-request',
+			type: 'inline'
+		}
+	});
+	$('.demo-modal-success').magnificPopup({
+		items: {
+			src: '#modal-success',
+			type: 'inline'
+		}
 	});
 
 
@@ -382,6 +396,7 @@ $(function() {
 
 
 	// Анимации кнопок
+	// Кнопки CTA
 	var animateCta = function(e) {
 
 		// Для демо
@@ -402,7 +417,7 @@ $(function() {
 		bubblyButtons[i].addEventListener('click', animateCta, false);
 	}
 
-
+	// Эффект клика
 	[].map.call(document.querySelectorAll('.btn'), el=> {
 		el.addEventListener('click',e => {
 			e = e.touches ? e.touches[0] : e;
@@ -412,10 +427,30 @@ $(function() {
 		})
 	})
 
+
+	// Тоггл меню
 	$('.menu-trigger').click(function (e) { 
 		$(this).toggleClass('menu-open');
 		$('.toggle-menu').toggleClass('menu-open');
 	});
+
+
+	// Аккордион в мобильном меню
+	$('.mob-toggle').click(function() {
+
+		var dropDown = $(this).closest('li').find('.mob-menu__sublist');
+
+		$(this).closest('.mob-menu__list').find('.mob-menu__sublist').not(dropDown).slideUp();
+
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+		} else {
+			$(this).closest('.mob-menu__list').find('.mob-toggle.active').removeClass('active');
+			$(this).addClass('active');
+		}
+
+		dropDown.stop(false, true).slideToggle();
+   });
 
 
 });

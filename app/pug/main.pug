@@ -15,7 +15,7 @@ html(lang="ru")
 			// /.header
 
 			
-			.page
+			.page.page-main
 				.main-hero
 					.container
 						// bg-slider
@@ -23,13 +23,11 @@ html(lang="ru")
 							.slide
 								img.img(src="img/img-main-1.jpg", alt="alt")
 							.slide
-								img.img(src="img/img-main-1.jpg", alt="alt")
+								img.img(src="img/img-main-2.jpg", alt="alt")
 							.slide
-								img.img(src="img/img-main-1.jpg", alt="alt")
+								img.img(src="img/img-main-3.jpg", alt="alt")
 							.slide
-								img.img(src="img/img-main-1.jpg", alt="alt")
-							.slide
-								img.img(src="img/img-main-1.jpg", alt="alt")
+								img.img(src="img/img-main-4.jpg", alt="alt")
 						
 						// main-slider
 						.main-slider
@@ -45,11 +43,6 @@ html(lang="ru")
 									| Подробнее
 							.slide
 								.h2.main-slider__title Супер выгодная акция на&nbsp;квартиры в UP "Комендантский 2" с&nbsp;продолжением!
-								a.btn.btn--transp(href="#") 
-									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-									| Подробнее
-							.slide
-								.h2.main-slider__title Супер выгодная акция на&nbsp;квартиры в UP "Московский 2" с&nbsp;продолжением продолжением!
 								a.btn.btn--transp(href="#") 
 									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 									| Подробнее
@@ -215,13 +208,11 @@ html(lang="ru")
 
 					// /.results
 
-					.results-empty По вашему запросу ничего не найдено :(
-
 				// /.container
 
 
-				.container
-					h2.h1.title Новостройки
+				.container.section-margin
+					h2.h1.title Объекты
 					
 					.quarter-list.view-1
 						.quarter
@@ -299,8 +290,6 @@ html(lang="ru")
 										
 					// /.quarter-list 1
 
-					div(style="height: 30px;")
-
 					.quarter-list.view-2
 						.f-row
 							.cols.col-1-2
@@ -367,18 +356,122 @@ html(lang="ru")
 											.p-key.p-key--green
 												.p-key__ic 
 												.p-key__txt Ключи 1 оч. в 2020!
+							.cols.col-1-2
+								.quarter
+									.quarter__img-wrap
+										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+										.quarter__overlay
+											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+									.quarter__content
+										.quarter__title UP-квартал Комендантский 
+										.quarter__transport.flex
+											.p-metro.flex
+												.p-metro__branch(style="border-color: #33B7FB;")
+												span Московская
+										.quarter__info
+											p 
+												a(href="#") Студии -  1,95 млн /р.
+											p 
+												a.accent-link(href="#") 1 ккв - от 2,32 млн /р.
+											p 
+												a(href="#") 2 ккв - от 4,35 млн /р.
+											p
+												a.accent-link(href="#") 3 ккв - от 5.85 млн /р.
+											p
+												a.sub-link(href="#") 4 ккв - нет в продаже
+											p
+												a.sub-link(href="#") 5 ккв - нет в продаже 
+										.p-discount.flex
+											.p-discount__ic %
+											p.p-discount__txt Только до 15 сентября <span class="nowrap">до 15%!</span>
+										.quarter__footer
+											.p-key.p-key--green
+												.p-key__ic 
+												.p-key__txt Ключи 1 оч. в 2020!
 
 					// /.quarter-list 2
+
+					.results-empty По вашему запросу ничего не найдено :(
+
+					.quarter-list.view-1
+						.quarter
+							.quarter__img-wrap
+								img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+								.quarter__overlay
+									img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+							.quarter__content
+								.quarter__title UP-квартал Комендантский 
+								.quarter__transport.flex
+									.p-metro.flex
+										.p-metro__branch(style="border-color: #33B7FB;")
+										span Московская
+									.p-distance.flex
+										img.svg(src="img/icons/ic-walk-dist.svg", width="8", height="13", alt="alt")
+										span 5 
+											| мин./пешком
+									.p-distance.flex
+										img.svg(src="img/icons/ic-transport-dist.svg", width="15", height="16", alt="alt")
+										span 10 
+											| мин./транспортом
+								.quarter__info.my-readmore
+									p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие. 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие
+								.p-discount.flex
+									.p-discount__ic %
+									p.p-discount__txt Только до 15 сентября до 15%!
+								.quarter__footer
+									.p-key.p-key--blue
+										.p-key__ic 
+										.p-key__txt Квартиры от 
+											b 15.6 
+											| млн/р.
+									.p-key.p-key--green
+										.p-key__ic 
+										.p-key__txt Ключи 1 оч. в 2020!
+									a.btn.btn--bg.quarter-link(href="#") 
+										img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+										| Подробнее
+						.quarter
+							.quarter__img-wrap
+								img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+								.quarter__overlay
+									img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+							.quarter__content
+								.quarter__title UP-квартал Комендантский 
+								.quarter__transport.flex
+									.p-metro.flex
+										.p-metro__branch(style="border-color: #33B7FB;")
+										span Московская
+									.p-distance.flex
+										img.svg(src="img/icons/ic-walk-dist.svg", width="8", height="13", alt="alt")
+										span 5 
+											| мин./пешком
+									.p-distance.flex
+										img.svg(src="img/icons/ic-transport-dist.svg", width="15", height="16", alt="alt")
+										span 10 
+											| мин./транспортом
+								.quarter__info.my-readmore
+									p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.
+								.p-discount.flex
+									.p-discount__ic %
+									p.p-discount__txt Только до 15 сентября до 15%!
+								.quarter__footer
+									.p-key.p-key--blue
+										.p-key__ic 
+										.p-key__txt Квартиры от 
+											b 15.6 
+											| млн/р.
+									.p-key.p-key--green
+										.p-key__ic 
+										.p-key__txt Ключи 1 оч. в 2020!
+									a.btn.btn--bg.quarter-link(href="#") 
+										img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+										| Подробнее
+										
+					// /.quarter-list 1
 					
 				// /.container
 
-
-				// form
-				include pug-modules/cta
-				// /.form
-
-
-				.container
+				.container.section-margin
 					h2.h1.title ФСК «Лидер» в цифрах
 					.advantages-list
 						.advantage

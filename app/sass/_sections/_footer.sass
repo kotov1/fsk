@@ -24,6 +24,8 @@
 			width: 185px
 			height: 63px
 
+	.mob-menu
+
 
 .confidence-link
 	display: inline-block
@@ -31,16 +33,31 @@
 
 
 
+@include max-screen($xl)
+
+	.footer
+		padding-top: 30px
+		.sub-menu
+			display: none
+		.mob-menu
+			display: block
+		&__logo
+			border-bottom: 1px dashed v(border-color)
+			.img
+				width: 164px
+				height: 55px
+				margin: 0 auto 30px
+		&__text
+			margin-top: 25px
 
 
 
-
-
-
-
-
-
-
+@include max-screen($md)
+	.footer
+		&__logo
+			.img
+				width: 145px
+				height: 49px
 
 
 

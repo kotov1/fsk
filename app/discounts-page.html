@@ -30,8 +30,9 @@
       </div>
       <header class="header">
         <div class="header__top">
-          <div class="logo"><img class="img" src="img/svg-logo.svg" alt="FSK"></div>
-          <button class="menu-trigger" type="button"><span class="menu-trigger__ic"></span></button>
+          <div class="logo"><a href="main.html"><img class="img" src="img/svg-logo.svg" alt="FSK"></a>
+          </div>
+          <button class="menu-trigger" type="button"></button>
           <ul class="main-menu">
             <li class="active"><a href="newbuild.html">Новостройки</a></li>
             <li><a href="discounts.html">Акции и скидки</a></li>
@@ -47,12 +48,66 @@
           </div><a class="btn btn--bg header-top__link" href="#"> <img class="svg btn__ic" src="img/icons/ic-filters-white.svg" width="15" height="15" alt="alt">Выбрать квартиру</a>
         </div>
         <!-- /.header__top-->
-        <div class="sub-menu toggle-menu">
-          <div class="container">
-            <div class="f-row">
-              <div class="cols col-1-4">
-                <div class="sub-menu__title">Новостройки</div>
-                <ul class="sub-menu__list">
+        <div class="toggle-menu">
+          <div class="sub-menu">
+            <div class="container">
+              <div class="f-row">
+                <div class="cols col-1-4">
+                  <div class="sub-menu__title">Новостройки</div>
+                  <ul class="sub-menu__list">
+                    <li><a href="#">UP-Светлановский</a></li>
+                    <li><a href="#">UP-Комендантский</a></li>
+                    <li><a href="#">UP-Московский</a></li>
+                    <li><a href="#">UP-Пушкинский</a></li>
+                    <li><a href="#">Zoom Apart</a></li>
+                    <li><a href="#">Коммерческие помещения</a></li>
+                  </ul>
+                </div>
+                <div class="cols col-1-4">
+                  <div class="sub-menu__title">О Компании</div>
+                  <ul class="sub-menu__list">
+                    <li><a href="#">ГК ФСК сегодня</a></li>
+                    <li><a href="#">Рейтинги и награды</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="vacancy.html">Вакансии</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                  </ul>
+                </div>
+                <div class="cols col-1-4">
+                  <div class="sub-menu__title">Оплата</div>
+                  <ul class="sub-menu__list">
+                    <li><a href="ipo.html">Ипотека</a></li>
+                    <li><a href="#">Мат. капитал</a></li>
+                    <li><a href="#">Военная ипотека</a></li>
+                  </ul>
+                </div>
+                <div class="cols col-1-4">
+                  <div class="sub-menu__title">Покупателям </div>
+                  <ul class="sub-menu__list">
+                    <li><a href="discounts.html">Акции и скидки</a></li>
+                    <li><a href="#">Отдел клиентского сервиса</a></li>
+                    <li><a class="lk-link" href="#">Кабинет покупателя</a></li>
+                    <li><a class="vk-link" href="#">Мы ВКонтакте</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /.f-row-->
+            </div>
+            <!-- /.container-->
+            <div class="sub-contacts">
+              <div class="container">
+                <div class="sub-contacts__row"><a class="sub-contacts__link" href="tel:+78127035555"> <img class="svg svg-stroke btn__ic" src="img/icons/ic-tel.svg" alt="tel" width="12" height="20">+7 (812) 703-55-55</a><a class="sub-contacts__link" href="mailto:info@fsknw.ru"> <img class="svg btn__ic" src="img/icons/ic-mail-white.svg" alt="email" width="33" height="16">info@fsknw.ru</a><span class="sub-contacts__link"><img class="svg btn__ic" src="img/icons/ic-map-pin-sm-white.svg" alt="geo" width="13" height="19">Большой пр. ПС, д.48, 1 этаж</span><a class="sub-contacts__link sub-objects" href="#"> <img class="svg svg-stroke svg-fill btn__ic" src="img/icons/ic-nav-objects.svg" alt="nav" width="17" height="18"><span>Объекты ГК ФСК в Москве и МО</span></a></div>
+              </div>
+              <!-- /.container-->
+            </div>
+            <!-- /.sub-contacts-->
+          </div>
+          <!-- /.sub-menu-->
+          <div class="mob-menu"><a class="btn btn--bg header-top__link" href="#"> <img class="svg btn__ic" src="img/icons/ic-filters-white.svg" width="15" height="15" alt="alt">Выбрать квартиру</a>
+            <ul class="mob-menu__list">
+              <li><a class="mob-menu__title" href="newbuild.html">Новостройки </a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
                   <li><a href="#">UP-Светлановский</a></li>
                   <li><a href="#">UP-Комендантский</a></li>
                   <li><a href="#">UP-Московский</a></li>
@@ -60,10 +115,9 @@
                   <li><a href="#">Zoom Apart</a></li>
                   <li><a href="#">Коммерческие помещения</a></li>
                 </ul>
-              </div>
-              <div class="cols col-1-4">
-                <div class="sub-menu__title">О Компании</div>
-                <ul class="sub-menu__list">
+              </li>
+              <li><a class="mob-menu__title" href="company.html">О Компании</a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
                   <li><a href="#">ГК ФСК сегодня</a></li>
                   <li><a href="#">Рейтинги и награды</a></li>
                   <li><a href="#">Контакты</a></li>
@@ -71,37 +125,33 @@
                   <li><a href="docs.html">Документы</a></li>
                   <li><a href="news.html">Новости</a></li>
                 </ul>
-              </div>
-              <div class="cols col-1-4">
-                <div class="sub-menu__title">Оплата</div>
-                <ul class="sub-menu__list">
+              </li>
+              <li><a class="mob-menu__title" href="#">Оплата</a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
                   <li><a href="ipo.html">Ипотека</a></li>
                   <li><a href="#">Мат. капитал</a></li>
                   <li><a href="#">Военная ипотека</a></li>
                 </ul>
-              </div>
-              <div class="cols col-1-4">
-                <div class="sub-menu__title">Покупателям </div>
-                <ul class="sub-menu__list">
+              </li>
+              <li><a class="mob-menu__title" href="#">Покупателям</a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
                   <li><a href="discounts.html">Акции и скидки</a></li>
                   <li><a href="#">Отдел клиентского сервиса</a></li>
                   <li><a class="lk-link" href="#">Кабинет покупателя</a></li>
                   <li><a class="vk-link" href="#">Мы ВКонтакте</a></li>
                 </ul>
-              </div>
-            </div>
-            <!-- /.f-row-->
+              </li>
+              <li><a class="favourite-link" href="favourite.html">Избранное<img class="svg" src="img/icons/ic-star.svg" width="22" height="21" alt="Закладки"></a></li>
+              <li><span class="sub-contacts__link"><img class="svg btn__ic" src="img/icons/ic-map-pin-sm-accent.svg" alt="geo" width="13" height="19">Большой пр. ПС, д.48, 1 этаж</span></li>
+              <li><a class="sub-contacts__link" href="tel:+78127035555"> <img class="svg svg-stroke btn__ic" src="img/icons/ic-tel.svg" alt="tel" width="12" height="20">+7 (812) 703-55-55</a></li>
+              <li><a class="sub-contacts__link" href="mailto:info@fsknw.ru"> <img class="svg btn__ic" src="img/icons/ic-mail.svg" alt="email" width="33" height="16">info@fsknw.ru</a></li>
+              <li><a class="sub-contacts__link sub-objects" href="#"> <img class="svg svg-stroke btn__ic" src="img/icons/ic-nav-objects.svg" alt="nav" width="17" height="18"><span>Объекты ГК ФСК в Москве и МО</span></a></li>
+              <li><a class="confidence-link" href="confidence.html">Политика конфиденциальности</a></li>
+            </ul>
           </div>
-          <!-- /.container-->
-          <div class="sub-contacts">
-            <div class="container">
-              <div class="sub-contacts__row"><a class="sub-contacts__link" href="tel:+78127035555"> <img class="svg svg-stroke btn__ic" src="img/icons/ic-tel.svg" alt="tel" width="12" height="20">+7 (812) 703-55-55</a><a class="sub-contacts__link" href="mailto:info@fsknw.ru"> <img class="svg btn__ic" src="img/icons/ic-mail-white.svg" alt="email" width="32" height="16">info@fsknw.ru</a><span class="sub-contacts__link"><img class="svg btn__ic" src="img/icons/ic-map-pin-sm-white.svg" alt="geo" width="13" height="19">Большой пр. ПС, д.48, 1 этаж</span><a class="sub-contacts__link sub-objects" href="#"> <img class="svg btn__ic" src="img/icons/ic-nav-objects.svg" alt="nav" width="17" height="18"><span>Объекты ГК ФСК в Москве и МО</span></a></div>
-            </div>
-            <!-- /.container-->
-          </div>
-          <!-- /.sub-contacts-->
+          <!-- /.mob-menu-->
         </div>
-        <!-- /.sub-menu.toggle-menu-->
+        <!-- /.toggle-menu-->
       </header>
       <!-- /.header-->
       <div class="page">
@@ -207,6 +257,50 @@
                 <div class="footer__logo"><img class="img" src="img/svg-logo-gray.svg" alt="FSK"></div>
               </div>
             </div>
+          </div>
+          <div class="mob-menu">
+            <div class="footer__logo"><img class="img" src="img/svg-logo-gray.svg" alt="FSK"></div>
+            <ul class="mob-menu__list">
+              <li><a class="mob-menu__title" href="newbuild.html">Новостройки </a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
+                  <li><a href="#">UP-Светлановский</a></li>
+                  <li><a href="#">UP-Комендантский</a></li>
+                  <li><a href="#">UP-Московский</a></li>
+                  <li><a href="#">UP-Пушкинский</a></li>
+                  <li><a href="#">Zoom Apart</a></li>
+                  <li><a href="#">Коммерческие помещения</a></li>
+                </ul>
+              </li>
+              <li><a class="mob-menu__title" href="company.html">О Компании</a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
+                  <li><a href="#">ГК ФСК сегодня</a></li>
+                  <li><a href="#">Рейтинги и награды</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="vacancy.html">Вакансии</a></li>
+                  <li><a href="docs.html">Документы</a></li>
+                  <li><a href="news.html">Новости</a></li>
+                </ul>
+              </li>
+              <li><a class="mob-menu__title" href="#">Оплата</a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
+                  <li><a href="ipo.html">Ипотека</a></li>
+                  <li><a href="#">Мат. капитал</a></li>
+                  <li><a href="#">Военная ипотека</a></li>
+                </ul>
+              </li>
+              <li><a class="mob-menu__title" href="#">Покупателям</a><span class="mob-toggle"></span>
+                <ul class="mob-menu__sublist">
+                  <li><a href="discounts.html">Акции и скидки</a></li>
+                  <li><a href="#">Отдел клиентского сервиса</a></li>
+                  <li><a class="lk-link" href="#">Кабинет покупателя</a></li>
+                  <li><a class="vk-link" href="#">Мы ВКонтакте</a></li>
+                </ul>
+              </li>
+              <li><span class="sub-contacts__link"><img class="svg btn__ic" src="img/icons/ic-map-pin-sm-accent.svg" alt="geo" width="13" height="19">Большой пр. ПС, д.48, 1 этаж</span></li>
+              <li><a class="sub-contacts__link" href="tel:+78127035555"> <img class="svg svg-stroke btn__ic" src="img/icons/ic-tel.svg" alt="tel" width="12" height="20">+7 (812) 703-55-55</a></li>
+              <li><a class="sub-contacts__link" href="mailto:info@fsknw.ru"> <img class="svg btn__ic" src="img/icons/ic-mail.svg" alt="email" width="33" height="16">info@fsknw.ru</a></li>
+              <li><a class="confidence-link" href="confidence.html">Политика конфиденциальности</a></li>
+            </ul>
           </div>
           <div class="footer__text">
             <p>Все материалы данного сайта являются объектами авторского права ООО "ФСК Лидер Северо-Запад" © 2015 - 2019. Запрещается копирование, распространение или любое другое использование информации и объектов без предварительного согласия. Данный сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. Для получения актуальной информации о наличии и стоимости представленных объектов недвижимости, пожалуйста, обращайтесь к специалистам отдела продаж. Ипотека от Сбербанк (Лицензия №XXX от XX.XX.XX) и еще XX ипотечных программ.</p>

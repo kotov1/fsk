@@ -4,7 +4,6 @@
 	margin: 50px 0
 	&__inner
 		display: flex
-		align-items: center
 		padding: 37px 30px
 		background-color: v(accent-color)
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
@@ -13,8 +12,11 @@
 	&__title
 		width: 25%
 		padding-right: 24px
+		transform: translateY(-6%)
 	&__form
 		width: 75%
+		.privacy
+			color: #bebebe
 
 
 @include max-screen($xl)
@@ -27,6 +29,7 @@
 			box-shadow: none
 			padding: 23px 0 20px
 		&__title
+			transform: none
 			width: 100%
 			margin-bottom: 1.2em
 			padding-right: 0
