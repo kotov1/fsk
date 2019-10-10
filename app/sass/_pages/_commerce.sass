@@ -1,0 +1,44 @@
+/* ----- Страница коммерции ----- */
+
+
+.commerce
+
+
+.flex-between
+	justify-content: space-between
+
+.filter
+	.sub-objects
+		display: inline-flex
+		align-items: center
+		font-size: 14px
+		font-weight: 500
+		color: v(sub-text-color)
+		span
+			border-color: transparent
+		&:hover
+			span
+				border-color: v(border-color)
+
+.commerce-list
+	.quarter__img-wrap
+		height: 270px
+	.quarter__footer
+		margin-top: 29px
+		.p-key
+			max-width: 100%
+
+
+@include max-screen($xl)
+
+	.commerce-list
+		.quarter__footer .btn
+			min-width: 220px
+
+
+
+@include max-screen($md)
+	.filter__tech
+		.sub-objects
+			order: 1
+

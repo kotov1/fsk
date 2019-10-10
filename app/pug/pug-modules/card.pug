@@ -1,7 +1,7 @@
 .card.mfp-hide#card-example
 	.p-relative
 		button.close-btn.mfp-close(type="button")
-		.h1.card__title 3-к квартира, 42 м<sup>2</sup>.
+		.h1.card__title 3-к квартира, 42 м<sup>2</sup>
 		.card__body.js-tab-wrapper
 			.card__col-1
 				.card__tabs-wrap
@@ -22,8 +22,26 @@
 							img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
 					img.img(src="img/img-plan.jpg", alt="plan")
 				.card__img.js-tab-item
+					.card-img-btns
+						button.ui-btn.zoom-link(href="#")
+							img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
+						a.interactive-btn.interactive-favorite(href="#")
+							img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+					div.img.img-empty
 				.card__img.js-tab-item
+					.card-img-btns
+						button.ui-btn.zoom-link(href="#")
+							img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
+						a.interactive-btn.interactive-favorite(href="#")
+							img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+					div.img.img-empty
 				.card__img.js-tab-item
+					.card-img-btns
+						button.ui-btn.zoom-link(href="#")
+							img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
+						a.interactive-btn.interactive-favorite(href="#")
+							img.svg(src="img/icons/ic-star.svg", alt="Добавить в закладки")
+					div.img.img-empty
 			.card__col-3
 				.card__info
 					.interactive-btns
@@ -34,28 +52,52 @@
 					.card-data
 						.card-data__col-1
 							.h3.card-data__title Студия
-							ul.card-data__list
-								li
-									span Общая площадь
-									span 27 м<sup>2</sup>
-								li
-									span Жилая площадь
-									span 16 м<sup>2</sup>
-								li
-									span Площадь кухни
-									span 5 м<sup>2</sup>
-								li
-									span Этаж / этажей
-									span 8/26
-								li
-									span Корпус
-									span 3.1
-								li
-									span Секция
-									span 2
-								li
-									span Отделка
-									span Предчистовая
+							if page == "commerce"
+								ul.card-data__list
+									li
+										span Общая площадь
+										span 27 м<sup>2</sup>
+									li
+										span Этаж / этажей
+										span 8/26
+									li
+										span Корпус
+										span 3.1
+									li
+										span Секция
+										span 2
+									li
+										span Электричество
+										span 5 кВт
+									li
+										span Вода
+										span Есть
+									li
+										span Назначение
+										span Свободное
+							else
+								ul.card-data__list
+									li
+										span Общая площадь
+										span 27 м<sup>2</sup>
+									li
+										span Жилая площадь
+										span 16 м<sup>2</sup>
+									li
+										span Площадь кухни
+										span 5 м<sup>2</sup>
+									li
+										span Этаж / этажей
+										span 8/26
+									li
+										span Корпус
+										span 3.1
+									li
+										span Секция
+										span 2
+									li
+										span Отделка
+										span Предчистовая
 
 						.card-data__col-2
 							p.card-price-1 Цена по акции: 

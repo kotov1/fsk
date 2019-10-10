@@ -1,4 +1,4 @@
-- var page = "filters"
+- var page = "commerce"
 
 doctype html
 html(lang="ru")
@@ -15,112 +15,78 @@ html(lang="ru")
 			// /.header
 
 			
-			.page
+			.page.commerce
 				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem') 
+							a(rel='nofollow', itemprop='item', title='Главная', href='/') 
+								span(itemprop='name') Главная 
+								meta(itemprop='position', content='1') 
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem') 
+							a(rel='nofollow', itemprop='item', title='Коммерческая недвижимость', href='#') 
+								span(itemprop='name') Коммерческая недвижимость
+								meta(itemprop='position', content='2') 
+					// /.breadcrumbs
 
-					h1 Фильтр на странице ЖК
+					h2.h1.title Выбор коммерческих помещений
 
 					.filter
-						.filter-row
-							.filter-fields
-								.filter__field.filter-field
-									.filter-field__label Количество комнат
-									.ui-checkbox-group
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-0(type="checkbox", name="filter_rooms_C")
-											label.ui-checkbox__label(for="checkbox-rooms-0") С
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-1(type="checkbox", name="filter_rooms_1")
-											label.ui-checkbox__label(for="checkbox-rooms-1") 1
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-2(type="checkbox", name="filter_rooms_2")
-											label.ui-checkbox__label(for="checkbox-rooms-2") 2
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-3(type="checkbox", name="filter_rooms_3")
-											label.ui-checkbox__label(for="checkbox-rooms-3") 3
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-4(type="checkbox", name="filter_rooms_4")
-											label.ui-checkbox__label(for="checkbox-rooms-4") 4
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-5(type="checkbox", name="filter_rooms_5")
-											label.ui-checkbox__label(for="checkbox-rooms-5") 5
+						.filter-mob Фильтр по квартирам
+							button.ui-btn.ui-btn--stroke(type="button")
+								img.svg(src="img/icons/ic-dropdown-arrow.svg", alt="link", width="12", height="7")
 
-								.filter__field.filter-field
-									.filter-field__label Стоимость, млн/р.
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="1.95")
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="12.8")
-										.ui-range__slider.ui-range-cost
+						.filter-mob-collapse
 
-								.filter__field.filter-field
-									.filter-field__label Площадь, м
-										sup 2
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="22") 
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="158") 
-										.ui-range__slider.ui-range-size
+							.filter-row
+								.filter-fields
+									.filter__field.filter-field
+										.filter-field__label Площадь, м
+											sup 2
+										.ui-range
+											.ui-range__col
+												span от
+												input.ui-range__val.ui-range__from(value="22") 
+											.ui-range__col
+												span до
+												input.ui-range__val.ui-range__to(value="158") 
+											.ui-range__slider.ui-range-size
 
-								.filter__field.filter-field
-									.filter-field__label Этаж
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="1") 
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="26") 
-										.ui-range__slider.ui-range-floor
-						
-						.filter-row.filter__hidden
-							.filter-fields
-								.filter__field.filter-field
-									.filter-field__label Площадь кухни, м
-										sup 2
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="12") 
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="46") 
-										.ui-range__slider.ui-range-kitchen
-								.filter__field.filter-field
-									.filter-field__label Готовность до
-									select.ui-select(name="select_period", data-placeholder="2021")
-										option(value="2020") 2020
-										option.active(value="2021") 2021
-										option(value="2022") 2022
-								.filter__field.filter-field
-									.filter-field__label Корпус
-									select.ui-select(name="select_building", data-placeholder="2 корпус")
-										option(value="1 корпус") 1 корпус
-										option.active(value="2 корпус") 2 корпус
-										option(value="3 корпус") 3 корпус
-								.filter__field.filter-field-result
-									a.btn.btn--bg(href="#") 
-										img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
-										| Найдено 
-										span.filter-count 150 
-										| квартир
-					
-						.filter-row.filter__tech
-							button.filter-additional(type="button") Дополнительные параметры
-							button.filter-reset(type="button") Сбросить фильтр
-							a.btn.btn--bg(href="#") 
-								img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
-								| Показать результаты
+									.filter__field.filter-field
+										.filter-field__label Стоимость, млн/р.
+										.ui-range
+											.ui-range__col
+												span от
+												input.ui-range__val.ui-range__from(value="1.95")
+											.ui-range__col
+												span до
+												input.ui-range__val.ui-range__to(value="12.8")
+											.ui-range__slider.ui-range-cost
+									
+									.filter__field.filter-field
+										.filter-field__label Готовность до
+										select.ui-select(name="select_period", data-placeholder="2021")
+											option(value="2020") 2020
+											option.active(value="2021") 2021
+											option(value="2022") 2022
+
+									.filter__field.filter-field-result
+										a.btn.btn--bg(href="#") 
+											img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
+											| Показать результаты
+							// /.filter__row
+
+
+							.filter-row.filter__tech.flex-between
+								a.sub-objects(href="#") 
+									img.svg.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
+									span Объекты ГК ФСК в Москве и МО
+								button.filter-reset(type="button") Сбросить фильтр
+							// /.filter__row
+							
 					// /.filter
 
 
-					.results
+					.results.results--nofloors
 						.results__row.results__header
 							.results__col
 								.results__row
@@ -132,8 +98,6 @@ html(lang="ru")
 											img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
 											span Площадь, м
 												sup 2
-									.results__cell.results-cell-3
-										span Этаж
 									.results__cell.results-cell-4
 										button.sort.sort--flip(type="button")
 											img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
@@ -147,9 +111,9 @@ html(lang="ru")
 									.mob-sort
 										span.mob-sort__hint Сортировать
 										select.ui-select(name="mob_sort", data-placeholder="по цене")
-											option.active(value="2020") по цене
-											option(value="2021") по площади
-											option(value="2022") по готовности
+											option.active(value="2020") По цене
+											option(value="2021") По площади
+											option(value="2022") По готовности
 										img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
 							// /.results__col	
 
@@ -167,12 +131,7 @@ html(lang="ru")
 							.results__col
 								.results-screen#results-screen
 									.results__row.results-screen__header
-										div Однокомнатные квартиры от 
-											span.filter-data 52 
-											| до 
-											span.filter-data 78 
-											| м
-											sup 2
+										div.filter-data.dashed-underline Up-квартал Комендантский
 										div от 
 											span.filter-data 2 376 200 р.
 									.results__row
@@ -180,14 +139,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -199,14 +156,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -218,14 +173,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -237,14 +190,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -256,14 +207,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -275,14 +224,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 23 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -294,14 +241,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -310,12 +255,7 @@ html(lang="ru")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									
 									.results__row.results-screen__header
-										div Однокомнатные квартиры от 
-											span.filter-data 52 
-											| до 
-											span.filter-data 78 
-											| м
-											sup 2
+										div.filter-data.dashed-underline Up-квартал Комендантский
 										div от 
 											span.filter-data 2 376 200 р.
 									.results__row
@@ -323,14 +263,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -342,14 +280,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -361,14 +297,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -380,14 +314,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -399,14 +331,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -418,14 +348,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -437,14 +365,12 @@ html(lang="ru")
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
-										.results__cell.results-cell-3
-											span 1...9
 										.results__cell.results-cell-4
 											span 2021
 										.results__cell.results-cell-5
 											span 2 376 200 р.
 										.results-cell-mob
-											p.data-1 3-к квартира - 78 м<sup>2</sup>
+											p.data-1 Помещение - 78 м<sup>2</sup>
 											p.data-2 
 												span 2 376 200 
 												| р.
@@ -475,23 +401,14 @@ html(lang="ru")
 
 					// /.results
 
-					.results-refresh 
-						img.svg.btn__ic(src="img/icons/ic-refresh.svg", alt="refresh", width="14", height="14") 
-						| Информация обновлена 
-						span 12 августа 2019 
-						| .
-					
-					.results-more
-						button.btn.btn--transp(type="button")
-							img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-							| Показать ещё
-
-
-
-
-
 
 				// /.container
+
+
+				// form
+				include pug-modules/cta
+				// /.form
+
 
 			// /.page
 
@@ -507,7 +424,11 @@ html(lang="ru")
 			
 
 		// /.wrapper
-
 		
+
+
+
+
+
 
 

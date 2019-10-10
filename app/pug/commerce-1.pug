@@ -1,0 +1,222 @@
+- var page = "commerce"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page.commerce
+				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem') 
+							a(rel='nofollow', itemprop='item', title='Главная', href='/') 
+								span(itemprop='name') Главная 
+								meta(itemprop='position', content='1') 
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem') 
+							a(rel='nofollow', itemprop='item', title='Коммерческая недвижимость', href='#') 
+								span(itemprop='name') Коммерческая недвижимость
+								meta(itemprop='position', content='2') 
+					// /.breadcrumbs
+
+					h2.h1.title Выбор коммерческих помещений
+
+					.filter
+						.filter-mob Фильтр по квартирам
+							button.ui-btn.ui-btn--stroke(type="button")
+								img.svg(src="img/icons/ic-dropdown-arrow.svg", alt="link", width="12", height="7")
+
+						.filter-mob-collapse
+
+							.filter-row
+								.filter-fields
+									.filter__field.filter-field
+										.filter-field__label Площадь, м
+											sup 2
+										.ui-range
+											.ui-range__col
+												span от
+												input.ui-range__val.ui-range__from(value="22") 
+											.ui-range__col
+												span до
+												input.ui-range__val.ui-range__to(value="158") 
+											.ui-range__slider.ui-range-size
+
+									.filter__field.filter-field
+										.filter-field__label Стоимость, млн/р.
+										.ui-range
+											.ui-range__col
+												span от
+												input.ui-range__val.ui-range__from(value="1.95")
+											.ui-range__col
+												span до
+												input.ui-range__val.ui-range__to(value="12.8")
+											.ui-range__slider.ui-range-cost
+									
+									.filter__field.filter-field
+										.filter-field__label Готовность до
+										select.ui-select(name="select_period", data-placeholder="2021")
+											option(value="2020") 2020
+											option.active(value="2021") 2021
+											option(value="2022") 2022
+
+									.filter__field.filter-field-result
+										a.btn.btn--bg(href="#") 
+											img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
+											| Показать результаты
+							// /.filter__row
+
+
+							.filter-row.filter__tech.flex-between
+								a.sub-objects(href="#") 
+									img.svg.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
+									span Объекты ГК ФСК в Москве и МО
+								button.filter-reset(type="button") Сбросить фильтр
+							// /.filter__row
+							
+					// /.filter
+
+
+				// /.container
+
+
+				section.section-margin
+					.container
+						h2.h1.title Новостройки
+						
+						.quarter-list.view-1.commerce-list
+
+							
+							.quarter
+								.quarter__img-wrap
+									img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+									.quarter__overlay
+										img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+								.quarter__content
+									.quarter__title UP-квартал Комендантский 
+									.quarter__transport.flex
+										.p-metro.flex
+											.p-metro__branch(style="border-color: #33B7FB;")
+											span Московская
+										.p-distance.flex
+											img.svg(src="img/icons/ic-walk-dist.svg", width="8", height="13", alt="alt")
+											span 30 
+												| мин./пешком
+										.p-distance.flex
+											img.svg(src="img/icons/ic-transport-dist.svg", width="15", height="16", alt="alt")
+											span 10 
+												| мин./транспортом
+									.quarter__info.my-readmore
+										p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие. 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.
+									.quarter__footer
+										.p-key.p-key--blue
+											.p-key__ic 
+											.p-key__txt Помещения от 
+												b 15.6 
+												| млн/р.
+										a.btn.btn--bg(href="#") 
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							// /.quarter
+							
+							.quarter
+								.quarter__img-wrap
+									img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+									.quarter__overlay
+										img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+								.quarter__content
+									.quarter__title UP-квартал Комендантский 
+									.quarter__transport.flex
+										.p-metro.flex
+											.p-metro__branch(style="border-color: #33B7FB;")
+											span Московская
+										.p-distance.flex
+											img.svg(src="img/icons/ic-walk-dist.svg", width="8", height="13", alt="alt")
+											span 30 
+												| мин./пешком
+										.p-distance.flex
+											img.svg(src="img/icons/ic-transport-dist.svg", width="15", height="16", alt="alt")
+											span 10 
+												| мин./транспортом
+									.quarter__info.my-readmore
+										p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие. 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.
+									.quarter__footer
+										.p-key.p-key--blue
+											.p-key__ic 
+											.p-key__txt Помещения от 
+												b 15.6 
+												| млн/р.
+										a.btn.btn--bg(href="#") 
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							// /.quarter
+							
+							.quarter
+								.quarter__img-wrap
+									img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+									.quarter__overlay
+										img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+								.quarter__content
+									.quarter__title UP-квартал Комендантский 
+									.quarter__transport.flex
+										.p-metro.flex
+											.p-metro__branch(style="border-color: #33B7FB;")
+											span Московская
+										.p-distance.flex
+											img.svg(src="img/icons/ic-walk-dist.svg", width="8", height="13", alt="alt")
+											span 30 
+												| мин./пешком
+										.p-distance.flex
+											img.svg(src="img/icons/ic-transport-dist.svg", width="15", height="16", alt="alt")
+											span 10 
+												| мин./транспортом
+									.quarter__info.my-readmore
+										p 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие. 240 квартир со скидкой от 450 000. Выгодное предложения июня 2019. Успейте с максимальными скидками. Акция действует только в Июне, и если не купите вы - купят другие.
+									.quarter__footer
+										.p-key.p-key--blue
+											.p-key__ic 
+											.p-key__txt Помещения от 
+												b 15.6 
+												| млн/р.
+										a.btn.btn--bg(href="#") 
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Подробнее
+							// /.quarter
+
+	
+						// /.quarter-list 1
+
+						
+					// /.container
+
+
+				// form
+				include pug-modules/cta
+				// /.form
+
+
+			// /.page
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+		// /.wrapper
+		
+
+
+
+
+
+
+

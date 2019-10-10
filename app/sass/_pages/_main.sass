@@ -211,6 +211,8 @@
 			top: -3vw
 
 
+
+/* ----- Карточки ЖК ----- */
 .quarter
 	display: flex
 	flex-wrap: wrap
@@ -373,9 +375,13 @@
 
 
 @include max-screen($md)
-	.quarter__img-wrap
-		height: 56.25vw
-		max-height: 220px
+	.quarter-list
+		.quarter__img-wrap
+			height: 56.25vw
+			max-height: 220px
+	.quarter-list.view-1
+		.quarter__img-wrap
+			height: 56.25vw
 
 	.quarter__transport
 		display: block

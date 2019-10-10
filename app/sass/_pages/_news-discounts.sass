@@ -100,6 +100,7 @@
 		top: 20px
 		left: 20px
 	&--static
+		margin-bottom: -15px
 		.p-label
 			margin-right: 24px
 	&__title
@@ -217,10 +218,27 @@
 @include max-screen($sm)
 	.p-hero
 		border-radius: 0
+		&__inner
+			max-width: 100%
+			padding-right: 15%
+			background: linear-gradient(180deg, transparent 20vw, v(accent-color) 7vw)
+			&::before
+				height: calc(100% - 16vw)
+			&::after
+				height: 20vw
+				top: -3.5vw
+				background-size: 100% auto
 
-
-
-
+@include max-screen(420px)
+	.p-hero
+		&__inner
+			padding-right: 10%
+			background: linear-gradient(180deg, transparent 16vw, v(accent-color) 7vw)
+			&::before
+				height: calc(100% - 67px)
+			&::after
+				height: 20vw
+				top: -3vw
 
 
 

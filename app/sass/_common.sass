@@ -77,6 +77,8 @@
 	color: v(sub-text-color)
 .text-bold
 	font-weight: 500
+.dashed-underline
+	border-bottom: 1px dashed currentColor
 .p-relative
 	position: relative
 
@@ -484,8 +486,20 @@ ol.list
 
 
 
+.img-empty
+	height: 100%
+	background: v(additional-color) url('../img/svg-logo-gray.svg') no-repeat 50% 50% / 75% 20%
 
+.content 
+	.img-empty
+		height: calc(100% - 1.25rem)
+.card__img
+	.img-empty
+		height: calc(100% - 50px)
 
+.quarter-list.view-2
+	.img-empty
+		background-size: 75% 15%
 
 
 @include max-screen($xl)
