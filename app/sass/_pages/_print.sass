@@ -4,7 +4,7 @@
 	-webkit-print-color-adjust: exact !important
 	&-hero
 		position: relative
-		margin-bottom: 3rem
+		margin-bottom: 40px
 		padding-top: 77px
 		&__img
 			position: absolute
@@ -56,7 +56,8 @@
 		&__txt
 			font-weight: 300
 
-
+	.content-margin:not(:last-child)
+		margin-bottom: 30px
 
 
 .print-center 
@@ -77,6 +78,7 @@
 
 .print-table
 	display: flex
+	margin-top: 30px
 	border: 1px dashed #707070
 	// page-break-before: always
 	.img
@@ -88,11 +90,11 @@
 	align-items: center
 	padding: 20px
 .print-img-1
-	height: 800px
+	height: 700px
 	width: 78%
 	border-right: 1px dashed #707070
 .print-img-2, .print-img-3
-	height: 400px
+	height: 350px
 .print-img-2
 	border-bottom: 1px dashed #707070
 
@@ -129,10 +131,14 @@
 	
 @media print
 	.print-pdf
-		width: calc(100% + 300pt)
-		margin-left: -150pt
+		position: absolute
+		left: 0
+		top: 0
+		width: calc(100% + 476pt)
+		margin-left: -238pt
 		transform-origin: 50% 0
-		transform: scale(.7)
+		transform: scale(.8)
+
 	.print-distance .img
 		margin-right: 4pt
 	.print-col
@@ -142,28 +148,24 @@
 	.print-img-2, .print-img-3
 		height: 300pt
 
-	// .print-footer__col
-	// 	align-items: flex-start
-	// .print-footer__address
-	// 	.text-bold 
-	// 		margin-bottom: 6pt
-	// .print-contact
-	// 	width: 100%
-	// 	justify-content: flex-end
-	// 	&:first-child
-	// 		margin-bottom: 5pt
-	// 	&__ic
-	// 		min-width: 33px
-	// 		.img
-	// 			margin-left: auto
-
 	.print-row
-		width: 900pt
 		.col-1-3
 			width: 33%
+	
 
-.dashed-border
-	border-bottom: 1px dashed v(accent-color)
+
+
+
+
+
+@page
+	margin-left: 0px
+	margin-right: 0px
+	margin-top: 0px
+	margin-bottom: 0px
+
+
+
 
 
 

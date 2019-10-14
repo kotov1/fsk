@@ -48,6 +48,8 @@
 			background-image: url('../img/icons/ic-breadcrumb-white.svg') 
 
 
+.p-list
+	margin-bottom: -24px
 .p-item
 	display: flex
 	flex-wrap: wrap
@@ -71,6 +73,8 @@
 			width: 100%
 			height: 100%
 			object-fit: cover
+			border-top-left-radius: $bd-r
+			border-bottom-left-radius: $bd-r
 			margin-bottom: 0
 			@include trs(.5s)
 	&__content
@@ -198,6 +202,9 @@
 			height: 56.25vw
 			min-height: 1px
 			max-height: 220px
+			.img
+				border-top-right-radius: $bd-r
+				border-bottom-left-radius: 0
 		&__content 
 			display: block
 			padding: 20px

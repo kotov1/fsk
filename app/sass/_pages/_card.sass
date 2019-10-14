@@ -1,0 +1,376 @@
+/* ----- Страница ЖК ----- */
+
+
+.page-project
+	max-width: 1920px
+	margin: 0 auto
+
+
+
+.project-hero
+	display: flex
+	align-items: flex-end
+	height: 500px
+	margin-bottom: 0
+	.p-hero__inner
+		position: relative
+	.p-hero__title
+		margin: 40px 0 5px
+		font-weight: 500
+
+	&__img
+		width: 200px
+		height: 50px
+
+	&__distance
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 20px
+		.p-metro
+			margin-right: 15px
+		.p-distance .img
+			margin-right: 5px
+
+	.p-discount
+		max-width: 70%
+		margin-bottom: 20px
+		&__ic
+			width: 50px
+			flex-basis: 50px
+			height: 50px
+			font-size: 28px
+
+
+.project-about
+	padding-top: 50px
+
+.project-data
+	display: flex
+	justify-content: space-between
+	&__col
+		width: 115px
+		margin-top: 30px
+		&:not(:last-child)
+			padding-right: 15px
+	.img
+		height: 63px
+		margin-bottom: 18px
+
+
+
+.gallery
+	&-slider
+		&-xl
+			.slide
+				position: relative
+				.zoom-link
+					position: absolute
+					top: 24px
+					right: 24px
+			.img
+				width: 100%
+				height: 520px
+				object-fit: cover
+				border-top-right-radius: $bd-r
+				border-top-left-radius: $bd-r
+			.slider-arrow
+				position: absolute
+				top: 50%
+				margin-top: -25px
+				opacity: 0.9
+				z-index: 1
+				&:hover
+					opacity: 1
+			.slider-prev
+				left: 24px
+			.slider-next
+				right: 24px
+			
+
+		&-sm
+			display: flex
+			width: calc(100% + 0.1px)
+			margin-top: 5px
+			.slide
+				margin-right: 5px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					width: 100%
+					height: 100%
+					position: absolute
+					left: 0
+					top: 0
+					z-index: 0
+					background: $white
+					opacity: 0
+					@include trs(.1s)
+				&.slick-current
+					&::after
+						opacity: .5
+			.img
+				width: 155px
+				height: 94px
+				border-radius: $bd-r
+
+	&-btns
+		display: flex
+		position: relative
+		z-index: 2
+		
+
+.project-build
+	&__top
+		margin-bottom: 20px
+		.gallery-selects
+			display: flex
+			margin-right: auto
+			div.ui-select
+				margin-right: 20px
+				&:first-of-type
+					min-width: 180px
+				&:last-of-type
+					min-width: 110px
+
+		.btn
+			margin-left: 20px
+	&__bottom
+		display: none
+		.btn
+			margin: 24px 24px 0 0
+
+
+
+.project-photos
+	.gallery-btns
+		.btn
+			margin: 24px 24px 0 0
+
+
+
+
+.project-geo
+	.map
+		height: 450px
+		margin-bottom: 30px
+
+
+
+
+.advantages-slider
+	.p-item__img
+		height: 380px
+		max-height: 380px
+	.p-item__title
+		height: 105px
+		margin: 5px 0 0
+		overflow: hidden
+	.p-item__content
+		display: block
+		width: 50%
+		.advantages-slider-text
+			width: 100%
+	.slider-arrow
+		display: flex !important
+		position: absolute
+		bottom: -75px
+		z-index: 1
+		opacity: 0.9
+		background: $white
+		border-color: #bebebe
+		.svg, .svg *
+			stroke: #bebebe
+		&:hover
+			opacity: 1
+			background: v(accent-color)
+			border-color: v(accent-color)
+			.svg, .svg *
+				stroke: $white
+
+	.slider-prev
+		left: 0
+	.slider-next
+		left: 75px
+
+
+
+
+
+.project-docs
+	&__block
+		display: flex
+		align-items: center
+		padding: 25px
+		border: 1px solid v(border-color)
+		border-radius: $bd-r
+		p
+			margin-bottom: 0
+			padding-right: 75px
+		.btn
+			min-width: 200px
+
+
+
+
+.project-ipo
+	margin-top: 50px
+	.ipo-calc
+		background: $white
+		border: 1px solid v(border-color)
+		border-radius: $bd-r
+	.filter__field
+		margin-bottom: 24px
+	.ui-quantity
+		background: v(additional-color)
+		input
+			background: transparent
+	.ui-quantity__btn
+		border: 1px solid #bebebe
+		.svg, .svg *
+			stroke: #bebebe
+			fill: #bebebe
+		&:hover
+			border-color: v(accent-color)
+			.svg, .svg *
+				stroke: $white
+				fill: $white
+
+	&__item
+		display: flex
+		align-items: center
+		height: 70px
+		background: v(additional-color)
+		border: 1px solid #ececec
+		.ipo-bank
+			width: 50%
+			height: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			z-index: 1
+			// overflow: hidden
+			background: $white
+			&::before, &::after
+				content: ''
+				display: block
+				width: 50%
+				height: 50%
+				position: absolute
+				right: -10px
+				border-right: 1px solid v(border-color)
+				background: $white
+				z-index: -1
+			&::before
+				top: 0
+				transform: skew(25deg, 0deg)
+			&::after
+				bottom: 0
+				transform: skew(-25deg, 0deg)
+			.img
+				max-width: 110px
+				max-height: 30px
+	&__val
+		width: 50%
+		padding-left: 15px
+		text-align: center
+	&__btn
+		width: 100%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		&:hover
+			color: $white
+			background: v(accent-color)
+
+	.sub-text
+		margin: 10px 0 0
+
+
+
+
+@include max-screen($xl)
+	.project-hero
+		width: 100%
+		margin-left: 0
+		height: 400px
+
+	.project-data
+		flex-wrap: wrap
+	.project-data__col
+		width: 25%
+		display: flex
+		flex-direction: column
+		align-items: center
+	.project-data__val
+		max-width: 90px
+
+	.project-build__top .btn
+		display: none
+	.project-build__bottom
+		display: flex
+
+	
+	.gallery 
+		.gallery-slider-xl, .gallery-slider-sm
+			margin-left: -24px
+		.gallery-slider-xl
+			width: calc(100% + 48px)
+		.gallery-slider-sm
+			width: calc(100% + 48.1px)
+		
+	.gallery-slider-xl .img
+		height: 350px
+		border-radius: 0
+	.gallery-slider-sm .img
+		height: 70px
+	.gallery-btns .btn
+		min-width: auto
+
+	
+	.advantages-slider
+		.p-item
+			display: block
+			border: none
+		.p-item__img
+			width: 100%
+			.img
+				height: 380px
+				border-radius: $bd-r
+		.p-item__content
+			width: 100%
+			padding: 20px 0 0
+		.p-item__title
+			max-height: 100%
+			height: auto
+		.slider-dots
+			margin-top: 20px
+			padding: 5px 0
+			justify-content: center
+
+
+	.project-docs__block p
+		padding-right: 6%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

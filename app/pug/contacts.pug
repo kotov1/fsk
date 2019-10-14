@@ -1,0 +1,157 @@
+- var page = "contacts"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Главная', href='/')
+								span(itemprop='name') Главная
+								meta(itemprop='position', content='1')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+							a(rel='nofollow', itemprop='item', title='Контакты', href='#')
+								span(itemprop='name') Контакты
+								meta(itemprop='position', content='2')
+
+					h1.title.title-margin Контакты
+
+
+					// contacts
+					
+					.contact
+						.contact__map
+							.map#map1(style="background: url('img/img-map.jpg') no-repeat 50% 50% / cover")
+								span.demo-marker
+						.contact__content
+							.contact__title.h2 Центральный офис продаж
+							.contact__metro
+								.p-metro.flex
+									.p-metro__branch(style="border-color: #33B7FB;")
+									span Московская
+								.p-metro.flex
+									.p-metro__branch(style="border-color: #9E33FB;")
+									span Чкаловская
+							.contact__data
+								.data
+									.data-label.sub-text Адрес:
+									.data-value Большой пр. ПС, д. 48, офис 1
+								.data.data-col
+									.data-label.sub-text Время работы:
+									.data-value Ежедневно с 9:00 до 21:00
+								.data.data-col
+									.data-label.sub-text Телефон:
+									.data-value
+										a(href="tel:+74951064607") +7 (495) 106-4607
+								.data
+									.data-label.sub-text Как добраться:
+									.data-value Двигаясь по Садовому кольцу в сторону Нижней Краснохолмской улицы, съезд направо на Космодамианскую набережную. Через 900 м съезд налево. Далее прямо 670м. Комплекс будет слева. Двигаясь по Садовому кольцу в сторону Нижней Краснохолмской улицы.
+
+						
+					// /.contact
+
+					.contact
+						.contact__map
+							.map#map2(style="background: url('img/img-map.jpg') no-repeat 50% 50% / cover")
+								span.demo-marker
+						.contact__content
+							.contact__title.h2 Центральный офис продаж
+							.contact__metro
+								.p-metro.flex
+									.p-metro__branch(style="border-color: #33B7FB;")
+									span Московская
+								.p-metro.flex
+									.p-metro__branch(style="border-color: #9E33FB;")
+									span Чкаловская
+							.contact__data
+								.data
+									.data-label.sub-text Адрес:
+									.data-value Большой пр. ПС, д. 48, офис 1
+								.data.data-col
+									.data-label.sub-text Время работы:
+									.data-value Ежедневно с 9:00 до 21:00
+								.data.data-col
+									.data-label.sub-text Телефон:
+									.data-value
+										a(href="tel:+74951064607") +7 (495) 106-4607
+								.data
+									.data-label.sub-text Как добраться:
+									.data-value Двигаясь по Садовому кольцу в сторону Нижней Краснохолмской улицы, съезд направо на Космодамианскую набережную. Через 900 м съезд налево. Далее прямо 670м. Комплекс будет слева. Двигаясь по Садовому кольцу в сторону Нижней Краснохолмской улицы.
+
+						
+					// /.contact
+
+					.contact
+						.contact__map
+							.map#map3(style="background: url('img/img-map.jpg') no-repeat 50% 50% / cover")
+								span.demo-marker
+						.contact__content
+							.contact__title.h2 Центральный офис продаж
+							.contact__metro
+								.p-metro.flex
+									.p-metro__branch(style="border-color: #33B7FB;")
+									span Московская
+								.p-metro.flex
+									.p-metro__branch(style="border-color: #9E33FB;")
+									span Чкаловская
+							.contact__data
+								.data
+									.data-label.sub-text Адрес:
+									.data-value Большой пр. ПС, д. 48, офис 1
+								.data.data-col
+									.data-label.sub-text Время работы:
+									.data-value Ежедневно с 9:00 до 21:00
+								.data.data-col
+									.data-label.sub-text Телефон:
+									.data-value
+										a(href="tel:+74951064607") +7 (495) 106-4607
+								.data
+									.data-label.sub-text Как добраться:
+									.data-value Двигаясь по Садовому кольцу в сторону Нижней Краснохолмской улицы, съезд направо на Космодамианскую набережную. Через 900 м съезд налево. Далее прямо 670м. Комплекс будет слева. Двигаясь по Садовому кольцу в сторону Нижней Краснохолмской улицы.
+
+						
+					// /.contact
+
+
+
+						
+
+
+				// /.container
+
+
+
+
+
+			// /.page
+
+
+			// Карточка
+			include pug-modules/card
+			// /.card
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+
+
+		// /.wrapper
+			
+
+		
+
+

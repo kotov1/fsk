@@ -1,11 +1,12 @@
+// preloader
+$(window).on('load', function() {
+	$('.preloader').fadeOut(); 
+	$('preloader .pl').delay(350).fadeOut('slow');
+});
+
+
 
 $(function() {
-
-	// preloader
-	$(window).on('load', function() {
-		$('.preloader').fadeOut(); 
-		$('preloader .pl').delay(350).fadeOut('slow');
-	});
 
 	// img.svg to inline svg
 	inlineSVG.init();
@@ -19,10 +20,11 @@ $(function() {
 		var template =  '<div class="' + classes + '">';
 				template += '<div class="ui-select__trigger">' + $(this).data("placeholder") + '</div>';
 				template += '<div class="ui-select__options">';
+				template += '<div class="ui-select__simplebar" data-simplebar data-simplebar-auto-hide="false">';
 				$(this).find("option").each(function() {
 					template += '<span class="ui-select__option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
 				});
-		template += '</div></div>';
+		template += '</div></div></div>';
 		$(this).addClass('ui-select__select');
 		$(this).after(template);
 	});
@@ -169,6 +171,9 @@ $(function() {
 
 
 
+	var sliderPrevBtn = '<button type="button" class="slider-arrow slider-prev"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
+	sliderNextBtn = '<button type="button" class="slider-arrow slider-next"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>';
+
 
 	// Слайдеры на главной
 	$('.bg-slider').slick({
@@ -176,8 +181,8 @@ $(function() {
 		autoplay: true,
 		autoplaySpeed: 7000,
 		asNavFor: '.main-slider',
-		prevArrow: '<button type="button" class="slider-arrow slider-prev"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
-		nextArrow: '<button type="button" class="slider-arrow slider-next"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="12.121" height="6.811" viewBox="0 0 12.121 6.811"><g transform="translate(1.061 1.061)"><path d="M0,0,5,5l5-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/></g></svg></button>',
+		prevArrow: sliderPrevBtn,
+		nextArrow: sliderNextBtn,
 		responsive: [
 			{
 			  breakpoint: 768,
@@ -212,6 +217,90 @@ $(function() {
 	// 		$('.main-hero').removeClass('slide-prev');
 	// 	}
 	// );
+
+
+
+	// Слайдеры на странице ЖК
+	$('#gallery-1').slick({
+		infinite: false,
+		speed: 800,
+		fade: true,
+		asNavFor: '#gallery-1-thumbs',
+		prevArrow: sliderPrevBtn,
+		nextArrow: sliderNextBtn
+	});
+	
+	$('#gallery-1-thumbs').slick({
+		infinite: false,
+		slidesToShow: 8,
+		arrows: false,
+		speed: 800,
+		focusOnSelect: true,
+		asNavFor: '#gallery-1',
+		responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+				slidesToShow: 6,
+			  }
+			}
+		]
+	});
+
+	
+	$('.advantages-slider-img').slick({
+		infinite: false,
+		arrows: false,
+		speed: 800,
+		asNavFor: '.advantages-slider-text',
+	});
+	$('.advantages-slider-text').slick({
+		infinite: false,
+		speed: 800,
+		fade: true,
+		asNavFor: '.advantages-slider-img',
+		prevArrow: sliderPrevBtn,
+		nextArrow: sliderNextBtn,
+		dotsClass: 'slider-dots slider-dots--dark',
+		responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+				arrows: false,
+				dots: true
+			  }
+			}
+		]
+	});
+
+
+	$('#gallery-2').slick({
+		infinite: false,
+		speed: 800,
+		fade: true,
+		asNavFor: '#gallery-2-thumbs',
+		prevArrow: sliderPrevBtn,
+		nextArrow: sliderNextBtn
+	});
+	
+	$('#gallery-2-thumbs').slick({
+		infinite: false,
+		slidesToShow: 8,
+		arrows: false,
+		speed: 800,
+		focusOnSelect: true,
+		asNavFor: '#gallery-2',
+		responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+				slidesToShow: 6,
+			  }
+			}
+		]
+	});
+
+		
 
 
 

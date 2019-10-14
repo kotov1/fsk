@@ -5,12 +5,10 @@
 // .wrapper
 
 .page
-	&:not(.page-main)
-		padding-top: 80px
-	&-main
-		padding-top: 60px
-.page
+	padding-top: 60px
 	padding-bottom: 50px
+	&--nohero
+		padding-top: 80px
 
 	
 /* ---------- Grid ---------- */
@@ -79,6 +77,8 @@
 	font-weight: 500
 .dashed-underline
 	border-bottom: 1px dashed currentColor
+.dashed-border
+	border-bottom: 1px dashed v(accent-color)
 .p-relative
 	position: relative
 
@@ -101,7 +101,7 @@ h3, h4, h5, .h3
 	padding-left: 0.5em
 	border-left: 3px solid v(accent-color)
 	&-margin
-		margin-bottom: 1em
+		margin-bottom: .8em
 
 .sub-text
 	font-size: 14px
@@ -217,6 +217,8 @@ ol.list
 			fill: v(accent-color)
 			stroke: v(accent-color)
 			border-color: v(accent-color)
+		.svg-stroke *
+			transition-delay: .1s
 		&:hover
 			box-shadow: $shadow1
 			.btn__ic
@@ -225,6 +227,11 @@ ol.list
 				border-color: $white
 			.ic-read *
 				stroke: $white
+			.svg-stroke *
+				stroke: $white
+				transition-delay: 0s
+				
+
 	&--border
 		background-color: $white
 		border-color: v(accent-color)
@@ -238,6 +245,8 @@ ol.list
 		color: $white
 		&:hover
 			background-color: v(cta-color) !important
+			box-shadow: 0 0 7px 2px v(cta-color)
+		&:focus
 			box-shadow: 0 0 7px 2px v(cta-color)
 		.ic-tel *
 			stroke: $white
@@ -412,8 +421,14 @@ ol.list
 				transform: scale(1.8)
 				background: v(accent-color)
 
-
-
+.slick-disabled
+	opacity: .5 !important
+	cursor: default
+	&:hover
+		background-color: v(accent-color)
+		border: 1px solid v(accent-color)
+		.svg, .svg *
+			stroke: $white
 
 
 .p-metro
@@ -447,8 +462,9 @@ ol.list
 		border-radius: 50%
 		background: #ffc919
 		font-size: 19px
-		line-height: 1
-		color: #000
+		line-height: 0
+		color: $black
+		padding-top: 1px
 	&__txt
 		margin: 0
 		flex: 1
@@ -502,10 +518,47 @@ ol.list
 		background-size: 75% 15%
 
 
+
+
+
+
+.geo-marks
+	display: flex
+	&__col
+		width: 20%
+.geo-mark
+	display: flex
+	align-items: center
+	&:not(:last-child)
+		margin-bottom: 24px
+	.img
+		margin-right: 17px
+		&:not(.pin-object)
+			width: 30px
+			flex: 0 0 30px
+			height: 37px
+	.pin-object
+		width: 40px
+		flex: 0 0 40px
+		height: 45px
+
+
+
+
+
+
+
 @include max-screen($xl)
 
 	.hide-on-mob
 		display: none
+
+	.geo-marks
+		flex-wrap: wrap
+	.geo-marks__col
+		width: 50%
+	.geo-mark
+		margin-bottom: 24px
 
 
 
