@@ -45,7 +45,7 @@
             <div class="header-call__data"><a href="tel:8127035555">(812) 703-55-55</a>
               <button class="header-call__btn" type="button">ПЕРЕЗВОНИТЕ МНЕ</button>
             </div>
-          </div><a class="btn btn--bg header-top__link" href="#"> <img class="svg btn__ic" src="img/icons/ic-filters-white.svg" width="15" height="15" alt="alt">Выбрать квартиру</a>
+          </div><a class="btn btn--bg header-top__link anchor-scroll" href="#filter-anchor"> <img class="svg btn__ic" src="img/icons/ic-filters-white.svg" width="15" height="15" alt="alt">Выбрать квартиру</a>
         </div>
         <!-- /.header__top-->
         <div class="toggle-menu">
@@ -178,77 +178,96 @@
           </div>
         </div>
         <!-- /.card-hero-->
-        <div class="project-about">
+        <div class="scrollspy-menu">
+          <div class="container scrollspy-menu__slider"><a class="active" href="#p-1">О проекте</a><a href="#p-2">Галерея</a><a href="#p-3">Расположение</a><a href="#p-4">Преимущества</a><a href="#p-5">Квартиры</a><a href="#p-6">Ипотека</a><a href="#p-7">Акции</a><a href="#p-8">Ход строительства</a><a href="#p-9">Офис продаж</a><a href="#p-10">Документы</a></div>
+        </div>
+        <div class="project-about scrollspy-item" id="p-1">
           <div class="container">
             <h2 class="h1 title">О проекте</h2>
             <p>Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.</p>
             <div class="project-data">
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Срок сдачи:</div>
-                <div class="project-data__val">I кв. 2019 – IV кв. 2020</div>
+                <div>
+                  <div class="sub-text">Срок сдачи:</div>
+                  <div class="project-data__val">I кв. 2019 – IV кв. 2020</div>
+                </div>
               </div>
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Потолки:</div>
-                <div class="project-data__val">от 2,8 м</div>
+                <div>
+                  <div class="sub-text">Потолки:</div>
+                  <div class="project-data__val">от 2,8 м</div>
+                </div>
               </div>
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Тип дома:</div>
-                <div class="project-data__val">Кирпичный</div>
+                <div>
+                  <div class="sub-text">Тип дома:</div>
+                  <div class="project-data__val">Кирпичный</div>
+                </div>
               </div>
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Этажность:</div>
-                <div class="project-data__val">8–27 этажей</div>
+                <div>
+                  <div class="sub-text">Этажность:</div>
+                  <div class="project-data__val">8–27 этажей</div>
+                </div>
               </div>
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Отделка:</div>
-                <div class="project-data__val">Черновая</div>
+                <div>
+                  <div class="sub-text">Отделка:</div>
+                  <div class="project-data__val">Черновая</div>
+                </div>
               </div>
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Паркинг:</div>
-                <div class="project-data__val">Есть</div>
+                <div>
+                  <div class="sub-text">Паркинг:</div>
+                  <div class="project-data__val">Есть</div>
+                </div>
               </div>
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Класс дома:</div>
-                <div class="project-data__val">Комфорт</div>
+                <div>
+                  <div class="sub-text">Класс дома:</div>
+                  <div class="project-data__val">Комфорт</div>
+                </div>
               </div>
               <div class="project-data__col"><img class="img" src="img/img-advantage-1.svg" alt="alt">
-                <div class="sub-text">Кладовки:</div>
-                <div class="project-data__val">Есть</div>
+                <div>
+                  <div class="sub-text">Кладовки:</div>
+                  <div class="project-data__val">Есть</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <!-- /.card-project-->
-        <div class="gallery project-photos section-margin">
+        <div class="gallery project-photos section-margin scrollspy-item" id="p-2">
           <div class="container">
             <h2 class="h1 title">Галерея</h2>
             <div class="gallery-slider-xl" id="gallery-1">
               <div class="slide"><img class="img" src="img/img-main-1.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-1.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-1.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-2.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-2.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-2.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-3.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-3.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-3.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-4.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-4.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-4.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-1.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-1g.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-1.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-2.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-2.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-2.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-3.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-3.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-3.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-4.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-4.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-4.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-1.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-1.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-1.jpg" data-fancybox="gallery1"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
             </div>
             <!-- /.gallery-slider-xl-->
@@ -293,7 +312,7 @@
           </div>
         </div>
         <!-- /.form-->
-        <div class="project-geo">
+        <div class="project-geo scrollspy-item" id="p-3">
           <div class="container">
             <h2 class="h1 title">Расположение и инфраструктура</h2>
           </div>
@@ -327,7 +346,7 @@
           </div>
         </div>
         <!-- /.project-geo-->
-        <div class="project-advantages section-margin">
+        <div class="project-advantages section-margin scrollspy-item" id="p-4">
           <div class="container">
             <h2 class="h1 title">Преимущества</h2>
             <div class="advantages-slider">
@@ -348,11 +367,11 @@
                       </div>
                       <div class="slide">
                         <div class="h2 text-bold">Преимущество 2</div>
-                        <div class="p-item__title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. По всей, ipsum решила речью запятых вершину несколько домах о запятой, журчит залетают, последний первую заголовок?</div>
+                        <div class="p-item__title">Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.</div>
                       </div>
                       <div class="slide">
                         <div class="h2 text-bold">Преимущество 3</div>
-                        <div class="p-item__title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали текстов пояс жаренные запятых переписали встретил последний возвращайся языкового великий, безопасную лучше переписывается безорфографичный буквенных заголовок своего курсивных путь решила свое ручеек! Ему, они.</div>
+                        <div class="p-item__title">Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.</div>
                       </div>
                     </div>
                   </div>
@@ -363,8 +382,8 @@
         </div>
         <!-- /.project-advantages-->
         <!-- filters-->
-        <div class="container section-margin">
-          <h2 class="h1 title">Выбор квартир</h2>
+        <div class="container section-margin scrollspy-item" id="p-5">
+          <h2 class="h1 title" id="filter-anchor">Выбор квартир</h2>
           <div class="filter">
             <div class="filter-row">
               <div class="filter-fields">
@@ -742,7 +761,7 @@
         </div>
         <!-- /.filters-->
         <!-- ipo-->
-        <div class="project-ipo">
+        <div class="project-ipo scrollspy-item" id="p-6">
           <div class="container">
             <h2 class="h1 title">Ипотека - это просто!</h2>
             <div class="ipo-calc">
@@ -825,9 +844,7 @@
                     </div>
                   </div>
                   <div class="filter__field">
-                    <div class="project-ipo__item">
-                      <button class="project-ipo__btn" type="button">Показать ещё банки</button>
-                    </div>
+                    <div class="project-ipo__item"><a class="project-ipo__btn" href="ipo.html">Показать ещё банки</a></div>
                   </div>
                 </div>
               </div>
@@ -838,7 +855,7 @@
         </div>
         <!-- /.ipo-->
         <!-- discounts-->
-        <div class="container section-margin">
+        <div class="container section-margin scrollspy-item" id="p-7">
           <h2 class="h1 title">Акции и скидки</h2>
           <div class="p-list">
             <div class="f-row">
@@ -871,7 +888,7 @@
           </div>
         </div>
         <!-- /.discounts-->
-        <div class="gallery project-build section-margin">
+        <div class="gallery project-build section-margin scrollspy-item" id="p-8">
           <div class="container">
             <h2 class="h1 title">Ход строительства</h2>
             <div class="gallery-btns project-build__top">
@@ -901,31 +918,31 @@
             </div>
             <div class="gallery-slider-xl" id="gallery-2">
               <div class="slide"><img class="img" src="img/img-main-1.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-1.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-1.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-2.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-2.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-2.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-3.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-3.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-3.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-4.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-4.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-4.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-1.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-1g.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-1.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-2.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-2.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-2.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-3.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-3.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-3.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-4.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-4.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-4.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
               <div class="slide"><img class="img" src="img/img-main-1.jpg" alt="alt">
-                <button class="ui-btn zoom-link" href="img/img-main-1g.jpg"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
+                <button class="ui-btn zoom-link" href="img/img-main-1.jpg" data-fancybox="gallery2"><img class="svg" src="img/icons/ic-zoom.svg" width="15" height="15" alt="zoom"></button>
               </div>
             </div>
             <!-- /.gallery-slider-xl-->
@@ -945,7 +962,7 @@
           </div>
         </div>
         <!-- /.gallery-->
-        <div class="project-contacts section-margin">
+        <div class="project-contacts section-margin scrollspy-item" id="p-9">
           <div class="container">
             <h1 class="title title-margin">Контакты офиса продаж</h1>
             <div class="contact">
@@ -985,7 +1002,7 @@
           </div>
         </div>
         <!-- project-docs-->
-        <div class="project-docs section-margin">
+        <div class="project-docs section-margin scrollspy-item" id="p-10">
           <div class="container">
             <h2 class="h1 title">Документация по объекту</h2>
             <div class="project-docs__block">
@@ -997,7 +1014,7 @@
         <div class="container section-margin">
           <h2 class="h1 title">Другие объекты</h2>
           <div class="quarter-list view-2 other-objects">
-            <div class="f-row">
+            <div class="f-row project-other">
               <div class="cols col-1-2">
                 <div class="quarter">
                   <div class="quarter__img-wrap"><img class="quarter__img" src="img/img-quarter.jpg" alt="alt">

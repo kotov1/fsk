@@ -14,6 +14,7 @@
 	margin-bottom: 0
 	.p-hero__inner
 		position: relative
+		left: 0
 	.p-hero__title
 		margin: 40px 0 5px
 		font-weight: 500
@@ -47,6 +48,7 @@
 .project-data
 	display: flex
 	justify-content: space-between
+	margin-top: -1rem
 	&__col
 		width: 115px
 		margin-top: 30px
@@ -59,6 +61,7 @@
 
 
 .gallery
+	overflow: hidden
 	&-slider
 		&-xl
 			.slide
@@ -79,12 +82,27 @@
 				margin-top: -25px
 				opacity: 0.9
 				z-index: 1
+				border: none
+				background: v(additional-color)
+				.svg *
+					stroke: #727272
 				&:hover
+					border-color: v(accent-color)
+					background-color: v(accent-color)
+					box-shadow: 0 8px 15px 0 rgba(233,66,0,.3)
 					opacity: 1
+					.svg *
+						stroke: $white
 			.slider-prev
 				left: 24px
 			.slider-next
 				right: 24px
+			.slick-disabled:hover
+				border: none
+				box-shadow: none
+				background: v(additional-color)
+				.svg *
+					stroke: #727272
 			
 
 		&-sm
@@ -191,7 +209,7 @@
 	.slider-prev
 		left: 0
 	.slider-next
-		left: 75px
+		left: 65px
 
 
 
@@ -243,7 +261,7 @@
 		background: v(additional-color)
 		border: 1px solid #ececec
 		.ipo-bank
-			width: 50%
+			width: 60%
 			height: 100%
 			display: flex
 			align-items: center
@@ -269,24 +287,115 @@
 				bottom: 0
 				transform: skew(-25deg, 0deg)
 			.img
-				max-width: 110px
-				max-height: 30px
+				max-width: 100px
+				max-height: 25px
 	&__val
 		width: 50%
 		padding-left: 15px
 		text-align: center
+		font-weight: 500
 	&__btn
 		width: 100%
 		height: 100%
 		display: flex
 		align-items: center
 		justify-content: center
+		font-weight: 500
 		&:hover
 			color: $white
 			background: v(accent-color)
 
 	.sub-text
 		margin: 10px 0 0
+
+
+
+
+
+.scrollspy-menu
+	width: 100%
+	background: rgba($add-accent-color, .85)
+	@include trs(.1s)
+	&__slider
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 100%
+	a
+		display: block
+		position: relative
+		height: 50px
+		padding: 15px 0
+		font-size: 16px
+		color: $white
+		font-weight: 500
+		white-space: 
+		@include trs(.1s)
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 3px
+			position: absolute
+			left: 0
+			bottom: 0
+			z-index: 0
+			background: $white
+			opacity: 0
+			@include trs(.1s)
+		&:hover, &:focus
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.8)
+		&:focus
+			box-shadow: none
+		&.active
+			&::after
+				opacity: .8
+
+	&--fixed
+		position: fixed
+		top: 60px
+		left: 0
+		z-index: 200
+
+	.slick-arrow
+		width: 50px
+		height: 48px
+		position: absolute
+		top: 50%
+		margin-top: -24px
+		background-image: url('../img/icons/ic-scroll-arrow.svg'), linear-gradient(270deg, $add-accent-color 70%, rgba(38, 41, 90, 0) 100%)
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: 20px 20px, 100% 100%
+		font-size: 0
+		z-index: 201
+		@include trs(.1s)
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 0
+			background-image: 
+		&:focus
+			box-shadow: none
+	.slick-prev
+		left: 0
+		transform: scale(-1)
+	.slick-next
+		right: 0
+	.slick-disabled
+		opacity: 0 !important
+		visibility: hidden
+
+.scrollspy-padding
+	padding-top: 50px
+
+
+
 
 
 
@@ -334,10 +443,10 @@
 		.p-item
 			display: block
 			border: none
+			box-shadow: none
 		.p-item__img
 			width: 100%
 			.img
-				height: 380px
 				border-radius: $bd-r
 		.p-item__content
 			width: 100%
@@ -355,18 +464,120 @@
 		padding-right: 6%
 
 
+	.project-other
+		.slider-dots
+			justify-content: center
 
 
+	.scrollspy-menu
+		&__slider
+			padding: 0 24px
+		a
+			margin-right: 30px
 
 
+@include max-screen($md)
+
+	.project-hero
+		height: 250px
+		margin-bottom: 140px
+		padding: 0
+		&__img
+			display: none
+		.p-hero__inner
+			width: 100%
+			left: 0
+			bottom: -140px
+		.p-hero__title
+			margin: 0 0 8px
+			font-size: 25px
+		&__distance
+			margin-bottom: 15px
+		.p-discount
+			max-width: 100%
+			margin-bottom: 15px
+			&__ic
+				width: 30px
+				flex-basis: 30px
+				height: 30px
+				font-size: 18px
+			&__txt
+				font-weight: 300
+		.breadcrumbs
+			position: static
+			> span + span::before
+				opacity: 0.8
+				background-image: url('../img/icons/ic-breadcrumb-white.svg')
 
 
+	.gallery 
+		.gallery-slider-xl, .gallery-slider-sm
+			margin-left: -15px
+		.gallery-slider-xl
+			width: calc(100% + 30px)
+		.gallery-slider-sm
+			width: calc(100% + 30.1px)
+	.gallery-slider-xl .img
+		height: 56.25vw
+		max-height: 220px
+	.gallery-slider-xl .slide .zoom-link
+		display: none
+	.gallery-slider-sm .img
+		height: 60px
+	.gallery-btns
+		display: block
+		.btn
+			width: 100%
+			margin: 20px 0 0
+	.project-build__top .gallery-selects div.ui-select:first-of-type
+		min-width: 155px
+
+	.advantages-slider 
+		.p-item__img 
+			height: 220px
+
+	.project-docs__block
+		display: block
+		padding: 20px
+		p
+			padding-right: 0
+		.btn
+			width: 100%
+			margin-top: 20px
 
 
+	.project-geo .map
+		height: 400px
 
 
+	.project-data
+		display: block
+		.img
+			height: 45px
+			margin: 0 19px 0 0
+		.slider-dots
+			margin-top: 20px
+			justify-content: center
+	.project-data__col
+		display: flex !important
+		flex-direction: row
+		width: 100%
+	.project-data__col:not(:last-child)
+		padding-right: 0
+	.project-data__val
+		max-width: 100%
 
 
+	.scrollspy-menu
+		overflow: hidden
+		&__slider
+			padding: 0 15px
+		.slick-next
+			right: 0
+		.slick-prev
+			left: 0
+		a
+			margin-right: 20px
 
 
 

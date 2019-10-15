@@ -227,7 +227,15 @@ $(function() {
 		fade: true,
 		asNavFor: '#gallery-1-thumbs',
 		prevArrow: sliderPrevBtn,
-		nextArrow: sliderNextBtn
+		nextArrow: sliderNextBtn,
+		responsive: [
+			{
+			  breakpoint: 767,
+			  settings: {
+				arrows: false
+			  }
+			}
+		]
 	});
 	
 	$('#gallery-1-thumbs').slick({
@@ -243,19 +251,25 @@ $(function() {
 			  settings: {
 				slidesToShow: 6,
 			  }
+			},
+			{
+				breakpoint: 767,
+				settings: {
+				  slidesToShow: 4,
+				}
 			}
 		]
 	});
 
 	
 	$('.advantages-slider-img').slick({
-		infinite: false,
+		// infinite: false,
 		arrows: false,
 		speed: 800,
 		asNavFor: '.advantages-slider-text',
 	});
 	$('.advantages-slider-text').slick({
-		infinite: false,
+		// infinite: false,
 		speed: 800,
 		fade: true,
 		asNavFor: '.advantages-slider-img',
@@ -280,7 +294,15 @@ $(function() {
 		fade: true,
 		asNavFor: '#gallery-2-thumbs',
 		prevArrow: sliderPrevBtn,
-		nextArrow: sliderNextBtn
+		nextArrow: sliderNextBtn,
+		responsive: [
+			{
+			  breakpoint: 767,
+			  settings: {
+				arrows: false
+			  }
+			}
+		]
 	});
 	
 	$('#gallery-2-thumbs').slick({
@@ -296,17 +318,66 @@ $(function() {
 			  settings: {
 				slidesToShow: 6,
 			  }
+			},
+			{
+				breakpoint: 767,
+				settings: {
+				  slidesToShow: 4,
+				}
 			}
 		]
 	});
 
+
+	// BEGIN scrollspy в подменю на странице ЖК
+
+	var scrollspyOffset;
+
+	$('.scrollspy-menu a, .anchor-scroll').on('click', function(e){
+		var id = $(this).attr('href');
+		e.preventDefault();
+		$('html,body').stop().animate({ scrollTop: $(id).offset().top-150 }, 1000);
+	});
+
+	function AnchorActive() {
+		$('.scrollspy-item').each(function(e) {
+			var dataName = $(this).attr('id');
+			var posit = $(this).offset().top - 400;
+
+			var windowPostition = $(window).scrollTop();
+
+			if (windowPostition >= posit) {
+				$('.scrollspy-menu a').removeClass('active');
+				$('.scrollspy-menu [href="#'+ dataName + '"]').addClass('active');
+			}
+
+		});
+	}
+
+	
+	function lineFixing() {
+		if ( $(window).scrollTop() >= scrollspyOffset ) {
+			$('.scrollspy-menu').addClass('scrollspy-menu--fixed');
+			$('.wrapper').addClass('scrollspy-padding');
+		} else {
+			$('.scrollspy-menu').removeClass('scrollspy-menu--fixed');
+			$('.wrapper').removeClass('scrollspy-padding');
+		}
+	}
+
+	$(window).scroll(function() {
+		AnchorActive();
+		lineFixing();
+	});
+
+
+	// END scrollspy в подменю на странице ЖК
+
 		
+	/* Реинициализация элементов при ресайзе окна */
+	$(window).on('load resize orientationchange', function() {
 
-
-
-    /* Slick needs no get Reinitialized on window Resize after it was destroyed */
-    $(window).on('load resize orientationchange', function() {
-
+		// слайдер преимуществ на главной
         $('.advantages-list').each(function(){
             var $carousel = $(this);
             if ($(window).width() > 767) {
@@ -351,17 +422,94 @@ $(function() {
 				$(this).find('p').append(link);
 			}
 		});
-			
-    });
+
+
+		// слайдер других объектов
+		$('.project-data').each(function(){
+            var $carousel = $(this);
+            if ($(window).width() > 767) {
+                if ($carousel.hasClass('slick-initialized')) {
+                    $carousel.slick('unslick');
+                }
+            }
+            else{
+                if (!$carousel.hasClass('slick-initialized')) {
+                    $carousel.slick({
+						arrows: false,
+						dots: true,
+						dotsClass: 'slider-dots slider-dots--dark',
+						mobileFirst: true,
+						rows: 3
+                    });
+                }
+            }
+		});
+
+		// слайдер других объектов
+		$('.project-other').each(function(){
+            var $carousel = $(this);
+            if ($(window).width() > 1199) {
+                if ($carousel.hasClass('slick-initialized')) {
+                    $carousel.slick('unslick');
+                }
+            }
+            else{
+                if (!$carousel.hasClass('slick-initialized')) {
+                    $carousel.slick({
+						arrows: false,
+						dots: true,
+						dotsClass: 'slider-dots slider-dots--dark',
+                        mobileFirst: true,
+                    });
+                }
+            }
+		});
+
+
+		scrollspyOffset = $('.scrollspy-menu').offset().top -60;
+		AnchorActive();
+		lineFixing();
+
+		var $scrollSlider = $('.scrollspy-menu__slider');
+		if ($(window).width() > 1199) {
+			if ($scrollSlider.hasClass('slick-initialized')) {
+				$scrollSlider.slick('unslick');
+			}
+		} else{
+			if (!$scrollSlider.hasClass('slick-initialized')) {
+				$scrollSlider.slick({
+					infinite: false,
+					speed: 500,
+					slidesToShow: 8,
+					// focusOnSelect: true,
+					// centerMode: true,
+					// centerPadding: '0px',
+					variableWidth: true,
+					responsive: [
+						{
+							breakpoint: 767,
+							settings: {
+								slidesToShow: 6,
+							}
+						},
+						{
+							breakpoint: 575,
+							settings: {
+								slidesToShow: 2
+							}
+						}
+					]
+				});
+			}
+			$(window).scroll(function() {
+				var currentSlide = $('.scrollspy-menu .active').index();
+				$scrollSlider.slick('slickGoTo', currentSlide-1);
+			});
+		}
 
 
 
-
-
-
-
-
-
+	});
 
 
 
@@ -540,6 +688,20 @@ $(function() {
 
 		dropDown.stop(false, true).slideToggle();
    });
+
+
+
+
+
+
+
+	
+
+
+
+	
+	
+
 
 
 });

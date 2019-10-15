@@ -56,86 +56,108 @@ html(lang="ru")
 				// /.card-hero
 
 
-				.project-about
+				.scrollspy-menu
+					.container.scrollspy-menu__slider
+						a.active(href="#p-1") О проекте
+						a(href="#p-2") Галерея
+						a(href="#p-3") Расположение
+						a(href="#p-4") Преимущества
+						a(href="#p-5") Квартиры
+						a(href="#p-6") Ипотека
+						a(href="#p-7") Акции
+						a(href="#p-8") Ход строительства
+						a(href="#p-9") Офис продаж
+						a(href="#p-10") Документы
+
+
+				.project-about.scrollspy-item#p-1
 					.container
 						h2.h1.title О проекте
 						p Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
 						.project-data
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Срок сдачи:
-								.project-data__val I кв. 2019 – IV кв. 2020
+								div
+									.sub-text Срок сдачи:
+									.project-data__val I кв. 2019 – IV кв. 2020
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Потолки:
-								.project-data__val от 2,8 м
+								div
+									.sub-text Потолки:
+									.project-data__val от 2,8 м
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Тип дома:
-								.project-data__val Кирпичный
+								div
+									.sub-text Тип дома:
+									.project-data__val Кирпичный
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Этажность:
-								.project-data__val 8–27 этажей
+								div
+									.sub-text Этажность:
+									.project-data__val 8–27 этажей
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Отделка:
-								.project-data__val Черновая
+								div
+									.sub-text Отделка:
+									.project-data__val Черновая
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Паркинг:
-								.project-data__val Есть
+								div
+									.sub-text Паркинг:
+									.project-data__val Есть
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Класс дома:
-								.project-data__val Комфорт
+								div
+									.sub-text Класс дома:
+									.project-data__val Комфорт
 							.project-data__col
 								img.img(src="img/img-advantage-1.svg", alt="alt")
-								.sub-text Кладовки:
-								.project-data__val Есть
+								div
+									.sub-text Кладовки:
+									.project-data__val Есть
 
 				// /.card-project
 
 
-				.gallery.project-photos.section-margin
+				.gallery.project-photos.section-margin.scrollspy-item#p-2
 					.container
 						h2.h1.title Галерея
 						.gallery-slider-xl#gallery-1
 							.slide
 								img.img(src="img/img-main-1.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-1.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-1.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-2.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-2.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-2.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-3.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-3.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-3.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-4.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-4.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-4.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-1.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-1g.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-1.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-2.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-2.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-2.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-3.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-3.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-3.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-4.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-4.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-4.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-1.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-1.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-1.jpg", data-fancybox="gallery1")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 
 						// /.gallery-slider-xl
@@ -181,7 +203,7 @@ html(lang="ru")
 				// /.form
 
 
-				.project-geo
+				.project-geo.scrollspy-item#p-3
 					.container
 						h2.h1.title Расположение и инфраструктура
 					.map#map1(style="background: url('img/img-map-marks.jpg') no-repeat 50% 50% / cover")
@@ -236,7 +258,7 @@ html(lang="ru")
 
 
 
-				.project-advantages.section-margin
+				.project-advantages.section-margin.scrollspy-item#p-4
 					.container
 						h2.h1.title Преимущества
 
@@ -258,19 +280,20 @@ html(lang="ru")
 												.p-item__title Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
 											.slide
 												.h2.text-bold Преимущество 2
-												.p-item__title Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. По всей, ipsum решила речью запятых вершину несколько домах о запятой, журчит залетают, последний первую заголовок?
+												.p-item__title Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
 											.slide
 												.h2.text-bold Преимущество 3
-												.p-item__title Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали текстов пояс жаренные запятых переписали встретил последний возвращайся языкового великий, безопасную лучше переписывается безорфографичный буквенных заголовок своего курсивных путь решила свое ручеек! Ему, они.
+												.p-item__title Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
 
 
 				// /.project-advantages
 
 
 				// filters
-				.container.section-margin
+				
+				.container.section-margin.scrollspy-item#p-5
 
-					h2.h1.title Выбор квартир
+					h2.h1.title#filter-anchor Выбор квартир
 
 					.filter
 						.filter-row
@@ -741,7 +764,7 @@ html(lang="ru")
 
 
 				// ipo
-				.project-ipo
+				.project-ipo.scrollspy-item#p-6
 					.container
 						h2.h1.title Ипотека - это просто!
 						.ipo-calc
@@ -818,7 +841,7 @@ html(lang="ru")
 											.project-ipo__val 199 226
 									.filter__field
 										.project-ipo__item
-											button.project-ipo__btn(type="button") Показать ещё банки
+											a.project-ipo__btn(href="ipo.html") Показать ещё банки
 
 						// /.ipo-calc
 
@@ -828,7 +851,7 @@ html(lang="ru")
 
 
 				// discounts
-				.container.section-margin
+				.container.section-margin.scrollspy-item#p-7
 					h2.h1.title Акции и скидки
 					.p-list
 						.f-row
@@ -872,7 +895,7 @@ html(lang="ru")
 				// /.discounts
 
 
-				.gallery.project-build.section-margin
+				.gallery.project-build.section-margin.scrollspy-item#p-8
 					.container
 						h2.h1.title Ход строительства
 						.gallery-btns.project-build__top
@@ -909,39 +932,39 @@ html(lang="ru")
 						.gallery-slider-xl#gallery-2
 							.slide
 								img.img(src="img/img-main-1.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-1.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-1.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-2.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-2.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-2.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-3.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-3.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-3.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-4.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-4.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-4.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-1.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-1g.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-1.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-2.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-2.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-2.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-3.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-3.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-3.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-4.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-4.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-4.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 							.slide
 								img.img(src="img/img-main-1.jpg", alt="alt")
-								button.ui-btn.zoom-link(href="img/img-main-1g.jpg")
+								button.ui-btn.zoom-link(href="img/img-main-1.jpg", data-fancybox="gallery2")
 									img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 
 						// /.gallery-slider-xl
@@ -982,7 +1005,7 @@ html(lang="ru")
 				// /.gallery
 
 
-				.project-contacts.section-margin
+				.project-contacts.section-margin.scrollspy-item#p-9
 					.container
 						h1.title.title-margin Контакты офиса продаж
 						.contact
@@ -1016,7 +1039,7 @@ html(lang="ru")
 
 
 				// project-docs
-				.project-docs.section-margin
+				.project-docs.section-margin.scrollspy-item#p-10
 					.container
 						h2.h1.title Документация по объекту
 						.project-docs__block
@@ -1031,7 +1054,7 @@ html(lang="ru")
 				.container.section-margin
 					h2.h1.title Другие объекты
 					.quarter-list.view-2.other-objects
-						.f-row
+						.f-row.project-other
 							.cols.col-1-2
 								.quarter
 									.quarter__img-wrap

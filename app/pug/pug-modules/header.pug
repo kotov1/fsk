@@ -33,9 +33,22 @@ header.header
 				a(href="tel:8127035555") (812) 703-55-55
 				button.header-call__btn(type="button") ПЕРЕЗВОНИТЕ МНЕ
 
-		a.btn.btn--bg.header-top__link(href="#") 
-			img.svg.btn__ic(src="img/icons/ic-filters-white.svg", width="15", height="15", alt="alt")
-			| Выбрать квартиру
+		if page == "page"
+			a.btn.btn--bg.header-top__link.anchor-scroll(href="#filter-anchor") 
+				img.svg.btn__ic(src="img/icons/ic-filters-white.svg", width="15", height="15", alt="alt")
+				| Выбрать квартиру
+		else if page == "main"
+			a.btn.btn--bg.header-top__link.anchor-scroll(href="#filter-anchor") 
+				img.svg.btn__ic(src="img/icons/ic-filters-white.svg", width="15", height="15", alt="alt")
+				| Выбрать квартиру
+		else if page == "newbuild"
+			a.btn.btn--bg.header-top__link.anchor-scroll(href="#filter-anchor") 
+				img.svg.btn__ic(src="img/icons/ic-filters-white.svg", width="15", height="15", alt="alt")
+				| Выбрать квартиру
+		else
+			a.btn.btn--bg.header-top__link(href="newbuild.html") 
+				img.svg.btn__ic(src="img/icons/ic-filters-white.svg", width="15", height="15", alt="alt")
+				| Выбрать квартиру
 
 	// /.header__top
 
