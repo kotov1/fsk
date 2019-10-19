@@ -180,20 +180,34 @@
 	.p-item__img
 		height: 380px
 		max-height: 380px
+		.zoom-link
+			display: none
+			position: absolute
+			top: 24px
+			left: 24px
+			opacity: 0.8
+	&-img
+		.slide
+			position: relative
 	.p-item__title
-		height: 105px
+		max-height: 210px
 		margin: 5px 0 0
 		overflow: hidden
 	.p-item__content
-		display: block
 		width: 50%
+		padding: 5px 50px
 		.advantages-slider-text
 			width: 100%
+		.slick-track
+			display: flex
+			align-items: center
+	&-btns
+		display: flex
+		padding-top: 15px
+		.slider-arrow
+			margin-right: 15px
 	.slider-arrow
 		display: flex !important
-		position: absolute
-		bottom: -75px
-		z-index: 1
 		opacity: 0.9
 		background: $white
 		border-color: #bebebe
@@ -206,10 +220,7 @@
 			.svg, .svg *
 				stroke: $white
 
-	.slider-prev
-		left: 0
-	.slider-next
-		left: 65px
+
 
 
 
@@ -234,25 +245,25 @@
 .project-ipo
 	margin-top: 50px
 	.ipo-calc
-		background: $white
-		border: 1px solid v(border-color)
-		border-radius: $bd-r
+		// background: $white
+		// border: 1px solid v(border-color)
+		// border-radius: $bd-r
 	.filter__field
 		margin-bottom: 24px
-	.ui-quantity
-		background: v(additional-color)
-		input
-			background: transparent
-	.ui-quantity__btn
-		border: 1px solid #bebebe
-		.svg, .svg *
-			stroke: #bebebe
-			fill: #bebebe
-		&:hover
-			border-color: v(accent-color)
-			.svg, .svg *
-				stroke: $white
-				fill: $white
+	// .ui-quantity
+	// 	background: v(additional-color)
+	// 	input
+	// 		background: transparent
+	// .ui-quantity__btn
+	// 	border: 1px solid #bebebe
+	// 	.svg, .svg *
+	// 		stroke: #bebebe
+	// 		fill: #bebebe
+	// 	&:hover
+	// 		border-color: v(accent-color)
+	// 		.svg, .svg *
+	// 			stroke: $white
+	// 			fill: $white
 
 	&__item
 		display: flex
@@ -396,7 +407,17 @@
 
 
 
-
+.project-other
+	.quarter__img-wrap
+		height: 200px
+	.quarter__content
+		display: flex
+		flex-direction: column
+		.quarter__transport
+			.p-metro
+				margin-bottom: 5px
+		.btn
+			margin-top: auto
 
 
 
@@ -446,6 +467,8 @@
 			box-shadow: none
 		.p-item__img
 			width: 100%
+			.zoom-link
+				display: flex
 			.img
 				border-radius: $bd-r
 		.p-item__content
@@ -455,9 +478,20 @@
 			max-height: 100%
 			height: auto
 		.slider-dots
-			margin-top: 20px
+			width: 100%
+			position: absolute
+			bottom: 16px
 			padding: 5px 0
 			justify-content: center
+		.slider-dots--dark li:not(.slick-active) button
+			background: $white
+	.advantages-slider .p-item__content .slick-track
+		display: block
+	// .advantages-slider-img
+	// 	.slick-list
+	// 		overflow: visible
+	.advantages-slider-text .h2
+		margin-bottom: 10px
 
 
 	.project-docs__block p
@@ -470,6 +504,7 @@
 
 
 	.scrollspy-menu
+		background-color: v(add-accent-color)
 		&__slider
 			padding: 0 24px
 		a
@@ -518,24 +553,32 @@
 		.gallery-slider-sm
 			width: calc(100% + 30.1px)
 	.gallery-slider-xl .img
-		height: 56.25vw
-		max-height: 220px
+		height: 210px
 	.gallery-slider-xl .slide .zoom-link
-		display: none
+		right: 15px
+		top: 15px
 	.gallery-slider-sm .img
-		height: 60px
+		height: 57px
 	.gallery-btns
 		display: block
-		.btn
-			width: 100%
-			margin: 20px 0 0
+		padding-top: 5px
+	.project-photos .gallery-btns .btn, .gallery-btns .btn
+		width: 100%
+		margin: 15px 0 0
+
+
 	.project-build__top .gallery-selects div.ui-select:first-of-type
 		min-width: 155px
 
+
 	.advantages-slider 
 		.p-item__img 
-			height: 220px
-
+			height: auto
+			.img
+				height: 230px
+			.zoom-link
+				top: 15px
+				left: 15px
 	.project-docs__block
 		display: block
 		padding: 20px
@@ -544,6 +587,7 @@
 		.btn
 			width: 100%
 			margin-top: 20px
+
 
 
 	.project-geo .map
@@ -578,6 +622,35 @@
 			left: 0
 		a
 			margin-right: 20px
+
+
+
+@include max-screen($sm)
+	.advantages-slider 
+		.p-item
+			overflow: visible
+		.p-item__img
+			width: calc(100% + 30px)
+			margin-left: -15px
+			position: relative
+			&::after
+				content: ''
+				display: block
+				width: 50px
+				height: 100%
+				position: absolute
+				right: 0
+				top: 0
+				z-index: 0
+				background: linear-gradient(90deg, transparent, $white)
+
+
+
+
+
+
+
+
 
 
 

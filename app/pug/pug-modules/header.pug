@@ -13,7 +13,6 @@ header.header
 					img.img(src="img/svg-logo.svg", alt="FSK")
 
 		button.menu-trigger(type="button")
-			//- span.menu-trigger__ic
 
 		ul.main-menu
 			li.active
@@ -21,11 +20,11 @@ header.header
 			li
 				a(href="discounts.html") Акции и скидки
 			li
-				a(href="company.html") О компании
+				a(href="company.html") О застройщике
 			li
-				a(href="#") Оплата
-			li
-				a(href="#") Покупателям 
+				a.link-favourite(href="favourite.html") 
+					span.dashed-underline Избранное
+					img.svg(src="img/icons/ic-star.svg", alt="Избранное")
 
 		.header-call
 			.header-call__ic
@@ -53,81 +52,82 @@ header.header
 	// /.header__top
 
 	.toggle-menu
-		.sub-menu
-			.container
-				.f-row
-					.cols.col-1-4
-						.sub-menu__title Новостройки
-						ul.sub-menu__list
-							li
-								a(href="#") UP-Светлановский
-							li
-								a(href="#") UP-Комендантский
-							li
-								a(href="#") UP-Московский
-							li
-								a(href="#") UP-Пушкинский
-							li
-								a(href="#") Zoom Apart
-							li
-								a(href="#") Коммерческие помещения
-					.cols.col-1-4
-						.sub-menu__title О Компании
-						ul.sub-menu__list
-							li
-								a(href="#") ГК ФСК сегодня
-							li
-								a(href="#") Рейтинги и награды
-							li
-								a(href="#") Контакты
-							li
-								a(href="vacancy.html") Вакансии
-							li
-								a(href="docs.html") Документы
-							li
-								a(href="news.html") Новости
-					.cols.col-1-4
-						.sub-menu__title Оплата
-						ul.sub-menu__list
-							li
-								a(href="ipo.html") Ипотека
-							li
-								a(href="#") Мат. капитал
-							li
-								a(href="#") Военная ипотека
-					.cols.col-1-4
-						.sub-menu__title Покупателям 
-						ul.sub-menu__list
-							li
-								a(href="discounts.html") Акции и скидки
-							li
-								a(href="#") Отдел клиентского сервиса
-							li
-								a.lk-link(href="#") Кабинет покупателя
-							li
-								a.vk-link(href="#") Мы ВКонтакте
+
+		//- .sub-menu
+		//- 	.container
+		//- 		.f-row
+		//- 			.cols.col-1-4
+		//- 				.sub-menu__title Новостройки
+		//- 				ul.sub-menu__list
+		//- 					li
+		//- 						a(href="#") UP-Светлановский
+		//- 					li
+		//- 						a(href="#") UP-Комендантский
+		//- 					li
+		//- 						a(href="#") UP-Московский
+		//- 					li
+		//- 						a(href="#") UP-Пушкинский
+		//- 					li
+		//- 						a(href="#") Zoom Apart
+		//- 					li
+		//- 						a(href="#") Коммерческие помещения
+		//- 			.cols.col-1-4
+		//- 				.sub-menu__title О Компании
+		//- 				ul.sub-menu__list
+		//- 					li
+		//- 						a(href="#") ГК ФСК сегодня
+		//- 					li
+		//- 						a(href="#") Рейтинги и награды
+		//- 					li
+		//- 						a(href="#") Контакты
+		//- 					li
+		//- 						a(href="vacancy.html") Вакансии
+		//- 					li
+		//- 						a(href="docs.html") Документы
+		//- 					li
+		//- 						a(href="news.html") Новости
+		//- 			.cols.col-1-4
+		//- 				.sub-menu__title Оплата
+		//- 				ul.sub-menu__list
+		//- 					li
+		//- 						a(href="ipo.html") Ипотека
+		//- 					li
+		//- 						a(href="#") Мат. капитал
+		//- 					li
+		//- 						a(href="#") Военная ипотека
+		//- 			.cols.col-1-4
+		//- 				.sub-menu__title Покупателям 
+		//- 				ul.sub-menu__list
+		//- 					li
+		//- 						a(href="discounts.html") Акции и скидки
+		//- 					li
+		//- 						a(href="#") Отдел клиентского сервиса
+		//- 					li
+		//- 						a.lk-link(href="#") Кабинет покупателя
+		//- 					li
+		//- 						a.vk-link(href="#") Мы ВКонтакте
 				
-				// /.f-row
-			// /.container
+		//- 		// /.f-row
+		//- 	// /.container
 			
-			.sub-contacts
-				.container
-					.sub-contacts__row
-						a.sub-contacts__link(href="tel:+78127035555") 
-							img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", alt="tel", width="12", height="20") 
-							| +7 (812) 703-55-55
-						a.sub-contacts__link(href="mailto:info@fsknw.ru") 
-							img.svg.btn__ic(src="img/icons/ic-mail-white.svg", alt="email", width="33", height="16")
-							| info@fsknw.ru
-						span.sub-contacts__link
-							img.svg.btn__ic(src="img/icons/ic-map-pin-sm-white.svg", alt="geo", width="13", height="19")
-							| Большой пр. ПС, д.48, 1 этаж
-						a.sub-contacts__link.sub-objects(href="#") 
-							img.svg.svg-stroke.svg-fill.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
-							span Объекты ГК ФСК в Москве и МО
+		//- 	.sub-contacts
+		//- 		.container
+		//- 			.sub-contacts__row
+		//- 				a.sub-contacts__link(href="tel:+78127035555") 
+		//- 					img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", alt="tel", width="12", height="20") 
+		//- 					| +7 (812) 703-55-55
+		//- 				a.sub-contacts__link(href="mailto:info@fsknw.ru") 
+		//- 					img.svg.btn__ic(src="img/icons/ic-mail-white.svg", alt="email", width="33", height="16")
+		//- 					| info@fsknw.ru
+		//- 				span.sub-contacts__link
+		//- 					img.svg.btn__ic(src="img/icons/ic-map-pin-sm-white.svg", alt="geo", width="13", height="19")
+		//- 					| Большой пр. ПС, д.48, 1 этаж
+		//- 				a.sub-contacts__link.sub-objects(href="#") 
+		//- 					img.svg.svg-stroke.svg-fill.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
+		//- 					span Объекты ГК ФСК в Москве и МО
 				
-				// /.container
-			// /.sub-contacts
+		//- 		// /.container
+		//- 	// /.sub-contacts
 		
 		// /.sub-menu
 		
@@ -139,79 +139,98 @@ header.header
 			ul.mob-menu__list
 				li
 					a.mob-menu__title(href="newbuild.html") Новостройки 
-					span.mob-toggle
-					ul.mob-menu__sublist
-						li
-							a(href="#") UP-Светлановский
-						li
-							a(href="#") UP-Комендантский
-						li
-							a(href="#") UP-Московский
-						li
-							a(href="#") UP-Пушкинский
-						li
-							a(href="#") Zoom Apart
-						li
-							a(href="#") Коммерческие помещения
+					//- span.mob-toggle
+					//- ul.mob-menu__sublist
+					//- 	li
+					//- 		a(href="#") UP-Светлановский
+					//- 	li
+					//- 		a(href="#") UP-Комендантский
+					//- 	li
+					//- 		a(href="#") UP-Московский
+					//- 	li
+					//- 		a(href="#") UP-Пушкинский
+					//- 	li
+					//- 		a(href="#") Zoom Apart
+					//- 	li
+					//- 		a(href="#") Коммерческие помещения
 				li
-					a.mob-menu__title(href="company.html") О Компании
-					span.mob-toggle
-					ul.mob-menu__sublist
-						li
-							a(href="#") ГК ФСК сегодня
-						li
-							a(href="#") Рейтинги и награды
-						li
-							a(href="#") Контакты
-						li
-							a(href="vacancy.html") Вакансии
-						li
-							a(href="docs.html") Документы
-						li
-							a(href="news.html") Новости
+					a.mob-menu__title(href="discounts.html") Акции и скидки
 				li
-					a.mob-menu__title(href="#") Оплата
-					span.mob-toggle
-					ul.mob-menu__sublist
-						li
-							a(href="ipo.html") Ипотека
-						li
-							a(href="#") Мат. капитал
-						li
-							a(href="#") Военная ипотека
+					a.mob-menu__title(href="ipo.html") Ипотека
 				li
-					a.mob-menu__title(href="#") Покупателям
-					span.mob-toggle
-					ul.mob-menu__sublist
-						li
-							a(href="discounts.html") Акции и скидки
-						li
-							a(href="#") Отдел клиентского сервиса
-						li
-							a.lk-link(href="#") Кабинет покупателя
-						li
-							a.vk-link(href="#") Мы ВКонтакте
+					a.mob-menu__title(href="company.html") О застройщике
+					//- span.mob-toggle
+					//- ul.mob-menu__sublist
+					//- 	li
+					//- 		a(href="#") ГК ФСК сегодня
+					//- 	li
+					//- 		a(href="#") Рейтинги и награды
+					//- 	li
+					//- 		a(href="#") Контакты
+					//- 	li
+					//- 		a(href="vacancy.html") Вакансии
+					//- 	li
+					//- 		a(href="docs.html") Документы
+					//- 	li
+					//- 		a(href="news.html") Новости
 				li
-					a.favourite-link(href="favourite.html") Избранное
-						img.svg(src="img/icons/ic-star.svg", width="22", height="21", alt="Закладки")
+					a.mob-menu__title(href="client.html") Отдел клиентского сервиса
+				//- li
+					//- a.mob-menu__title(href="#") Оплата
+					//- span.mob-toggle
+					//- ul.mob-menu__sublist
+					//- 	li
+					//- 		a(href="ipo.html") Ипотека
+					//- 	li
+					//- 		a(href="#") Мат. капитал
+					//- 	li
+					//- 		a(href="#") Военная ипотека
+				//- li
+					//- a.mob-menu__title(href="#") Покупателям
+					//- span.mob-toggle
+					//- ul.mob-menu__sublist
+					//- 	li
+					//- 		a(href="discounts.html") Акции и скидки
+					//- 	li
+					//- 		a(href="#") Отдел клиентского сервиса
+					//- 	li
+					//- 		a.lk-link(href="#") Кабинет покупателя
+					//- 	li
+					//- 		a.vk-link(href="#") Мы ВКонтакте
 				li
-					span.sub-contacts__link
-						img.svg.btn__ic(src="img/icons/ic-map-pin-sm-accent.svg", alt="geo", width="13", height="19")
-						| Большой пр. ПС, д.48, 1 этаж
-				li
+					a.mob-link-favourite(href="favourite.html")
+						.ic-container
+							img.svg(src="img/icons/ic-star.svg", width="22", height="21", alt="Закладки")
+						| Избранное
+				li.highlighted
 					a.sub-contacts__link(href="tel:+78127035555") 
-						img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", alt="tel", width="12", height="20") 
+						.ic-container
+							img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", alt="tel", width="12", height="20") 
 						| +7 (812) 703-55-55
-				li
+				li.highlighted
 					a.sub-contacts__link(href="mailto:info@fsknw.ru") 
-						img.svg.btn__ic(src="img/icons/ic-mail.svg", alt="email", width="33", height="16")
+						.ic-container
+							img.svg.btn__ic(src="img/icons/ic-envelope.svg", alt="email", width="20", height="15")
 						| info@fsknw.ru
+				li.highlighted
+					a.sub-contacts__link(href="contacts.html")
+						.ic-container
+							img.svg.btn__ic(src="img/icons/ic-map-pin-sm-accent.svg", alt="geo", width="14", height="19")
+						| Большой пр. ПС, д.48
+				li.highlighted
+					span.sub-contacts__link
+						.ic-container
+							img.svg.btn__ic(src="img/icons/ic-time.svg", alt="geo", width="19", height="19")
+						| 9:00 - 21:00 (Ежедневно)
 				li
-					a.sub-contacts__link.sub-objects(href="#") 
-						img.svg.svg-stroke.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
+					a.lk-link.sub-color(href="#") Кабинет покупателя
+				li
+					a.sub-contacts__link.sub-objects.sub-color(href="#") 
+						.ic-container
+							img.svg.svg-stroke.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
 						span Объекты ГК ФСК в Москве и МО
-				li
-					a.confidence-link(href="confidence.html") Политика конфиденциальности
+				//- li
+				//- 	a.confidence-link(href="confidence.html") Политика конфиденциальности
 
 
 		// /.mob-menu

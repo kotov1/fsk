@@ -1,0 +1,85 @@
+// ipo
+.project-ipo.scrollspy-item#p-6
+	.container
+		h2.h1.title Ипотека - это просто!
+		.ipo-calc
+			.filter-row
+				.filter-fields
+					.filter__field.filter-field
+						.filter-field__label Стоимость, р. 
+						.ui-quantity(data-step="100000")
+							button.ui-quantity__btn.ui-quantity__minus
+								img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+							input(type='text', value='2 500 000')
+							button.ui-quantity__btn.ui-quantity__plus
+								img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+					.filter__field.filter-field
+						.filter-field__label Первоначальный взнос
+						.ui-quantity(data-step="100000")
+							button.ui-quantity__btn.ui-quantity__minus
+								img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+							input(type='text', value='1 500 000')
+							button.ui-quantity__btn.ui-quantity__plus
+								img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+					.filter__field.filter-field
+						.filter-field__label Срок
+						.ui-quantity.ui-quantity--years(data-step="1")
+							button.ui-quantity__btn.ui-quantity__minus
+								img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+							input.years(type='text', value='10 лет')
+							button.ui-quantity__btn.ui-quantity__plus
+								img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+					.filter__field.filter-field-result
+						button.btn.btn--bg(type="button")
+							img.svg.btn__ic(src="img/icons/ic-btn-percentage.svg", width="20", height="20", alt="Минус") 
+							| Рассчитать платеж
+			
+			.filter-row
+				.filter-field__label Банк и платеж в месяц, от: 
+
+			.filter-row
+				.filter-fields
+					.filter__field
+						.project-ipo__item
+							.ipo-bank
+								img.img(src="img/ipo/sber.png", alt="alt")
+							.project-ipo__val 199 226
+					.filter__field
+						.project-ipo__item
+							.ipo-bank
+								img.img(src="img/ipo/vtb.png", alt="alt")
+							.project-ipo__val 199 226
+					.filter__field
+						.project-ipo__item
+							.ipo-bank
+								img.img(src="img/ipo/vozrojdenie-bank.png", alt="alt")
+							.project-ipo__val 199 226
+					.filter__field
+						.project-ipo__item
+							.ipo-bank
+								img.img(src="img/ipo/absolute-bank.png", alt="alt")
+							.project-ipo__val 199 226
+					.filter__field
+						.project-ipo__item
+							.ipo-bank
+								img.img(src="img/ipo/sber.png", alt="alt")
+							.project-ipo__val 199 226
+					.filter__field
+						.project-ipo__item
+							.ipo-bank
+								img.img(src="img/ipo/absolute-bank.png", alt="alt")
+							.project-ipo__val 199 226
+					.filter__field
+						.project-ipo__item
+							.ipo-bank
+								img.img(src="img/ipo/vtb.png", alt="alt")
+							.project-ipo__val 199 226
+					.filter__field
+						.project-ipo__item
+							a.project-ipo__btn(href="ipo.html") Показать ещё банки
+
+		// /.ipo-calc
+
+		p.sub-text Данная информация представлена для ознакомления и не является офертой. Подробную информацию уточняйте у менеджеров отдела продаж.
+
+// /.ipo

@@ -9,10 +9,15 @@
 		padding-right: 30px
 	&__body
 		display: flex
-		margin-top: 30px
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
-		background-color: $white
+		margin-top: 15px
+		height: 656px
+		// box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+		// background: $white
+		background: url('../img/popup-card-bg.svg') no-repeat 50% 50%
+		background-size: 1250px 668px
+		padding: 15px 0
 		border-radius: 6px
+		overflow: hidden
 	
 	&__col-1
 		display: flex
@@ -73,7 +78,17 @@
 	&__info
 		height: 100%
 		padding: 30px 35px
-		border-left: 2px dotted v(border-color)
+		position: relative
+		&::after
+			content: ''
+			display: block
+			// width: 100%
+			height: calc(100% - 40px)
+			position: absolute
+			left: -6px
+			top: 20px
+			z-index: 0
+			border-left: 2px dotted v(border-color)
 		.interactive-btns
 			justify-content: flex-end
 		.interactive-btn
@@ -194,6 +209,25 @@
 
 
 
+// .card__info
+// 	position: relative
+// 	&::before, &::after
+// 		content: ''
+// 		display: block
+// 		width: 35px
+// 		height: 35px
+// 		border-radius: 50%
+// 		position: absolute
+// 		left: 0
+// 		z-index: 0
+// 		background: #fafafa
+// 	&::before
+// 		top: 0
+// 		transform: translate3d(-50%, -50%, 0)
+// 	&::after
+// 		bottom: 0
+// 		transform: translate3d(-50%, 50%, 0)
+
 
 
 
@@ -201,8 +235,13 @@
 	.card
 		padding-top: 30px
 	.card__body
+		height: auto
 		flex-wrap: wrap
 		box-shadow: none
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+		margin-top: 30px
+		padding: 0
+		background: $white
 	.card__title
 		font-size: 25px
 		padding: 0 54px 0 24px
@@ -242,7 +281,6 @@
 		.img
 			max-height: 100%
 
-
 	.card-img-btns
 		width: 100%
 		bottom: 0
@@ -256,6 +294,8 @@
 		border-left: none
 		margin-top: 10px
 		padding: 0 24px 30px
+		&::before, &::after
+			display: none
 	.card__info .interactive-btns
 		display: none
 	.card-data__title

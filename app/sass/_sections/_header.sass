@@ -6,7 +6,7 @@
 	position: fixed
 	left: 0
 	top: 0
-	z-index: 10
+	z-index: 202
 	&__top
 		height: 100%
 		display: flex
@@ -61,7 +61,7 @@
 
 
 .menu-trigger
-	display: block
+	display: none
 	position: relative
 	width: 30px
 	height: 30px
@@ -102,7 +102,7 @@
 
 	&.menu-open
 		background-image: url('../img/icons/ic-close.svg')
-		background-position: 40% 50%
+		background-position: 0 50%
 		background-size: 13px 13px
 		// .menu-trigger__ic
 		// 	background: transparent
@@ -123,7 +123,7 @@
 	max-width: 100%
 	align-items: center
 	margin: 0
-	padding: 0
+	padding: 0 0 0 27px
 	list-style: none
 	li
 		margin-right: 30px
@@ -148,6 +148,10 @@
 			@include trs(.1s)
 		&:hover
 			color: v(accent-color)
+		&:focus
+			color: v(accent-color)
+			box-shadow: none
+
 	.active
 		a
 			&::after
@@ -202,6 +206,8 @@
 		color: inherit
 		&:hover
 			color: inherit
+		&.sub-color
+			color: v(sub-text-color)
 		.btn__ic
 			margin-right: 10px
 		.svg-stroke *
@@ -257,8 +263,24 @@
 		border-bottom: transparent
 	.sub-contacts__link
 		margin-right: 0
-	.favourite-link .svg
-		margin-left: auto
+	.lk-link::before
+		background-image: url('../img/icons/ic-login-accent.svg')
+
+	.highlighted
+		position: relative
+		z-index: 1
+		&::before
+			content: ''
+			display: block
+			width: calc(100% + 48px)
+			height: 100%
+			position: absolute
+			left: -24px
+			top: 0
+			z-index: 0
+			background: v(additional-color)
+			z-index: -1
+
 	
 
 .mob-toggle
@@ -300,8 +322,8 @@
 
 	.mob-menu
 		padding: 0 24px 30px
-		background-color: #f6f6f6
-		max-height: calc(100vh - 60px)
+		background-color: $white
+		height: calc(100vh - 60px)
 		overflow-y: scroll
 		box-shadow: $shadow1
 		li
@@ -381,7 +403,16 @@
 
 
 
-
+.link-favourite
+	color: #BEBEBE
+	position: relative
+	.svg
+		position: absolute
+		display: block
+		width: 20px
+		height: 19px
+		right: -32px
+		transform: translateY(-10%)
 
 
 
@@ -397,6 +428,9 @@
 
 
 @include max-screen($xl)
+	.menu-trigger
+		display: block
+		background-position-x: 0
 	.main-menu
 		display: none
 	.toggle-menu 
@@ -437,6 +471,12 @@
 	.header__top
 		padding: 0 15px
 
+	.toggle-menu .mob-menu
+		padding-left: 15px
+		padding-right: 15px
+	.mob-menu .highlighted::before
+		width: calc(100% + 30px)
+		left: -15px
 
 @include max-screen($sm)
 	.header .logo

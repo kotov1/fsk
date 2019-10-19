@@ -1,0 +1,153 @@
+- var page = "client"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.wrapper
+
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page.page--nohero
+				.container
+					.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem') 
+							a(rel='nofollow', itemprop='item', title='Главная', href='/') 
+								span(itemprop='name') Главная 
+								meta(itemprop='position', content='1') 
+						span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem') 
+							a(rel='nofollow', itemprop='item', title='Вакансии ФСК в Санкт-Петербурге', href='#') 
+								span(itemprop='name') Клиентский сервис
+								meta(itemprop='position', content='2') 
+					// /.breadcrumbs
+
+					h1.title.title-margin Клиентский сервис
+
+					.clients-img
+						img.img(src="img/img-clients-1.jpg", alt="alt")
+					.content
+						p Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов.
+						p С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. Также в клиентском отделе вы можете получить информацию о статусе регистрации договора, ходе строительства, поступлении платежей и этапах оформления квартиры в собственность. 
+
+						.contact-links
+							a.contact-link(href="tel:+78127035555") 
+								.ic-container
+									img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", alt="tel", width="12", height="20") 
+								| +7 (812) 703-55-55
+							a.contact-link(href="mailto:oks@fsknw.ru") 
+								.ic-container
+									img.svg.btn__ic(src="img/icons/ic-envelope.svg", alt="email", width="20", height="15")
+								| oks@fsknw.ru
+							span.contact-link
+								.ic-container
+									img.svg.btn__ic(src="img/icons/ic-time.svg", alt="geo", width="19", height="19")
+								| 9:00 - 21:00 (Ежедневно)
+							a.contact-link(href="contacts.html")
+								.ic-container
+									img.svg.btn__ic(src="img/icons/ic-map-pin-sm-accent.svg", alt="geo", width="14", height="19")
+								| Большой пр. ПС, д.48
+
+					.content
+						h2.h1.title Личный кабинет покупателя
+						.p-item.page-block
+							.p-item__img
+								a(href="#")
+									img.img(src="img/img-clients-2.jpg", alt="alt")
+							.p-item__content
+								.p-item__title Хотите присоединиться к нашей команде? В данном разделе вы сможете подробно ознакомиться с актуальными вакансиями нашей компании или подать заявку на зачисление в кадровый резерв.
+								a.btn.btn--transp(href="#")
+									img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+									| Перейти
+
+					.content
+						h2.h1.title Частые вопросы и ответы
+						ul.faq.js-accordion
+							li
+								.faq__question.js-accordion-btn Могу ли я включить в договор второго участника долевого строительства, после регистрации документов в УФРС?
+								p.faq__answer.js-accordion-content Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов. С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. 
+							li
+								.faq__question.js-accordion-btn Могу ли я воспользоваться средствами материнского капитала при оплате квартиры?
+								p.faq__answer.js-accordion-content Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов. С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. 
+							li
+								.faq__question.js-accordion-btn Могу я получить налоговый вычет при покупке квартиры? Как мне это сделать?
+								p.faq__answer.js-accordion-content Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов. С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. 
+							li
+								.faq__question.js-accordion-btn Если квартира куплена в рассрочку то, на каком этапе можно будет в ней прописаться?
+								p.faq__answer.js-accordion-content Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов. С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. 
+							li
+								.faq__question.js-accordion-btn После подписания акта осмотра можно въехать в квартиру и начать ремонт?
+								p.faq__answer.js-accordion-content Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов. С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. 
+							li
+								.faq__question.js-accordion-btn Какие документы необходимо иметь при себе для осмотра и приёмки квартиры?
+								p.faq__answer.js-accordion-content Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов. С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. 
+							
+					.content
+						h2.h1.title Документы и шаблоны
+						ul.faq.faq-docs
+							li
+								a.faq__question(href="#", download)
+									.faq-docs__name Шаблон документа номер 1
+									span.faq-docs__link.inline-btn
+										span Скачать
+										img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+							li
+								a.faq__question(href="#", download)
+									.faq-docs__name Шаблон документа номер 2
+									span.faq-docs__link.inline-btn
+										span Скачать
+										img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+							li
+								a.faq__question(href="#", download)
+									.faq-docs__name Шаблон документа номер 3
+									span.faq-docs__link.inline-btn
+										span Скачать
+										img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+							li
+								a.faq__question(href="#", download)
+									.faq-docs__name Шаблон документа номер 4
+									span.faq-docs__link.inline-btn
+										span Скачать
+										img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+
+								
+					.content
+						h2.h1.title Частые вопросы и ответы
+						ul.faq.js-accordion
+							li
+								.faq__question.js-accordion-btn Могу ли я включить в договор второго участника долевого строительства, после регистрации документов в УФРС?
+								p.faq__answer.js-accordion-content 
+									| Компания «ФСК» заботится о качестве обслуживания своих клиентов. Специально для этого мы открыли отдел по работе с клиентами. Это команда профессионалов, которые работают с клиентами компании на протяжении всего периода строительства домов. С момента заключения договора и до оформления документов в собственность наши специалисты помогут вам в решении любых вопросов и проблем. 
+									a.inline-btn(href="#", download)
+										img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+										span.dashed-underline Какое-то название приложенного файла
+
+
+						
+
+
+
+
+
+				// /.container
+
+			// /.page
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+
+
+		// /.wrapper
+			
+
+		
+
+

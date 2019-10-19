@@ -62,9 +62,9 @@ html(lang="ru")
 						a(href="#p-2") Галерея
 						a(href="#p-3") Расположение
 						a(href="#p-4") Преимущества
-						a(href="#p-5") Квартиры
-						a(href="#p-6") Ипотека
-						a(href="#p-7") Акции
+						a(href="#p-5") Акции
+						a(href="#p-6") Квартиры
+						a(href="#p-7") Ипотека
 						a(href="#p-8") Ход строительства
 						a(href="#p-9") Офис продаж
 						a(href="#p-10") Документы
@@ -198,61 +198,52 @@ html(lang="ru")
 				// /.gallery
 
 
-				// form
-				include pug-modules/cta
-				// /.form
-
-
-				.project-geo.scrollspy-item#p-3
+				.project-geo.section-margin.scrollspy-item#p-3
 					.container
 						h2.h1.title Расположение и инфраструктура
 					.map#map1(style="background: url('img/img-map-marks.jpg') no-repeat 50% 50% / cover")
 					.container
-						.geo-marks
-							.geo-marks__col
-								.geo-mark
-									img.img(src="img/pins/pin-metro.svg", alt="metro")
-									span.text-bold Метро
-								.geo-mark
-									img.img(src="img/pins/pin-cafe.svg", alt="metro")
-									span.text-bold Кафе и рестораны
-								.geo-mark
-									img.img(src="img/pins/pin-shops.svg", alt="metro")
-									span.text-bold Магазины и ТК
-							.geo-marks__col
-								.geo-mark
-									img.img(src="img/pins/pin-sport.svg", alt="metro")
-									span.text-bold Спорт площадки и клубы
-								.geo-mark
-									img.img(src="img/pins/pin-green.svg", alt="metro")
-									span.text-bold Парки, сады, скверы
-								.geo-mark
-									img.img(src="img/pins/pin-schools.svg", alt="metro")
-									span.text-bold Школы и университеты
-							.geo-marks__col
-								.geo-mark
-									img.img(src="img/pins/pin-transport.svg", alt="metro")
-									span.text-bold Общ. транспорт
-								.geo-mark
-									img.img(src="img/pins/pin-gardens.svg", alt="metro")
-									span.text-bold Детсады и ясли
-								.geo-mark
-									img.img(src="img/pins/pin-health.svg", alt="metro")
-									span.text-bold Поликлиники, больницы
-							.geo-marks__col
-								.geo-mark
-									img.img(src="img/pins/pin-airports.svg", alt="metro")
-									span.text-bold Аэропорт
-								.geo-mark
-									img.img(src="img/pins/pin-water.svg", alt="metro")
-									span.text-bold Набережная / вода
-								.geo-mark
-									img.img(src="img/pins/pin-kad.svg", alt="metro")
-									span.text-bold КАД
-							.geo-marks__col
-								.geo-mark
-									img.img.pin-object(src="img/pins/pin-object.svg", alt="metro")
-									span.text-bold Комплекс
+						.geo-labels
+							.f-row
+								.cols.col-1-3
+									.geo-label
+										span.geo-label__ic(style="background: #F35E41") 
+										span Надземные и подземные парковки;
+									.geo-label
+										span.geo-label__ic(style="background: #FD5EB6") 
+										span Коммерческие помещения на первых этажах;
+									.geo-label
+										span.geo-label__ic(style="background: #19A91C") 
+										span Поликлиника;
+									.geo-label
+										span.geo-label__ic(style="background: #FD8C40") 
+										span Торговый центр.
+								.cols.col-1-3
+									.geo-label
+										span.geo-label__ic(style="background: #F35E41") 
+										span Надземные и подземные парковки;
+									.geo-label
+										span.geo-label__ic(style="background: #FD5EB6") 
+										span Коммерческие помещения на первых этажах;
+									.geo-label
+										span.geo-label__ic(style="background: #19A91C") 
+										span Поликлиника;
+									.geo-label
+										span.geo-label__ic(style="background: #FD8C40") 
+										span Торговый центр.
+								.cols.col-1-3
+									.geo-label
+										span.geo-label__ic(style="background: #F35E41") 
+										span Надземные и подземные парковки;
+									.geo-label
+										span.geo-label__ic(style="background: #FD5EB6") 
+										span Коммерческие помещения на первых этажах;
+									.geo-label
+										span.geo-label__ic(style="background: #19A91C") 
+										span Поликлиника;
+									.geo-label
+										span.geo-label__ic(style="background: #FD8C40") 
+										span Торговый центр.
 
 				// /.project-geo
 
@@ -269,29 +260,111 @@ html(lang="ru")
 										.advantages-slider-img
 											.slide
 												img.img(src="img/img-advantage-1.jpg", alt="alt")
+												button.ui-btn.zoom-link(href="img/img-advantage-1.jpg", data-fancybox="advantage1")
+													img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 											.slide
 												img.img(src="img/img-advantage-1.jpg", alt="alt")
+												button.ui-btn.zoom-link(href="img/img-advantage-1.jpg", data-fancybox="advantage1")
+													img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 											.slide
 												img.img(src="img/img-advantage-1.jpg", alt="alt")
+												button.ui-btn.zoom-link(href="img/img-advantage-1.jpg", data-fancybox="advantage1")
+													img.svg(src="img/icons/ic-zoom.svg", width="15", height="15", alt="zoom")
 									.p-item__content
 										.advantages-slider-text
 											.slide
 												.h2.text-bold Рядом красивый парк
-												.p-item__title Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+												.p-item__title Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+												.advantages-slider-btns
+													button.slider-arrow.slider-prev(type='button')
+														svg.svg(xmlns='http://www.w3.org/2000/svg', width='12.121', height='6.811', viewbox='0 0 12.121 6.811')
+															g(transform='translate(1.061 1.061)')
+															path(d='M0,0,5,5l5-5', fill='none', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', stroke-width='1.5')
+													button.slider-arrow.slider-next(type='button')
+														svg.svg(xmlns='http://www.w3.org/2000/svg', width='12.121', height='6.811', viewbox='0 0 12.121 6.811')
+															g(transform='translate(1.061 1.061)')
+															path(d='M0,0,5,5l5-5', fill='none', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', stroke-width='1.5')
+
 											.slide
 												.h2.text-bold Преимущество 2
 												.p-item__title Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+												.advantages-slider-btns
+													button.slider-arrow.slider-prev(type='button')
+														svg.svg(xmlns='http://www.w3.org/2000/svg', width='12.121', height='6.811', viewbox='0 0 12.121 6.811')
+															g(transform='translate(1.061 1.061)')
+															path(d='M0,0,5,5l5-5', fill='none', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', stroke-width='1.5')
+													button.slider-arrow.slider-next(type='button')
+														svg.svg(xmlns='http://www.w3.org/2000/svg', width='12.121', height='6.811', viewbox='0 0 12.121 6.811')
+															g(transform='translate(1.061 1.061)')
+															path(d='M0,0,5,5l5-5', fill='none', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', stroke-width='1.5')
+
 											.slide
 												.h2.text-bold Преимущество 3
-												.p-item__title Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса. Жилой комплекс бизнес-класса в престижном Хорошёвском районе в окружении исторической сталинской застройки и статусных жилых комплексов. Это идеальное сочетание престижа района, авторской архитектуры, индивидуального подхода к планировкам и дизайну интерьеров комплекса.
+												.p-item__title Жилой
+												.advantages-slider-btns
+													button.slider-arrow.slider-prev(type='button')
+														svg.svg(xmlns='http://www.w3.org/2000/svg', width='12.121', height='6.811', viewbox='0 0 12.121 6.811')
+															g(transform='translate(1.061 1.061)')
+															path(d='M0,0,5,5l5-5', fill='none', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', stroke-width='1.5')
+													button.slider-arrow.slider-next(type='button')
+														svg.svg(xmlns='http://www.w3.org/2000/svg', width='12.121', height='6.811', viewbox='0 0 12.121 6.811')
+															g(transform='translate(1.061 1.061)')
+															path(d='M0,0,5,5l5-5', fill='none', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', stroke-width='1.5')
 
 
 				// /.project-advantages
 
 
+
+				// discounts
+				.container.section-margin.scrollspy-item#p-5
+					h2.h1.title Акции и скидки
+					.p-list
+						.f-row
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										a(href="news-page.html")
+											img.img(src="img/img-thumb-1.jpg", alt="news1")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="news-page.html")
+											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										a(href="news-page.html")
+											img.img(src="img/img-thumb-1.jpg", alt="news1")
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="news-page.html")
+											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
+											| Подробнее
+							.cols.col-1-2
+								.p-item
+									.p-item__img
+										a(href="news-page.html")
+											div.img.img-empty
+									.p-item__content
+										span.p-item__date 31 января 2020
+										.p-item__title
+											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
+										a.btn.btn--transp(href="news-page.html")
+											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
+											| Подробнее
+
+				// /.discounts
+
+
+
 				// filters
 				
-				.container.section-margin.scrollspy-item#p-5
+				.container.section-margin.scrollspy-item#p-6
 
 					h2.h1.title#filter-anchor Выбор квартир
 
@@ -450,8 +523,9 @@ html(lang="ru")
 											sup 2
 										div от 
 											span.filter-data 2 376 200 р.
-									.results__row
-										.results__cell.results-cell-1
+								
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -467,10 +541,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan-2.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -486,10 +560,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan-3.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -505,10 +579,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -524,10 +598,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -543,10 +617,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 23 м<sup>2</sup>
@@ -562,10 +636,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -581,7 +655,7 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									
 									.results__row.results-screen__header
@@ -593,8 +667,9 @@ html(lang="ru")
 											sup 2
 										div от 
 											span.filter-data 2 376 200 р.
-									.results__row
-										.results__cell.results-cell-1
+									
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -610,10 +685,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -629,10 +704,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -648,10 +723,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -667,10 +742,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -686,10 +761,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -705,10 +780,10 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									.results__row
-										.results__cell.results-cell-1
+									.results__row(data-plan="img-plan.jpg")
+										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
 										.results__cell.results-cell-2
 											span 22 м<sup>2</sup>
@@ -724,8 +799,9 @@ html(lang="ru")
 												span 2 376 200 
 												| р.
 										.results-cell-btns
-											button.interactive-btn.interactive-follow.js-call-card(type="button")
+											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
+						
 							// /.results__col	
 
 							.results__offer.results-offer
@@ -735,7 +811,7 @@ html(lang="ru")
 										img.svg(src="img/icons/ic-flat-plan.svg", width="36", height="44", alt="flat plan")
 								.results-offer__footer
 									.results-offer__text
-										p Интересует студия 22.3 м<sup>2</sup> ? 
+										p Интересует студия 22 м<sup>2</sup> ? 
 										p Посмотрите 
 											button.text-btn.js-call-card(button="button") подробнее!
 									.results-offer__btn
@@ -764,135 +840,99 @@ html(lang="ru")
 
 
 				// ipo
-				.project-ipo.scrollspy-item#p-6
+				.project-ipo.scrollspy-item#p-7
 					.container
 						h2.h1.title Ипотека - это просто!
-						.ipo-calc
-							.filter-row
-								.filter-fields
-									.filter__field.filter-field
-										.filter-field__label Стоимость, р. 
-										.ui-quantity(data-step="100000")
-											button.ui-quantity__btn.ui-quantity__minus
-												img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
-											input(type='text', value='2 500 000')
-											button.ui-quantity__btn.ui-quantity__plus
-												img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
-									.filter__field.filter-field
-										.filter-field__label Первоначальный взнос
-										.ui-quantity(data-step="100000")
-											button.ui-quantity__btn.ui-quantity__minus
-												img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
-											input(type='text', value='1 500 000')
-											button.ui-quantity__btn.ui-quantity__plus
-												img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
-									.filter__field.filter-field
-										.filter-field__label Срок
-										.ui-quantity.ui-quantity--years(data-step="1")
-											button.ui-quantity__btn.ui-quantity__minus
-												img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
-											input.years(type='text', value='10 лет')
-											button.ui-quantity__btn.ui-quantity__plus
-												img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
-									.filter__field.filter-field-result
-										button.btn.btn--bg(type="button")
-											img.svg.btn__ic(src="img/icons/ic-btn-percentage.svg", width="20", height="20", alt="Минус") 
-											| Рассчитать платеж
+						.ipo
+							.ipo-calc
+								.filter-row
+									.filter-fields
+										.filter__field.filter-field
+											.filter-field__label Стоимость, р. 
+											.ui-quantity(data-step="100000")
+												button.ui-quantity__btn.ui-quantity__minus
+													img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+												input(type='text', value='2 500 000')
+												button.ui-quantity__btn.ui-quantity__plus
+													img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+										.filter__field.filter-field
+											.filter-field__label Первоначальный взнос
+											.ui-quantity(data-step="100000")
+												button.ui-quantity__btn.ui-quantity__minus
+													img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+												input(type='text', value='1 500 000')
+												button.ui-quantity__btn.ui-quantity__plus
+													img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+										.filter__field.filter-field
+											.filter-field__label Срок
+											.ui-quantity.ui-quantity--years(data-step="1")
+												button.ui-quantity__btn.ui-quantity__minus
+													img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
+												input.years(type='text', value='10 лет')
+												button.ui-quantity__btn.ui-quantity__plus
+													img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
+										.filter__field.filter-field-result
+											button.btn.btn--bg(type="button")
+												img.svg.btn__ic(src="img/icons/ic-btn-percentage.svg", width="20", height="20", alt="Минус") 
+												| Рассчитать платеж
 							
-							.filter-row
-								.filter-field__label Банк и платеж в месяц, от: 
+							// /.ipo-calc
 
-							.filter-row
-								.filter-fields
-									.filter__field
-										.project-ipo__item
-											.ipo-bank
-												img.img(src="img/ipo/sber.png", alt="alt")
-											.project-ipo__val 199 226
-									.filter__field
-										.project-ipo__item
-											.ipo-bank
-												img.img(src="img/ipo/vtb.png", alt="alt")
-											.project-ipo__val 199 226
-									.filter__field
-										.project-ipo__item
-											.ipo-bank
-												img.img(src="img/ipo/vozrojdenie-bank.png", alt="alt")
-											.project-ipo__val 199 226
-									.filter__field
-										.project-ipo__item
-											.ipo-bank
-												img.img(src="img/ipo/absolute-bank.png", alt="alt")
-											.project-ipo__val 199 226
-									.filter__field
-										.project-ipo__item
-											.ipo-bank
-												img.img(src="img/ipo/sber.png", alt="alt")
-											.project-ipo__val 199 226
-									.filter__field
-										.project-ipo__item
-											.ipo-bank
-												img.img(src="img/ipo/absolute-bank.png", alt="alt")
-											.project-ipo__val 199 226
-									.filter__field
-										.project-ipo__item
-											.ipo-bank
-												img.img(src="img/ipo/vtb.png", alt="alt")
-											.project-ipo__val 199 226
-									.filter__field
-										.project-ipo__item
-											a.project-ipo__btn(href="ipo.html") Показать ещё банки
+							.ipo-table
+								.ipo-table__row.ipo-table__header
+									.ipo-bank Банк
+									.ipo-info
+										.ipo-info__col
+											span.hide-on-mob Ежемесячный 
+											| платёж, р.
+										.ipo-info__col Срок
+										.ipo-info__col Ставка
+								.ipo-table__row
+									.ipo-bank
+										img.img(src="img/ipo/sber.png", alt="Сбербанк")
+									.ipo-licence
+										div Сбербанк России ПАО
+										span.sub-text Лицензия № 1481 от 11.08.2015
+									.ipo-info
+										.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+										.ipo-info__col(data-title="Срок") до 30 лет
+										.ipo-info__col(data-title="Ставка") 6%
+								.ipo-table__row
+									.ipo-bank
+										img.img(src="img/ipo/vtb.png", alt="ВТБ")
+									.ipo-licence
+										div Банк ВТБ
+										span.sub-text Лицензия № 1481 от 11.08.2015
+									.ipo-info
+										.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+										.ipo-info__col(data-title="Срок") до 30 лет
+										.ipo-info__col(data-title="Ставка") 6%
+								.ipo-table__row
+									.ipo-bank
+										img.img(src="img/ipo/absolute-bank.png", alt="Абсолют банк АКБ")
+									.ipo-licence
+										div Абсолют банк АКБ (ЗАО)
+										span.sub-text Лицензия № 1481 от 11.08.2015
+									.ipo-info
+										.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
+										.ipo-info__col(data-title="Срок") до 30 лет
+										.ipo-info__col(data-title="Ставка") 6%
 
-						// /.ipo-calc
+							// /.ipo-table
 
-						p.sub-text Данная информация представлена для ознакомления и не является офертой. Подробную информацию уточняйте у менеджеров отдела продаж.
+						// /.ipo
+
+						.ipo-more
+							button.btn.btn--transp(type="button")
+								img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+								| Показать ещё
 
 				// /.ipo
 
 
-				// discounts
-				.container.section-margin.scrollspy-item#p-7
-					h2.h1.title Акции и скидки
-					.p-list
-						.f-row
-							.cols.col-1-2
-								.p-item
-									.p-item__img
-										a(href="news-page.html")
-											img.img(src="img/img-thumb-1.jpg", alt="news1")
-									.p-item__content
-										span.p-item__date 31 января 2020
-										.p-item__title
-											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
-										a.btn.btn--transp(href="news-page.html")
-											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
-											| Подробнее
-							.cols.col-1-2
-								.p-item
-									.p-item__img
-										a(href="news-page.html")
-											img.img(src="img/img-thumb-1.jpg", alt="news1")
-									.p-item__content
-										span.p-item__date 31 января 2020
-										.p-item__title
-											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
-										a.btn.btn--transp(href="news-page.html")
-											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
-											| Подробнее
-							.cols.col-1-2
-								.p-item
-									.p-item__img
-										a(href="news-page.html")
-											div.img.img-empty
-									.p-item__content
-										span.p-item__date 31 января 2020
-										.p-item__title
-											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
-										a.btn.btn--transp(href="news-page.html")
-											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
-											| Подробнее
-
-				// /.discounts
+				// form-ipo
+				include pug-modules/cta-ipo
+				// /.form
 
 
 				.gallery.project-build.section-margin.scrollspy-item#p-8
@@ -1005,6 +1045,7 @@ html(lang="ru")
 				// /.gallery
 
 
+
 				.project-contacts.section-margin.scrollspy-item#p-9
 					.container
 						h1.title.title-margin Контакты офиса продаж
@@ -1051,6 +1092,11 @@ html(lang="ru")
 				// /.project-docs
 
 
+				// form
+				include pug-modules/cta
+				// /.form
+
+
 				.container.section-margin
 					h2.h1.title Другие объекты
 					.quarter-list.view-2.other-objects
@@ -1067,50 +1113,11 @@ html(lang="ru")
 											.p-metro.flex
 												.p-metro__branch(style="border-color: #33B7FB;")
 												span Московская
-		
-										.p-discount.flex
-											.p-discount__ic %
-											p.p-discount__txt Только до 15 сентября <span class="nowrap">до 15%!</span>
-
-										.p-key.p-key--blue
-											.p-key__ic 
-											.p-key__txt Квартиры от 
-												b 15.6 
-												| млн/р.
 
 										a.btn.btn--transp(href="#")
 											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 											| Посмотреть
-						
-							// /.quarter
-							
-							.cols.col-1-2
-								.quarter
-									.quarter__img-wrap
-										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
-										.quarter__overlay
-											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
-									.quarter__content
-										.quarter__title UP-квартал Комендантский 
-										.quarter__transport.flex
-											.p-metro.flex
-												.p-metro__branch(style="border-color: #33B7FB;")
-												span Московская
-		
-										.p-discount.flex
-											.p-discount__ic %
-											p.p-discount__txt Только до 15 сентября <span class="nowrap">до 15%!</span>
-
-										.p-key.p-key--blue
-											.p-key__ic 
-											.p-key__txt Квартиры от 
-												b 15.6 
-												| млн/р.
-
-										a.btn.btn--transp(href="#")
-											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-											| Посмотреть
-						
+					
 							// /.quarter
 
 							.cols.col-1-2
@@ -1125,23 +1132,50 @@ html(lang="ru")
 											.p-metro.flex
 												.p-metro__branch(style="border-color: #33B7FB;")
 												span Московская
-		
-										.p-discount.flex
-											.p-discount__ic %
-											p.p-discount__txt Только до 15 сентября <span class="nowrap">до 15%!</span>
-
-										.p-key.p-key--blue
-											.p-key__ic 
-											.p-key__txt Квартиры от 
-												b 15.6 
-												| млн/р.
 
 										a.btn.btn--transp(href="#")
 											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 											| Посмотреть
-						
+					
 							// /.quarter
 
+							.cols.col-1-2
+								.quarter
+									.quarter__img-wrap
+										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+										.quarter__overlay
+											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+									.quarter__content
+										.quarter__title UP-квартал Комендантский 
+										.quarter__transport.flex
+											.p-metro.flex
+												.p-metro__branch(style="border-color: #33B7FB;")
+												span Московская
+
+										a.btn.btn--transp(href="#")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Посмотреть
+					
+							// /.quarter
+
+							.cols.col-1-2
+								.quarter
+									.quarter__img-wrap
+										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
+										.quarter__overlay
+											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
+									.quarter__content
+										.quarter__title UP-квартал Комендантский 
+										.quarter__transport.flex
+											.p-metro.flex
+												.p-metro__branch(style="border-color: #33B7FB;")
+												span Московская
+
+										a.btn.btn--transp(href="#")
+											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
+											| Посмотреть
+					
+							// /.quarter
 
 					// /.quarter-list 2
 
@@ -1155,6 +1189,58 @@ html(lang="ru")
 			// Карточка
 			include pug-modules/card
 			// /.card
+
+
+			.modal.ipo-request.mfp-hide#ipo-request
+				.ipo-request__body
+					.ipo-request__header
+						.ipo-bank
+							img.img(src="img/ipo/vtb.png", alt="ВТБ")
+						button.close-btn.mfp-close(type="button")
+
+					.ipo-request__data
+						.data-col
+							div Банк ВТБ
+							div.sub-text Лицензия № 1481 от 11.08.2015
+						.data-row
+							.data-col
+								div.sub-text.text-bold Ставка
+								span от 6.5%
+							.data-col
+								div.sub-text.text-bold Срок
+								span до 25 лет
+							.data-col
+								div.sub-text.text-bold Ежемесячный платёж, р.
+								span 50 782
+
+				.ipo-request__form
+					.h2.cta__title Подать заявку<br> на ипотеку - просто!
+					.cta__form.cta-form
+						form(action="#")
+							.cta-form__row.f-row
+								.cols.col-1-3
+									input.input(type="text", name="name", placeholder="Ваше имя", reqiured)
+								.cols.col-1-3
+									input.input(type="tel", name="tel", placeholder="Номер телефона", reqiured)
+								.cols.col-1-3
+									button.btn.btn--cta.demo-modal-success(type="submit") 
+										img.svg.btn__ic.ic-tel(src="img/icons/ic-tel.svg", alt="phone", width="12", height="20") 
+										| Позвоните мне
+							p.privacy Отправляя форму, вы подтверждаете своё согласие на 
+								a(href="confidence.html", target="_blank") обработку персональных данных
+
+
+			.modal.modal-success.mfp-hide#modal-success
+				.modal-success__inner
+					.modal-success__img
+						img.img(src="img/icons/ic-success.svg", alt="alt")
+					.h2.modal-success__title Спасибо за Вашу заявку!
+					p Наш специалист свяжется с вами в&nbsp;ближайшее время и ответит на все интересующие вас вопросы.
+					button.btn.btn--border.mfp-close(type="button")
+						img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", width="12", height="20", alt="ic")
+						| Отлично, жду!
+
+
 
 
 

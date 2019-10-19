@@ -23,8 +23,22 @@
 	margin-bottom: 30px
 
 	&-calc
-		padding: 25px 0 0
-		background-color: $additional-color
+		padding: 25px 0
+		background: $white
+		.ui-quantity
+			background: v(additional-color)
+			input
+				background: transparent
+		.ui-quantity__btn
+			border: 1px solid #bebebe
+			.svg, .svg *
+				stroke: #bebebe
+				fill: #bebebe
+			&:hover
+				border-color: v(accent-color)
+				.svg, .svg *
+					stroke: $white
+					fill: $white
 
 
 	&-table
@@ -133,6 +147,7 @@
 		margin-left: -15px
 		padding-left: 15px
 		padding-right: 15px
+		padding-bottom: 0
 
 	.ipo-table__header
 		display: none !important

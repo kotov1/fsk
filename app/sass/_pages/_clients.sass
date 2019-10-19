@@ -1,0 +1,137 @@
+/* ----- Страница Клиентский сервис ----- */
+
+.clients
+	
+	&-img
+		height: 220px
+		margin-bottom: 25px
+		.img
+			height: 100%
+			object-fit: cover
+
+
+
+
+
+.faq
+	margin: 0
+	padding: 0
+	list-style: none
+	li
+		position: relative
+		margin-top: -1px
+		// padding-bottom: 16px
+		border: 1px solid v(border-color)
+		background: $white
+		border-radius: $bd-r
+		@include trs(.1s)
+		&:hover
+			z-index: 1
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+	&__question
+		padding: 15px 50px 15px 16px
+		position: relative
+		font-weight: 500
+		cursor: pointer
+		color: #363839
+		&::after
+			content: ''
+			width: 12px
+			height: 7px
+			position: absolute
+			top: 50%
+			margin-top: -3px
+			right: 26px
+			background: url('../img/icons/ic-dropdown-arrow-accent.svg') no-repeat 100% 50%
+			will-change: transform
+			transform: scale(1, 1)
+			@include trs(.1s)
+		&.active
+			color: v(accent-color)
+			&::after
+				transform: scale(-1, -1)
+				filter: grayscale(1)
+		&:focus
+			box-shadow: none
+
+	&__answer
+		margin: -6px 0 0
+		padding: 0 16px 16px
+		.inline-btn
+			display: flex
+			margin-top: 10px
+			color: $sub-text-color
+
+	&-docs
+		.faq__question
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding-right: 16px
+			&::after
+				display: none
+		&__link
+			.btn__ic
+				margin: 0 0 0 7px
+
+
+.js-accordion-content
+	display: none
+
+
+
+
+@include max-screen($xl)
+
+	.faq:not(.faq-docs)
+		.faq__question
+			min-height: 60px
+			padding-top: 9px
+			padding-bottom: 9px
+			display: flex
+			align-items: center
+		.js-accordion-content
+			margin-top: 10px
+
+
+	.contact-link
+		margin-bottom: 25px
+
+	.faq__answer .inline-btn
+		.dashed-underline
+			border-bottom: none
+			text-decoration: underline
+		.btn__ic
+			margin-right: 10px
+
+
+@include max-screen($md)
+	.faq:not(.faq-docs) .faq__question
+		min-height: 1px
+	.faq-docs__link span
+		display: none
+
+
+@include max-screen($sm)
+	.clients-img
+		width: calc(100% + 30px)
+		height: 200px
+		margin-left: -15px
+
+	.contact-link
+		margin-bottom: 15px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -90,10 +90,13 @@
 	&__offer
 		flex: 1 0 0
 		max-width: 100%
-		padding: 12px 25px 25px
+		padding: 20px 20px 25px
 	&__img
 		position: relative
-		max-height: 523px
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 513px
 		&::after
 			content: ''
 			display: block
@@ -281,7 +284,10 @@
 		color: v(accent-color)
 
 
-
+.results__row
+	cursor: pointer
+	&.current
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
 
 
 

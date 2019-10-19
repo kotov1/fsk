@@ -235,22 +235,6 @@ $(function() {
 		asNavFor: '.bg-slider',
 	});
 
-
-	// $('.bg-slider .slider-next').hover(function () {
-	// 		$('.main-hero').addClass('slide-next');
-	// 	}, function () {
-	// 		$('.main-hero').removeClass('slide-next');
-	// 	}
-	// );
-	// $('.bg-slider .slider-prev').hover(function () {
-	// 		$('.main-hero').addClass('slide-prev');
-	// 	}, function () {
-	// 		$('.main-hero').removeClass('slide-prev');
-	// 	}
-	// );
-
-
-
 	// Слайдеры на странице ЖК
 	$('#gallery-1').slick({
 		infinite: false,
@@ -298,25 +282,49 @@ $(function() {
 		arrows: false,
 		speed: 800,
 		asNavFor: '.advantages-slider-text',
+		dotsClass: 'slider-dots slider-dots--dark',
+		responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+				dots: true
+			  }
+			}
+		]
 	});
 	$('.advantages-slider-text').slick({
 		// infinite: false,
 		speed: 800,
 		fade: true,
 		asNavFor: '.advantages-slider-img',
-		prevArrow: sliderPrevBtn,
-		nextArrow: sliderNextBtn,
+		// prevArrow: sliderPrevBtn,
+		// nextArrow: sliderNextBtn,
+		arrows: false,
 		dotsClass: 'slider-dots slider-dots--dark',
 		responsive: [
 			{
 			  breakpoint: 1199,
 			  settings: {
-				arrows: false,
-				dots: true
+				arrows: false
 			  }
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					adaptiveHeight: true
+				}
 			}
 		]
 	});
+
+	$('.advantages-slider .slider-prev').click(function(){
+		$('.advantages-slider-text').slick('slickPrev');
+	});
+	$('.advantages-slider .slider-next').click(function(){
+		$('.advantages-slider-text').slick('slickNext');
+	});
+
+
 
 
 	$('#gallery-2').slick({
@@ -497,7 +505,9 @@ $(function() {
 		});
 
 
-		scrollspyOffset = $('.scrollspy-menu').offset().top -60;
+		if( $('.scrollspy-menu').length ) {
+			scrollspyOffset = $('.scrollspy-menu').offset().top -60;
+		}
 		AnchorActive();
 		lineFixing();
 
@@ -704,34 +714,70 @@ $(function() {
 
 
 	// Аккордион в мобильном меню
-	$('.mob-toggle').click(function() {
+// 	$('.mob-toggle').click(function() {
 
-		var dropDown = $(this).closest('li').find('.mob-menu__sublist');
+// 		var dropDown = $(this).closest('li').find('.mob-menu__sublist');
 
-		$(this).closest('.mob-menu__list').find('.mob-menu__sublist').not(dropDown).slideUp();
+// 		$(this).closest('.mob-menu__list').find('.mob-menu__sublist').not(dropDown).slideUp();
+
+// 		if ($(this).hasClass('active')) {
+// 			$(this).removeClass('active');
+// 		} else {
+// 			$(this).closest('.mob-menu__list').find('.mob-toggle.active').removeClass('active');
+// 			$(this).addClass('active');
+// 		}
+
+// 		dropDown.stop(false, true).slideToggle();
+//    });
+
+	// FAQ accordion
+	$('.js-accordion-btn').click(function() {
+
+		var dropDown = $(this).parent().find('.js-accordion-content');
+
+		$(this).closest('.js-accordion').find('.js-accordion-content').not(dropDown).slideUp();
 
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
 		} else {
-			$(this).closest('.mob-menu__list').find('.mob-toggle.active').removeClass('active');
+			$(this).closest('.js-accordion').find('.js-accordion-btn.active').removeClass('active');
 			$(this).addClass('active');
 		}
 
 		dropDown.stop(false, true).slideToggle();
+	});
+
+
+
+
+
+// Вызов карточки квартиры
+
+
+	
+   $('[data-plan]').click(function (e) { 
+		$('[data-plan]').removeClass('current');
+		$(this).addClass('current');
+		$('.results__img').find('.img').attr('src', 'img/' + $(this).data('plan'));
+		if( $(window).width() < 1200 ) {
+			e.stopPropagation();
+			$.magnificPopup.open({
+				items: {
+					src: '#card-example',
+				},
+				type: 'inline',
+				callbacks: {
+					open: function() {
+						$('.mfp-bg').addClass('mfp-card');
+					}
+				}
+			});
+		}
    });
 
 
-
-
-
-
-
 	
 
-
-
-	
-	
 
 
 
