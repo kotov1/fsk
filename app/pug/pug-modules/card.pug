@@ -1,7 +1,10 @@
 .card.mfp-hide#card-example
 	.p-relative
 		button.close-btn.mfp-close(type="button")
-		.h1.card__title 3-к квартира, 42 м<sup>2</sup>
+		if page == "commerce"
+			.h1.card__title Помещение, 42 м<sup>2</sup>
+		else 
+			.h1.card__title 3-к квартира, 42 м<sup>2</sup>
 		.card__body.js-tab-wrapper
 			.card__col-1
 				.card__tabs-wrap

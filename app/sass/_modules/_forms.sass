@@ -10,15 +10,6 @@ body input:focus:required:invalid, body textarea:focus:required:invalid,
 body input:required:valid, body textarea:required:valid
 	color: $text-color
 
-
-
-.modal
-	max-width: 1200px
-	margin: 0 auto
-	background: $white
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
-	border-radius: 6px
-
 .input
 	display: block
 	width: 100%
@@ -33,7 +24,7 @@ body input:required:valid, body textarea:required:valid
 		box-shadow: inset 0 0 5px rgba($black, .2)
 	&:focus
 		outline: none
-		box-shadow: inset 1px 1px 5px rgba($black, .3)
+		box-shadow: inset 0 0 3px rgba($black, .2)
 		&::placeholder
 			opacity: 0
 
@@ -105,15 +96,87 @@ body input:required:valid, body textarea:required:valid
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.16)
 
 
-
-
-
 @include max-screen($md)
 	.input
 		font-size: 14px
 	.privacy
 		margin-top: 15px
 		font-size: 12px
+
+
+
+
+.modal
+	max-width: 1200px
+	margin: 0 auto
+	background: $white
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+	border-radius: 6px
+
+
+.modal-callback
+	max-width: 750px
+	height: 400px
+	overflow: hidden
+	border-radius: 5px
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		height: 100%
+		position: relative
+	&__img
+		width: 283px
+		flex: 0 0 283px
+		height: 100%
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-size: cover
+	&__col
+		flex: 1
+		max-width: 100%
+		padding: 50px
+	&__form
+		margin-top: 30px
+		.input
+			border: 1px solid v(border-color)
+			margin-bottom: 20px
+		.btn
+			margin-top: 5px
+		.privacy
+			margin-top: 20px
+			font-size: 12px
+			color: #BEBEBE
+
+	.close-btn
+		color: #BEBEBE
+		top: 15px
+		right: 15px
+
+	.modal-success__inner
+		width: calc(100% + 40px)
+		margin-left: -20px
+		text-align: center
+		.success-btn
+			margin-top: 50px
+
+.modal
+	.success-btn
+		display: flex
+		width: 200px
+		opacity: 1
+		margin: 35px auto 0
+		font-family: inherit
+		border: 1px solid v(border-color)
+		transition-delay: .2s
+		.btn__ic
+			margin-right: 10px
+		.svg-stroke 
+			transition-delay: .2s
+		&:hover
+			transition-delay: 0s
+			.svg-stroke * 
+				transition-delay: 0s
+				stroke: $white
 
 
 
@@ -142,35 +205,59 @@ body input:required:valid, body textarea:required:valid
 			margin-left: -35px
 			bottom: 0
 			background: v(accent-color)
-	.btn
-		display: flex
-		width: 200px
-		opacity: 1
-		margin: 35px auto 0
-		font-family: inherit
-		border: 1px solid v(border-color)
-		transition-delay: .2s
-		.btn__ic
-			margin-right: 10px
-		.svg-stroke 
-			transition-delay: .2s
-		&:hover
-			transition-delay: 0s
-			.svg-stroke * 
-				transition-delay: 0s
-				stroke: $white
+
 
 
 
 @include max-screen($xl)
+	.modal-callback
+		max-width: 720px
+	.modal-callback__col
+		padding: 50px 30px
 	.modal-success
 		padding: 85px 0
 
 @include max-screen($md)
+	.modal
+		box-shadow: none
 	.modal-success__inner
 		padding: 0 15px
 
+	.modal-callback
+		margin-top: 50px
+		height: auto
+		overflow: visible
+		border-radius: 0
+	.modal-callback__inner
+		display: block
+	.modal-callback__img
+		height: 205px
+		width: 100%
+	.modal-callback__col
+		padding: 17px 15px 20px
+	.modal-callback__form
+		margin-top: 20px
+	.modal-callback__form .btn
+		margin-top: 0
+	.modal-callback .close-btn
+		top: -30px
+		right: 10px
 
+
+	.modal-thanks
+		margin-top: 0
+		.modal-callback__img
+			display: none
+		.modal-callback__col
+			padding-top: 0
+			padding-bottom: 0
+
+
+	.modal-thanks, .modal-success
+		height: 100vh
+	.modal-thanks .modal-callback__inner, .modal-success
+		display: flex
+		align-items: center
 
 
 

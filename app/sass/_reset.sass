@@ -87,7 +87,7 @@ a
 		text-decoration: none
 		color: v(accent-color)
 	&:focus
-		box-shadow: 0 0 .5px v(accent-color)
+		// box-shadow: 0 0 .5px v(accent-color)
 	&:not([href]):not([tabindex])
 		color: inherit
 		text-decoration: none
@@ -142,7 +142,7 @@ button
 	appearance: none
 	cursor: pointer
 	&:focus
-		box-shadow: 0 0 .5px v(accent-color)
+		// box-shadow: 0 0 .5px v(accent-color)
 
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner
 	border-style: none
@@ -234,15 +234,22 @@ textarea
 .fancybox-bg
 	background: $white
 
+.mfp-card 
+	overflow: hidden
+	.mfp-wrap
+		overflow: scroll
+
+
 @include max-screen($xl)
 	.mfp-card
-		opacity: 1
-		background: $white
-		~ *
-			filter: none
-		+ .mfp-wrap	
-			.mfp-container
-				padding: 0
+		.mfp-bg
+			opacity: 1
+			background: $white
+			~ *
+				filter: none
+			+ .mfp-wrap	
+				.mfp-container
+					padding: 0
 
 @media (max-width: 900px)
 	.mfp-container
@@ -253,6 +260,9 @@ textarea
 	.mfp-container
 		padding-left: 0
 		padding-right: 0
+
+	.mfp-top .mfp-content
+		vertical-align: top
 
 
 .slick-slide

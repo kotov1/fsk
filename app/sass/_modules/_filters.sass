@@ -22,9 +22,12 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
+		&--padding
+			padding-bottom: 20px
 	&__field
-		margin-bottom: 30px
 		flex-basis: calc(25% - 18px)
+		&:not(:last-child)
+			margin-bottom: 30px
 
 	&-field
 		&__label
@@ -83,6 +86,12 @@
 		.filter__tech .btn
 			display: none
 		
+
+
+
+
+
+
 
 .ui-checkbox-group
 	display: flex
@@ -234,7 +243,19 @@
 				height: 12px
 				margin: 0 1px
 
+@include max-screen($md)
 
+	.ui-range 
+		&__slider
+			width: calc(100% - 50px)
+			left: 12.5px
+			&::before
+				// display: none
+		// .ui-slider-handle
+		// 	&:first-of-type
+		// 		margin-left: 12px
+		// 	&:last-of-type
+		// 		margin-left: -12px
 
 
 .ui-select
@@ -445,6 +466,7 @@
 			transform: scale(-1)
 	.ui-btn
 		position: absolute
+		top: 0
 		right: 0
 		border: none
 		background: none
@@ -476,6 +498,7 @@
 		padding-left: 1px
 
 	.filter__tech
+		padding-top: 15px
 		flex-direction: column
 	
 	.filter-additional
@@ -504,6 +527,11 @@
 
 	.filter-mob-collapse
 		margin-top: 25px
+
+	.filter__hidden .filter__field:first-child
+		margin-top: 25px
+
+	
 
 
 

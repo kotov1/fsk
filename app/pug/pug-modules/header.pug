@@ -3,6 +3,8 @@ include preloader
 
 
 header.header
+
+	// desktop
 	.header__top
 
 		.logo
@@ -20,16 +22,18 @@ header.header
 			li
 				a(href="discounts.html") Акции и скидки
 			li
+				a(href="ipo.html") Ипотека
+			li
 				a(href="company.html") О застройщике
 			li
 				a.link-favourite(href="favourite.html") 
 					span.dashed-underline Избранное
 					img.svg(src="img/icons/ic-star.svg", alt="Избранное")
 
-		.header-call
+		.header-call.js-call-callback
 			.header-call__ic
 			.header-call__data
-				a(href="tel:8127035555") (812) 703-55-55
+				span (812) 703-55-55
 				button.header-call__btn(type="button") ПЕРЕЗВОНИТЕ МНЕ
 
 		if page == "page"
@@ -51,6 +55,7 @@ header.header
 
 	// /.header__top
 
+	// mobile
 	.toggle-menu
 
 		//- .sub-menu

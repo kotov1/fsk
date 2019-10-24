@@ -419,6 +419,8 @@
 		.btn
 			margin-top: auto
 
+			
+
 
 
 @include max-screen($xl)
@@ -505,10 +507,22 @@
 
 	.scrollspy-menu
 		background-color: v(add-accent-color)
+		max-width: 100%
+		height: 50px
 		&__slider
 			padding: 0 24px
+			height: 52px
+			overflow: scroll
 		a
+			white-space: nowrap
 			margin-right: 30px
+			&:last-child
+				padding-right: 30px !important
+
+
+	.other-objects
+		margin-bottom: 0
+
 
 
 @include max-screen($md)

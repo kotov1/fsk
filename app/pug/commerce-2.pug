@@ -38,7 +38,19 @@ html(lang="ru")
 						.filter-mob-collapse
 
 							.filter-row
-								.filter-fields
+								.filter-fields.filter-fields--padding
+								
+									.filter__field.filter-field
+										.filter-field__label Стоимость, млн/р.
+										.ui-range
+											.ui-range__col
+												span от
+												input.ui-range__val.ui-range__from(value="1.95")
+											.ui-range__col
+												span до
+												input.ui-range__val.ui-range__to(value="12.8")
+											.ui-range__slider.ui-range-cost
+
 									.filter__field.filter-field
 										.filter-field__label Площадь, м
 											sup 2
@@ -50,17 +62,6 @@ html(lang="ru")
 												span до
 												input.ui-range__val.ui-range__to(value="158") 
 											.ui-range__slider.ui-range-size
-
-									.filter__field.filter-field
-										.filter-field__label Стоимость, млн/р.
-										.ui-range
-											.ui-range__col
-												span от
-												input.ui-range__val.ui-range__from(value="1.95")
-											.ui-range__col
-												span до
-												input.ui-range__val.ui-range__to(value="12.8")
-											.ui-range__slider.ui-range-cost
 									
 									.filter__field.filter-field
 										.filter-field__label Готовность до
@@ -76,11 +77,11 @@ html(lang="ru")
 							// /.filter__row
 
 
-							.filter-row.filter__tech.flex-between
-								a.sub-objects(href="#") 
-									img.svg.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
-									span Объекты ГК ФСК в Москве и МО
-								button.filter-reset(type="button") Сбросить фильтр
+							//- .filter-row.filter__tech.flex-between
+								//- a.sub-objects(href="https://fsk.ru/", target="_blank") 
+								//- 	img.svg.btn__ic(src="img/icons/ic-nav-objects.svg", alt="nav", width="17", height="18")
+								//- 	span Объекты ГК ФСК в Москве и МО
+								//- button.filter-reset(type="button") Сбросить фильтр
 							// /.filter__row
 							
 					// /.filter
@@ -131,7 +132,7 @@ html(lang="ru")
 							.results__col
 								.results-screen#results-screen
 									.results__row.results-screen__header
-										div.filter-data.dashed-underline Up-квартал Комендантский
+										a.filter-data.dashed-underline(href="#") Up-квартал Комендантский
 										div от 
 											span.filter-data 2 376 200 р.
 									.results__row(data-plan="img-plan.jpg")
@@ -269,7 +270,7 @@ html(lang="ru")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
 									
 									.results__row.results-screen__header
-										div.filter-data.dashed-underline Up-квартал Комендантский
+										a.filter-data.dashed-underline(href="#") Up-квартал Комендантский
 										div от 
 											span.filter-data 2 376 200 р.
 								
@@ -433,12 +434,17 @@ html(lang="ru")
 
 
 				// /.container
+							
 
 
 				// form
 				include pug-modules/cta
 				// /.form
 
+
+				.container.section-margin
+					.content
+							p.sub-color.mb-0 ГК ФСК работает не только в Москве и Московской области, но также в Санкт-Петербурге и Ленинградской области, Калужской области и Краснодарском крае. В структуру холдинга входят собственные производственные мощности, генподрядные организации, технический заказчик, агентство недвижимости, сервисные службы. Компания, основанная в 2005 году, зарекомендовала себя надежным партнером, который всегда выполняет обязательства. Вертикально интегрированная структура ФСК позволяет в короткие сроки своими силами проектировать и строить объекты любого уровня сложности, используя преимущественно собственное финансирование. Именно поэтому бизнес компании очень устойчив, а кредитная нагрузка минимальна. В 2016 году в структуру холдинга вошел ДСК-1 – крупнейшее предприятие по производству панельных домов с полувековой историей. В результате этой сделки компания вышла на новый для нее рынок индустриального домостроения, а также укрепила свои позиции и расширила ассортимент в сегментах стандарт и комфорт.
 
 			// /.page
 

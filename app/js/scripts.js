@@ -282,15 +282,15 @@ $(function() {
 		arrows: false,
 		speed: 800,
 		asNavFor: '.advantages-slider-text',
-		dotsClass: 'slider-dots slider-dots--dark',
-		responsive: [
-			{
-			  breakpoint: 1199,
-			  settings: {
-				dots: true
-			  }
-			}
-		]
+		dotsClass: 'slider-dots slider-dots--dark'
+		// responsive: [
+		// 	{
+		// 	  breakpoint: 1199,
+		// 	  settings: {
+		// 		dots: true
+		// 	  }
+		// 	}
+		// ]
 	});
 	$('.advantages-slider-text').slick({
 		// infinite: false,
@@ -371,6 +371,9 @@ $(function() {
 	// BEGIN scrollspy в подменю на странице ЖК
 
 	var scrollspyOffset;
+	if( $('.scrollspy-menu').length ) {
+		scrollspyOffset = $('.scrollspy-menu').offset().top -60;
+	}
 
 	$('.scrollspy-menu a, .anchor-scroll').on('click', function(e){
 		var id = $(this).attr('href');
@@ -407,6 +410,8 @@ $(function() {
 	$(window).scroll(function() {
 		AnchorActive();
 		lineFixing();
+		// console.log('scrollspyOffset ' + scrollspyOffset);
+		// console.log('window ' +  $(window).scrollTop());
 	});
 
 
@@ -505,48 +510,46 @@ $(function() {
 		});
 
 
-		if( $('.scrollspy-menu').length ) {
-			scrollspyOffset = $('.scrollspy-menu').offset().top -60;
-		}
+
 		AnchorActive();
 		lineFixing();
 
-		var $scrollSlider = $('.scrollspy-menu__slider');
-		if ($(window).width() > 1199) {
-			if ($scrollSlider.hasClass('slick-initialized')) {
-				$scrollSlider.slick('unslick');
-			}
-		} else{
-			if (!$scrollSlider.hasClass('slick-initialized')) {
-				$scrollSlider.slick({
-					infinite: false,
-					speed: 500,
-					slidesToShow: 8,
-					// focusOnSelect: true,
-					// centerMode: true,
-					// centerPadding: '0px',
-					variableWidth: true,
-					responsive: [
-						{
-							breakpoint: 767,
-							settings: {
-								slidesToShow: 6,
-							}
-						},
-						{
-							breakpoint: 575,
-							settings: {
-								slidesToShow: 2
-							}
-						}
-					]
-				});
-			}
-			$(window).scroll(function() {
-				var currentSlide = $('.scrollspy-menu .active').index();
-				$scrollSlider.slick('slickGoTo', currentSlide-1);
-			});
-		}
+		// var $scrollSlider = $('.scrollspy-menu__slider');
+		// if ($(window).width() > 1199) {
+		// 	if ($scrollSlider.hasClass('slick-initialized')) {
+		// 		$scrollSlider.slick('unslick');
+		// 	}
+		// } else{
+		// 	if (!$scrollSlider.hasClass('slick-initialized')) {
+		// 		$scrollSlider.slick({
+		// 			infinite: false,
+		// 			speed: 500,
+		// 			slidesToShow: 8,
+		// 			// focusOnSelect: true,
+		// 			// centerMode: true,
+		// 			// centerPadding: '0px',
+		// 			variableWidth: true,
+		// 			responsive: [
+		// 				{
+		// 					breakpoint: 767,
+		// 					settings: {
+		// 						slidesToShow: 6,
+		// 					}
+		// 				},
+		// 				{
+		// 					breakpoint: 575,
+		// 					settings: {
+		// 						slidesToShow: 2
+		// 					}
+		// 				}
+		// 			]
+		// 		});
+		// 	}
+		// 	$(window).scroll(function() {
+		// 		var currentSlide = $('.scrollspy-menu .active').index();
+		// 		$scrollSlider.slick('slickGoTo', currentSlide-1);
+		// 	});
+		// }
 
 
 
@@ -606,7 +609,10 @@ $(function() {
 		},
 		callbacks: {
 			open: function() {
-				$('.mfp-bg').addClass('mfp-card');
+				$('body').addClass('mfp-card');
+			},
+			close: function() {
+				$('body').removeClass('mfp-card');
 			}
 		}
 	});
@@ -622,11 +628,22 @@ $(function() {
 		items: {
 			src: '#ipo-request',
 			type: 'inline'
+		},
+		callbacks: {
+			open: function() {
+				$('body').addClass('mfp-card mfp-top');
+			},
+			close: function() {
+				$('body').removeClass('mfp-card mfp-top');
+			}
 		}
 	});
+
+	// =============================== ДЛЯ ДЕМО ===============================
+	// вызов модального окна благодарности на странице ипотеки
 	$('.demo-modal-success').magnificPopup({
 		items: {
-			src: '#modal-success',
+			src: '#modal-ipo-success',
 			type: 'inline'
 		}
 	});
@@ -678,7 +695,7 @@ $(function() {
 	var animateCta = function(e) {
 
 		// Для демо
-		e.preventDefault();
+		// e.preventDefault();
 
 		e.target.classList.remove('cta-animate');
 			
@@ -752,9 +769,6 @@ $(function() {
 
 
 // Вызов карточки квартиры
-
-
-	
    $('[data-plan]').click(function (e) { 
 		$('[data-plan]').removeClass('current');
 		$(this).addClass('current');
@@ -768,7 +782,10 @@ $(function() {
 				type: 'inline',
 				callbacks: {
 					open: function() {
-						$('.mfp-bg').addClass('mfp-card');
+						$('body').addClass('mfp-card');
+					},
+					close: function() {
+						$('body').removeClass('mfp-card');
 					}
 				}
 			});
@@ -776,10 +793,55 @@ $(function() {
    });
 
 
-	
 
+   
+   $('.js-call-callback').magnificPopup({
+		items: {
+			src: '#modal-callback',
+			type: 'inline'
+		},
+		callbacks: {
+			open: function() {
+				$('body').addClass('mfp-card');
+			},
+			close: function() {
+				$('body').removeClass('mfp-card');
+			}
+		}
+	});
 
+	   
+	$('.js-call-callback').magnificPopup({
+		items: {
+			src: '#modal-callback',
+			type: 'inline'
+		},
+		callbacks: {
+			open: function() {
+				$('body').addClass('mfp-card mfp-top');
+			},
+			close: function() {
+				$('body').removeClass('mfp-card mfp-top');
+			}
+		}
+	});
 
+	// =============================== ДЛЯ ДЕМО ===============================
+	// вызов модального окна благодарности после заказа звонка
+	$('#modal-callback .btn').magnificPopup({
+		items: {
+			src: '#modal-thanks',
+			type: 'inline'
+		},
+		callbacks: {
+			open: function() {
+				$('body').addClass('mfp-card').removeClass('mfp-top');
+			},
+			close: function() {
+				$('body').removeClass('mfp-card');
+			}
+		}
+	});
 
 });
 

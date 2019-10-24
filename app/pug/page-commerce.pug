@@ -35,10 +35,6 @@ html(lang="ru")
 									img.img(src="img/icons/ic-walk-dist.svg", width="8", height="13", alt="alt")
 									span 5 минут
 
-							.p-discount.flex
-								.p-discount__ic %
-								p.p-discount__txt Только до 15 сентября скидки до 15%!
-
 							.breadcrumbs(itemscope='', itemtype='http://schema.org/BreadcrumbList')
 								span(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
 									a(rel='nofollow', itemprop='item', title='Главная', href='/')
@@ -62,7 +58,6 @@ html(lang="ru")
 						a(href="#p-2") Галерея
 						a(href="#p-3") Расположение
 						a(href="#p-4") Преимущества
-						a(href="#p-5") Акции
 						a(href="#p-6") Квартиры
 						a(href="#p-7") Ипотека
 						a(href="#p-8") Ход строительства
@@ -316,159 +311,67 @@ html(lang="ru")
 
 
 
-				// discounts
-				.container.section-margin.scrollspy-item#p-5
-					h2.h1.title Акции и скидки
-					.p-list
-						.f-row
-							.cols.col-1-2
-								.p-item
-									.p-item__img
-										a(href="news-page.html")
-											img.img(src="img/img-thumb-1.jpg", alt="news1")
-									.p-item__content
-										span.p-item__date 31 января 2020
-										.p-item__title
-											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
-										a.btn.btn--transp(href="news-page.html")
-											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
-											| Подробнее
-							.cols.col-1-2
-								.p-item
-									.p-item__img
-										a(href="news-page.html")
-											img.img(src="img/img-thumb-1.jpg", alt="news1")
-									.p-item__content
-										span.p-item__date 31 января 2020
-										.p-item__title
-											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
-										a.btn.btn--transp(href="news-page.html")
-											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
-											| Подробнее
-							.cols.col-1-2
-								.p-item
-									.p-item__img
-										a(href="news-page.html")
-											div.img.img-empty
-									.p-item__content
-										span.p-item__date 31 января 2020
-										.p-item__title
-											a(href="news-page.html") Длинный заголовок какой-то новости или акции, которая длится очень долго и...
-										a.btn.btn--transp(href="news-page.html")
-											img.svg.btn__ic.ic-read(src="img/icons/ic-read.svg", alt="link", width="15", height="19")
-											| Подробнее
-
-				// /.discounts
-
-
-
 				// filters
 				
 				.container.section-margin.scrollspy-item#p-6
 
-					h2.h1.title#filter-anchor Выбор квартир
+					h2.h1.title#filter-anchor Выбор помещений
 
 					.filter
-						.filter-row
-							.filter-fields
-								.filter__field.filter-field
-									.filter-field__label Количество комнат
-									.ui-checkbox-group
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-0(type="checkbox", name="filter_rooms_C")
-											label.ui-checkbox__label(for="checkbox-rooms-0") С
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-1(type="checkbox", name="filter_rooms_1")
-											label.ui-checkbox__label(for="checkbox-rooms-1") 1
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-2(type="checkbox", name="filter_rooms_2")
-											label.ui-checkbox__label(for="checkbox-rooms-2") 2
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-3(type="checkbox", name="filter_rooms_3")
-											label.ui-checkbox__label(for="checkbox-rooms-3") 3
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-4(type="checkbox", name="filter_rooms_4")
-											label.ui-checkbox__label(for="checkbox-rooms-4") 4
-										.ui-checkbox
-											input.ui-checkbox__input#checkbox-rooms-5(type="checkbox", name="filter_rooms_5")
-											label.ui-checkbox__label(for="checkbox-rooms-5") 5
+						.filter-mob Фильтр по квартирам
+							button.ui-btn.ui-btn--stroke(type="button")
+								img.svg(src="img/icons/ic-dropdown-arrow.svg", alt="link", width="12", height="7")
 
-								.filter__field.filter-field
-									.filter-field__label Стоимость, млн/р.
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="2.6")
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="12.15")
-										.ui-range__slider.ui-range-cost
+						.filter-mob-collapse
 
-								.filter__field.filter-field
-									.filter-field__label Площадь, м
-										sup 2
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="30") 
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="150") 
-										.ui-range__slider.ui-range-size
+							.filter-row
+								.filter-fields.filter-fields--padding
+								
+									.filter__field.filter-field
+										.filter-field__label Стоимость, млн/р.
+										.ui-range
+											.ui-range__col
+												span от
+												input.ui-range__val.ui-range__from(value="1.95")
+											.ui-range__col
+												span до
+												input.ui-range__val.ui-range__to(value="12.8")
+											.ui-range__slider.ui-range-cost
 
-								.filter__field.filter-field
-									.filter-field__label Этаж
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="4") 
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="22") 
-										.ui-range__slider.ui-range-floor
-						
-						.filter-row.filter__hidden
-							.filter-fields
-								.filter__field.filter-field
-									.filter-field__label Площадь кухни, м
-										sup 2
-									.ui-range
-										.ui-range__col
-											span от
-											input.ui-range__val.ui-range__from(value="16") 
-										.ui-range__col
-											span до
-											input.ui-range__val.ui-range__to(value="42") 
-										.ui-range__slider.ui-range-kitchen
-								.filter__field.filter-field
-									.filter-field__label Готовность до
-									select.ui-select(name="select_period", data-placeholder="2021")
-										option(value="2020") 2020
-										option.active(value="2021") 2021
-										option(value="2022") 2022
-								.filter__field.filter-field
-									.filter-field__label Корпус
-									select.ui-select(name="select_building", data-placeholder="2 корпус")
-										option(value="1 корпус") 1 корпус
-										option.active(value="2 корпус") 2 корпус
-										option(value="3 корпус") 3 корпус
-								.filter__field.filter-field-result
-									a.btn.btn--bg(href="#") 
-										img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
-										| Найдено 
-										span.filter-count 150 
-										| квартир
-					
-						.filter-row.filter__tech
-							button.filter-additional(type="button") Дополнительные параметры
-							button.filter-reset(type="button") Сбросить фильтр
-							a.btn.btn--bg(href="#") 
-								img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
-								| Показать результаты
+									.filter__field.filter-field
+										.filter-field__label Площадь, м
+											sup 2
+										.ui-range
+											.ui-range__col
+												span от
+												input.ui-range__val.ui-range__from(value="22") 
+											.ui-range__col
+												span до
+												input.ui-range__val.ui-range__to(value="158") 
+											.ui-range__slider.ui-range-size
+									
+									.filter__field.filter-field
+										.filter-field__label Готовность до
+										select.ui-select(name="select_period", data-placeholder="2021")
+											option(value="2020") 2020
+											option.active(value="2021") 2021
+											option(value="2022") 2022
+
+									.filter__field.filter-field-result
+										a.btn.btn--bg(href="#") 
+											img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
+											| Показать результаты
+							// /.filter__row
+
+
+							//- .filter-row.filter__tech.flex-between
+							//- 	button.filter-reset(type="button") Сбросить фильтр
+							// /.filter__row
+							
 					// /.filter
 
 
-					.results
+					.results.results--nofloors
 						.results__row.results__header
 							.results__col
 								.results__row
@@ -480,8 +383,6 @@ html(lang="ru")
 											img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
 											span Площадь, м
 												sup 2
-									.results__cell.results-cell-3
-										span Этаж
 									.results__cell.results-cell-4
 										button.sort.sort--flip(type="button")
 											img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
@@ -495,9 +396,9 @@ html(lang="ru")
 									.mob-sort
 										span.mob-sort__hint Сортировать
 										select.ui-select(name="mob_sort", data-placeholder="по цене")
-											option.active(value="2020") по цене
-											option(value="2021") по площади
-											option(value="2022") по готовности
+											option.active(value="2020") По цене
+											option(value="2021") По площади
+											option(value="2022") По готовности
 										img.svg(src="img/icons/ic-sort.svg", width="9.5", height="9.25", alt="sort")
 							// /.results__col	
 
@@ -515,15 +416,9 @@ html(lang="ru")
 							.results__col
 								.results-screen#results-screen
 									.results__row.results-screen__header
-										div Однокомнатные квартиры от 
-											span.filter-data 52 
-											| до 
-											span.filter-data 78 
-											| м
-											sup 2
+										div.filter-data Помещения
 										div от 
 											span.filter-data 2 376 200 р.
-								
 									.results__row(data-plan="img-plan.jpg")
 										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -657,17 +552,7 @@ html(lang="ru")
 										.results-cell-btns
 											button.interactive-btn.interactive-follow(type="button")
 												img.svg.ic-arrow(src="img/icons/ic-arrow.svg", width="20", height="20", alt="Перейти")
-									
-									.results__row.results-screen__header
-										div Однокомнатные квартиры от 
-											span.filter-data 52 
-											| до 
-											span.filter-data 78 
-											| м
-											sup 2
-										div от 
-											span.filter-data 2 376 200 р.
-									
+								
 									.results__row(data-plan="img-plan.jpg")
 										.results__cell.results-cell-1.js-call-card
 											img.img.plan-thumb(src="img/img-plan-thumb.jpg", alt="alt")
@@ -811,7 +696,7 @@ html(lang="ru")
 										img.svg(src="img/icons/ic-flat-plan.svg", width="36", height="44", alt="flat plan")
 								.results-offer__footer
 									.results-offer__text
-										p Интересует студия 22 м<sup>2</sup> ? 
+										p Интересует студия 22.3 м<sup>2</sup> ? 
 										p Посмотрите 
 											button.text-btn.js-call-card(button="button") подробнее!
 									.results-offer__btn
@@ -822,6 +707,7 @@ html(lang="ru")
 						
 
 						// /.results__body
+
 
 					// /.results
 
@@ -838,101 +724,6 @@ html(lang="ru")
 
 				// /.filters
 
-
-				// ipo
-				.project-ipo.scrollspy-item#p-7
-					.container
-						h2.h1.title Ипотека - это просто!
-						.ipo
-							.ipo-calc
-								.filter-row
-									.filter-fields
-										.filter__field.filter-field
-											.filter-field__label Стоимость, р. 
-											.ui-quantity(data-step="100000")
-												button.ui-quantity__btn.ui-quantity__minus
-													img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
-												input(type='text', value='2 500 000')
-												button.ui-quantity__btn.ui-quantity__plus
-													img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
-										.filter__field.filter-field
-											.filter-field__label Первоначальный взнос
-											.ui-quantity(data-step="100000")
-												button.ui-quantity__btn.ui-quantity__minus
-													img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
-												input(type='text', value='1 500 000')
-												button.ui-quantity__btn.ui-quantity__plus
-													img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
-										.filter__field.filter-field
-											.filter-field__label Срок
-											.ui-quantity.ui-quantity--years(data-step="1")
-												button.ui-quantity__btn.ui-quantity__minus
-													img.svg(src="img/icons/ic-minus.svg", width="10", height="2", alt="Минус")
-												input.years(type='text', value='10 лет')
-												button.ui-quantity__btn.ui-quantity__plus
-													img.svg(src="img/icons/ic-plus.svg", width="10", height="10", alt="Плюс")
-										.filter__field.filter-field-result
-											button.btn.btn--bg(type="button")
-												img.svg.btn__ic(src="img/icons/ic-btn-percentage.svg", width="20", height="20", alt="Минус") 
-												| Рассчитать платеж
-							
-							// /.ipo-calc
-
-							.ipo-table
-								.ipo-table__row.ipo-table__header
-									.ipo-bank Банк
-									.ipo-info
-										.ipo-info__col
-											span.hide-on-mob Ежемесячный 
-											| платёж, р.
-										.ipo-info__col Срок
-										.ipo-info__col Ставка
-								.ipo-table__row
-									.ipo-bank
-										img.img(src="img/ipo/sber.png", alt="Сбербанк")
-									.ipo-licence
-										div Сбербанк России ПАО
-										span.sub-text Лицензия № 1481 от 11.08.2015
-									.ipo-info
-										.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
-										.ipo-info__col(data-title="Срок") до 30 лет
-										.ipo-info__col(data-title="Ставка") 6%
-								.ipo-table__row
-									.ipo-bank
-										img.img(src="img/ipo/vtb.png", alt="ВТБ")
-									.ipo-licence
-										div Банк ВТБ
-										span.sub-text Лицензия № 1481 от 11.08.2015
-									.ipo-info
-										.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
-										.ipo-info__col(data-title="Срок") до 30 лет
-										.ipo-info__col(data-title="Ставка") 6%
-								.ipo-table__row
-									.ipo-bank
-										img.img(src="img/ipo/absolute-bank.png", alt="Абсолют банк АКБ")
-									.ipo-licence
-										div Абсолют банк АКБ (ЗАО)
-										span.sub-text Лицензия № 1481 от 11.08.2015
-									.ipo-info
-										.ipo-info__col(data-title="Ежемесячный платёж, р.") 49 982
-										.ipo-info__col(data-title="Срок") до 30 лет
-										.ipo-info__col(data-title="Ставка") 6%
-
-							// /.ipo-table
-
-						// /.ipo
-
-						.ipo-more
-							button.btn.btn--transp(type="button")
-								img.svg.btn__ic.ic-arrow.ic-arrow--down(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-								| Показать ещё
-
-				// /.ipo
-
-
-				// form-ipo
-				include pug-modules/cta-ipo
-				// /.form
 
 
 				.gallery.project-build.section-margin.scrollspy-item#p-8
@@ -1098,89 +889,6 @@ html(lang="ru")
 
 
 				.container.section-margin
-					h2.h1.title Другие объекты
-					.quarter-list.view-2.other-objects
-						.f-row.project-other
-							.cols.col-1-2
-								.quarter
-									.quarter__img-wrap
-										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
-										.quarter__overlay
-											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
-									.quarter__content
-										.quarter__title UP-квартал Комендантский 
-										.quarter__transport.flex
-											.p-metro.flex
-												.p-metro__branch(style="border-color: #33B7FB;")
-												span Московская
-
-										a.btn.btn--transp(href="#")
-											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-											| Посмотреть
-					
-							// /.quarter
-
-							.cols.col-1-2
-								.quarter
-									.quarter__img-wrap
-										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
-										.quarter__overlay
-											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
-									.quarter__content
-										.quarter__title UP-квартал Комендантский 
-										.quarter__transport.flex
-											.p-metro.flex
-												.p-metro__branch(style="border-color: #33B7FB;")
-												span Московская
-
-										a.btn.btn--transp(href="#")
-											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-											| Посмотреть
-					
-							// /.quarter
-
-							.cols.col-1-2
-								.quarter
-									.quarter__img-wrap
-										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
-										.quarter__overlay
-											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
-									.quarter__content
-										.quarter__title UP-квартал Комендантский 
-										.quarter__transport.flex
-											.p-metro.flex
-												.p-metro__branch(style="border-color: #33B7FB;")
-												span Московская
-
-										a.btn.btn--transp(href="#")
-											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-											| Посмотреть
-					
-							// /.quarter
-
-							.cols.col-1-2
-								.quarter
-									.quarter__img-wrap
-										img.quarter__img(src="img/img-quarter.jpg", alt="alt")
-										.quarter__overlay
-											img.img(src="img/quarter-name.svg", width="277", height="70", alt="alt")
-									.quarter__content
-										.quarter__title UP-квартал Комендантский 
-										.quarter__transport.flex
-											.p-metro.flex
-												.p-metro__branch(style="border-color: #33B7FB;")
-												span Московская
-
-										a.btn.btn--transp(href="#")
-											img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
-											| Посмотреть
-					
-							// /.quarter
-
-					// /.quarter-list 2
-
-
-				.container.section-margin
 					.content
 							p.sub-color.mb-0 ГК ФСК работает не только в Москве и Московской области, но также в Санкт-Петербурге и Ленинградской области, Калужской области и Краснодарском крае. В структуру холдинга входят собственные производственные мощности, генподрядные организации, технический заказчик, агентство недвижимости, сервисные службы. Компания, основанная в 2005 году, зарекомендовала себя надежным партнером, который всегда выполняет обязательства. Вертикально интегрированная структура ФСК позволяет в короткие сроки своими силами проектировать и строить объекты любого уровня сложности, используя преимущественно собственное финансирование. Именно поэтому бизнес компании очень устойчив, а кредитная нагрузка минимальна. В 2016 году в структуру холдинга вошел ДСК-1 – крупнейшее предприятие по производству панельных домов с полувековой историей. В результате этой сделки компания вышла на новый для нее рынок индустриального домостроения, а также укрепила свои позиции и расширила ассортимент в сегментах стандарт и комфорт.
 							
@@ -1193,57 +901,6 @@ html(lang="ru")
 			// Карточка
 			include pug-modules/card
 			// /.card
-
-
-			.modal.ipo-request.mfp-hide#ipo-request
-				.ipo-request__body
-					.ipo-request__header
-						.ipo-bank
-							img.img(src="img/ipo/vtb.png", alt="ВТБ")
-						button.close-btn.mfp-close(type="button")
-
-					.ipo-request__data
-						.data-col
-							div Банк ВТБ
-							div.sub-text Лицензия № 1481 от 11.08.2015
-						.data-row
-							.data-col
-								div.sub-text.text-bold Ставка
-								span от 6.5%
-							.data-col
-								div.sub-text.text-bold Срок
-								span до 25 лет
-							.data-col
-								div.sub-text.text-bold Ежемесячный платёж, р.
-								span 50 782
-
-				.ipo-request__form
-					.h2.cta__title Подать заявку<br> на ипотеку - просто!
-					.cta__form.cta-form
-						form(action="#")
-							.cta-form__row.f-row
-								.cols.col-1-3
-									input.input(type="text", name="name", placeholder="Ваше имя", reqiured)
-								.cols.col-1-3
-									input.input(type="tel", name="tel", placeholder="Номер телефона", reqiured)
-								.cols.col-1-3
-									button.btn.btn--cta.demo-modal-success(type="submit") 
-										img.svg.btn__ic.ic-tel(src="img/icons/ic-tel.svg", alt="phone", width="12", height="20") 
-										| Позвоните мне
-							p.privacy Отправляя форму, вы подтверждаете своё согласие на 
-								a(href="confidence.html", target="_blank") обработку персональных данных
-
-
-			.modal.modal-success.mfp-hide#modal-success
-				.modal-success__inner
-					.modal-success__img
-						img.img(src="img/icons/ic-success.svg", alt="alt")
-					.h2.modal-success__title Спасибо за Вашу заявку!
-					p Наш специалист свяжется с вами в&nbsp;ближайшее время и ответит на все интересующие вас вопросы.
-					button.btn.btn--border.mfp-close(type="button")
-						img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", width="12", height="20", alt="ic")
-						| Отлично, жду!
-
 
 
 

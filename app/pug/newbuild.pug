@@ -38,7 +38,7 @@ html(lang="ru")
 						.filter-mob-collapse
 
 							.filter-row
-								.filter-fields
+								.filter-fields.filter-fields--padding
 									.filter__field.filter-field
 										.filter-field__label Количество комнат
 										.ui-checkbox-group
@@ -86,61 +86,62 @@ html(lang="ru")
 									
 									.filter__field.filter-field
 										.filter-field__label Готовность до
-										select.ui-select(name="select_period", data-placeholder="2021")
+										select.ui-select(name="select_period", data-placeholder="Любой")
+											option.active(value="Любой") Любой
 											option(value="2020") 2020
-											option.active(value="2021") 2021
+											option(value="2021") 2021
 											option(value="2022") 2022
 							// /.filter__row
 
-							.filter-row.filter__hidden
-								.filter-fields
-									.filter__field.filter-field
-										.filter-field__label Площадь кухни, м
-											sup 2
-										.ui-range
-											.ui-range__col
-												span от
-												input.ui-range__val.ui-range__from(value="12") 
-											.ui-range__col
-												span до
-												input.ui-range__val.ui-range__to(value="46") 
-											.ui-range__slider.ui-range-kitchen
+							//- .filter-row.filter__hidden
+							//- 	.filter-fields
+							//- 		.filter__field.filter-field
+							//- 			.filter-field__label Площадь кухни, м
+							//- 				sup 2
+							//- 			.ui-range
+							//- 				.ui-range__col
+							//- 					span от
+							//- 					input.ui-range__val.ui-range__from(value="12") 
+							//- 				.ui-range__col
+							//- 					span до
+							//- 					input.ui-range__val.ui-range__to(value="46") 
+							//- 				.ui-range__slider.ui-range-kitchen
 
-									.filter__field.filter-field
-										.filter-field__label Этаж
-										.ui-range
-											.ui-range__col
-												span от
-												input.ui-range__val.ui-range__from(value="1") 
-											.ui-range__col
-												span до
-												input.ui-range__val.ui-range__to(value="26") 
-											.ui-range__slider.ui-range-floor
+							//- 		.filter__field.filter-field
+							//- 			.filter-field__label Этаж
+							//- 			.ui-range
+							//- 				.ui-range__col
+							//- 					span от
+							//- 					input.ui-range__val.ui-range__from(value="1") 
+							//- 				.ui-range__col
+							//- 					span до
+							//- 					input.ui-range__val.ui-range__to(value="26") 
+							//- 				.ui-range__slider.ui-range-floor
 
-									.filter__field.filter-field
-										.filter-field__label Корпус
-										select.ui-select(name="select_building", data-placeholder="2 корпус")
-											option(value="1 корпус") 1 корпус
-											option.active(value="2 корпус") 2 корпус
-											option(value="3 корпус") 3 корпус
+							//- 		.filter__field.filter-field
+							//- 			.filter-field__label Корпус
+							//- 			select.ui-select(name="select_building", data-placeholder="2 корпус")
+							//- 				option(value="1 корпус") 1 корпус
+							//- 				option.active(value="2 корпус") 2 корпус
+							//- 				option(value="3 корпус") 3 корпус
 
-									.filter__field.filter-field-
-										.filter-field__label Апартаменты
-										.ui-toggle
-											.ui-toggle__item
-												input#apartment-yes.ui-toggle__input(type="radio", name="apartments", value="yes", checked)
-												label.ui-toggle__label(for="apartment-yes") Отображать
-											.ui-toggle__item
-												input#apartment-no.ui-toggle__input(type="radio", name="apartments", value="no")
-												label.ui-toggle__label(for="apartment-no") Скрыть
+							//- 		.filter__field.filter-field-
+							//- 			.filter-field__label Апартаменты
+							//- 			.ui-toggle
+							//- 				.ui-toggle__item
+							//- 					input#apartment-yes.ui-toggle__input(type="radio", name="apartments", value="yes", checked)
+							//- 					label.ui-toggle__label(for="apartment-yes") Отображать
+							//- 				.ui-toggle__item
+							//- 					input#apartment-no.ui-toggle__input(type="radio", name="apartments", value="no")
+							//- 					label.ui-toggle__label(for="apartment-no") Скрыть
 							// /.filter__row
 
-							.filter-row.filter__tech
-								button.filter-additional(type="button") Дополнительные параметры
-								button.filter-reset(type="button") Сбросить фильтр
-								a.btn.btn--bg(href="#") 
-									img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
-									| Показать результаты
+							//- .filter-row.filter__tech
+							//- 	button.filter-additional(type="button") Дополнительные параметры
+							//- 	button.filter-reset(type="button") Сбросить фильтр
+							//- 	a.btn.btn--bg(href="#") 
+							//- 		img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
+							//- 		| Показать результаты
 							// /.filter__row
 							
 					// /.filter
@@ -352,7 +353,6 @@ html(lang="ru")
 											| Подробнее
 											
 						// /.quarter-list 1
-
 						
 					// /.container
 
@@ -360,6 +360,11 @@ html(lang="ru")
 				// form
 				include pug-modules/cta
 				// /.form
+
+				
+				.container.section-margin
+					.content
+							p.sub-color.mb-0 ГК ФСК работает не только в Москве и Московской области, но также в Санкт-Петербурге и Ленинградской области, Калужской области и Краснодарском крае. В структуру холдинга входят собственные производственные мощности, генподрядные организации, технический заказчик, агентство недвижимости, сервисные службы. Компания, основанная в 2005 году, зарекомендовала себя надежным партнером, который всегда выполняет обязательства. Вертикально интегрированная структура ФСК позволяет в короткие сроки своими силами проектировать и строить объекты любого уровня сложности, используя преимущественно собственное финансирование. Именно поэтому бизнес компании очень устойчив, а кредитная нагрузка минимальна. В 2016 году в структуру холдинга вошел ДСК-1 – крупнейшее предприятие по производству панельных домов с полувековой историей. В результате этой сделки компания вышла на новый для нее рынок индустриального домостроения, а также укрепила свои позиции и расширила ассортимент в сегментах стандарт и комфорт.
 
 
 			// /.page

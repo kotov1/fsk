@@ -22,13 +22,17 @@ html(lang="ru")
 						// bg-slider
 						.bg-slider
 							.slide
-								img.img(src="img/img-main-1.jpg", alt="alt")
+								a(href="#")
+									img.img(src="img/img-main-1.jpg", alt="alt")
 							.slide
-								img.img(src="img/img-main-2.jpg", alt="alt")
+								a(href="#")
+									img.img(src="img/img-main-2.jpg", alt="alt")
 							.slide
-								img.img(src="img/img-main-3.jpg", alt="alt")
+								a(href="#")
+									img.img(src="img/img-main-3.jpg", alt="alt")
 							.slide
-								img.img(src="img/img-main-4.jpg", alt="alt")
+								a(href="#")
+									img.img(src="img/img-main-4.jpg", alt="alt")
 						
 						// main-slider
 						.main-slider
@@ -68,7 +72,7 @@ html(lang="ru")
 						.filter-mob-collapse
 
 							.filter-row
-								.filter-fields
+								.filter-fields.filter-fields--padding
 									.filter__field.filter-field
 										.filter-field__label Количество комнат
 										.ui-checkbox-group
@@ -116,61 +120,62 @@ html(lang="ru")
 									
 									.filter__field.filter-field
 										.filter-field__label Готовность до
-										select.ui-select(name="select_period", data-placeholder="2021")
+										select.ui-select(name="select_period", data-placeholder="Любой")
+											option.active(value="Любой") Любой
 											option(value="2020") 2020
-											option.active(value="2021") 2021
+											option(value="2021") 2021
 											option(value="2022") 2022
 							// /.filter__row
 
-							.filter-row.filter__hidden
-								.filter-fields
-									.filter__field.filter-field
-										.filter-field__label Площадь кухни, м
-											sup 2
-										.ui-range
-											.ui-range__col
-												span от
-												input.ui-range__val.ui-range__from(value="12") 
-											.ui-range__col
-												span до
-												input.ui-range__val.ui-range__to(value="46") 
-											.ui-range__slider.ui-range-kitchen
+							//- .filter-row.filter__hidden
+							//- 	.filter-fields
+							//- 		.filter__field.filter-field
+							//- 			.filter-field__label Площадь кухни, м
+							//- 				sup 2
+							//- 			.ui-range
+							//- 				.ui-range__col
+							//- 					span от
+							//- 					input.ui-range__val.ui-range__from(value="12") 
+							//- 				.ui-range__col
+							//- 					span до
+							//- 					input.ui-range__val.ui-range__to(value="46") 
+							//- 				.ui-range__slider.ui-range-kitchen
 
-									.filter__field.filter-field
-										.filter-field__label Этаж
-										.ui-range
-											.ui-range__col
-												span от
-												input.ui-range__val.ui-range__from(value="1") 
-											.ui-range__col
-												span до
-												input.ui-range__val.ui-range__to(value="26") 
-											.ui-range__slider.ui-range-floor
+							//- 		.filter__field.filter-field
+							//- 			.filter-field__label Этаж
+							//- 			.ui-range
+							//- 				.ui-range__col
+							//- 					span от
+							//- 					input.ui-range__val.ui-range__from(value="1") 
+							//- 				.ui-range__col
+							//- 					span до
+							//- 					input.ui-range__val.ui-range__to(value="26") 
+							//- 				.ui-range__slider.ui-range-floor
 
-									.filter__field.filter-field
-										.filter-field__label Корпус
-										select.ui-select(name="select_building", data-placeholder="2 корпус")
-											option(value="1 корпус") 1 корпус
-											option.active(value="2 корпус") 2 корпус
-											option(value="3 корпус") 3 корпус
+							//- 		.filter__field.filter-field
+							//- 			.filter-field__label Корпус
+							//- 			select.ui-select(name="select_building", data-placeholder="2 корпус")
+							//- 				option(value="1 корпус") 1 корпус
+							//- 				option.active(value="2 корпус") 2 корпус
+							//- 				option(value="3 корпус") 3 корпус
 
-									.filter__field.filter-field-
-										.filter-field__label Апартаменты
-										.ui-toggle
-											.ui-toggle__item
-												input#apartment-yes.ui-toggle__input(type="radio", name="apartments", value="yes", checked)
-												label.ui-toggle__label(for="apartment-yes") Отображать
-											.ui-toggle__item
-												input#apartment-no.ui-toggle__input(type="radio", name="apartments", value="no")
-												label.ui-toggle__label(for="apartment-no") Скрыть
+							//- 		.filter__field.filter-field-
+							//- 			.filter-field__label Апартаменты
+							//- 			.ui-toggle
+							//- 				.ui-toggle__item
+							//- 					input#apartment-yes.ui-toggle__input(type="radio", name="apartments", value="yes", checked)
+							//- 					label.ui-toggle__label(for="apartment-yes") Отображать
+							//- 				.ui-toggle__item
+							//- 					input#apartment-no.ui-toggle__input(type="radio", name="apartments", value="no")
+							//- 					label.ui-toggle__label(for="apartment-no") Скрыть
 							// /.filter__row
 
-							.filter-row.filter__tech
-								button.filter-additional(type="button") Дополнительные параметры
-								button.filter-reset(type="button") Сбросить фильтр
-								a.btn.btn--bg(href="#") 
-									img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
-									| Показать результаты
+							//- .filter-row.filter__tech
+							//- 	button.filter-additional(type="button") Дополнительные параметры
+							//- 	button.filter-reset(type="button") Сбросить фильтр
+							//- 	a.btn.btn--bg(href="#") 
+							//- 		img.svg.btn__ic(src="img/icons/ic-search.svg", alt="phone", width="20", height="20") 
+							//- 		| Показать результаты
 							// /.filter__row
 							
 					// /.filter
@@ -249,7 +254,7 @@ html(lang="ru")
 									.p-key.p-key--green
 										.p-key__ic 
 										.p-key__txt Ключи 1 оч. в 2020!
-									a.btn.btn--bg.quarter-link(href="#") 
+									a.btn.btn--bg.quarter-link(href="page.html") 
 										img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 										| Подробнее
 						// /.quarter
@@ -285,7 +290,7 @@ html(lang="ru")
 									.p-key.p-key--green
 										.p-key__ic 
 										.p-key__txt Ключи 1 оч. в 2020!
-									a.btn.btn--bg.quarter-link(href="#") 
+									a.btn.btn--bg.quarter-link(href="page.html") 
 										img.svg.btn__ic.ic-arrow(src="img/icons/ic-arrow.svg", alt="link", width="20", height="20")
 										| Подробнее
 						// /.quarter
@@ -306,7 +311,7 @@ html(lang="ru")
 											.p-metro.flex
 												.p-metro__branch(style="border-color: #33B7FB;")
 												span Московская
-										.quarter__info
+										.quarter__info.quater__links
 											p 
 												a(href="#") Студии -  1,95 млн /р.
 											p 
@@ -341,7 +346,7 @@ html(lang="ru")
 											.p-metro.flex
 												.p-metro__branch(style="border-color: #33B7FB;")
 												span Московская
-										.quarter__info
+										.quarter__info.quater__links
 											p 
 												a(href="#") Студии -  1,95 млн /р.
 											p 
@@ -374,7 +379,7 @@ html(lang="ru")
 											.p-metro.flex
 												.p-metro__branch(style="border-color: #33B7FB;")
 												span Московская
-										.quarter__info
+										.quarter__info.quater__links
 											p 
 												a(href="#") Студии -  1,95 млн /р.
 											p 
@@ -389,7 +394,7 @@ html(lang="ru")
 												a.sub-link(href="#") 5 ккв - нет в продаже 
 										.p-discount.flex
 											.p-discount__ic %
-											p.p-discount__txt Только до 15 сентября <span class="nowrap">до 15%!</span>
+											p.p-discount__txt.p-discount__width Только до 15 сентября <span class="nowrap">до 15%!</span>
 										.quarter__footer
 											.p-key.p-key--green
 												.p-key__ic 
@@ -399,7 +404,7 @@ html(lang="ru")
 
 					// /.quarter-list 2
 
-					.results-empty По вашему запросу ничего не найдено :(
+					.results-empty По вашему запросу ничего не найдено.
 
 					.quarter-list.view-1
 						.quarter
@@ -486,47 +491,47 @@ html(lang="ru")
 				// /.container
 
 				.container.section-margin
-					h2.h1.title ФСК «Лидер» в цифрах
+					h2.h1.title ФСК в цифрах
 					.advantages-list
 						.advantage
 							img.img(src="img/img-advantage-1.svg", alt="alt")
 							.advantage__content
 								.advantage__data
-									span.advantage__number 13
+									span.advantage__number 14
 									span.advantage__label.advantage__units лет
 								p.advantage__txt стабильного роста бизнеса
 						.advantage
 							img.img(src="img/img-advantage-2.svg", alt="alt")
 							.advantage__content
 								.advantage__data
-									span.advantage__number 6,2
+									span.advantage__number 6,5
 									span.advantage__label.advantage__units млн м<sup>2<sup>
-								p.advantage__txt совокупный объем проектов за 13 лет
+								p.advantage__txt совокупный объем проектов за 14 лет
 						.advantage
 							img.img(src="img/img-advantage-3.svg", alt="alt")
 							.advantage__content
 								.advantage__data
-									span.advantage__number 971 
+									span.advantage__number 1300 
 									span.advantage__label.advantage__units тыс м<sup>2<sup>
-								p.advantage__txt введено в&nbsp;эксплуатацию в&nbsp;2017 году
+								p.advantage__txt введено в&nbsp;эксплуатацию в&nbsp;2018 году
 						.advantage
 							img.img(src="img/img-advantage-4.svg", alt="alt")
 							.advantage__content
 								.advantage__data
-									span.advantage__number 27
-									span.advantage__label жилых комплексов
-								p.advantage__txt 14 построено и&nbsp;введено в&nbsp;эксплуатацию
+									span.advantage__number 22
+									span.advantage__label проекта
+								p.advantage__txt в стадии реализаци
 						.advantage
 							img.img(src="img/img-advantage-5.svg", alt="alt")
 							.advantage__content
 								.advantage__data
-									span.advantage__number 7 580
+									span.advantage__number 7580
 								p.advantage__txt мест в детских садах и школах
 						.advantage
 							img.img(src="img/img-advantage-6.svg", alt="alt")
 							.advantage__content
 								.advantage__data
-									span.advantage__number 12 600
+									span.advantage__number >15000
 								p.advantage__txt человек – общее количество сотрудников
 
 				// /.container

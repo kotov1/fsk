@@ -3,6 +3,8 @@
 
 footer.footer
 	.container
+	
+		// desktop
 		.sub-menu
 			.f-row
 
@@ -42,6 +44,8 @@ footer.footer
 					.sub-menu__title Оплата
 					ul.sub-menu__list
 						li
+							a(href="discounts.html") Акции и скидки
+						li
 							a(href="ipo.html") Ипотека
 						li
 							a(href="#") Мат. капитал
@@ -51,8 +55,6 @@ footer.footer
 				.cols.col-1-4
 					.sub-menu__title Покупателям 
 					ul.sub-menu__list
-						li
-							a(href="discounts.html") Акции и скидки
 						li
 							a(href="clients.html") Отдел клиентского сервиса
 						li
@@ -65,7 +67,7 @@ footer.footer
 
 
 
-
+		// mobile
 		.mob-menu
 			.footer__logo
 				img.img(src="img/svg-logo-gray.svg", alt="FSK")
@@ -162,23 +164,30 @@ footer.footer
 					a.confidence-link(href="confidence.html") Политика конфиденциальности
 
 
-		.contact-links.footer__contact-links
-			a.contact-link(href="tel:+78127035555") 
-				.ic-container
-					img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", alt="tel", width="12", height="20") 
-				| +7 (812) 703-55-55
-			a.contact-link(href="mailto:oks@fsknw.ru") 
-				.ic-container
-					img.svg.btn__ic(src="img/icons/ic-envelope.svg", alt="email", width="20", height="15")
-				| oks@fsknw.ru
-			a.contact-link(href="contacts.html")
-				.ic-container
-					img.svg.btn__ic(src="img/icons/ic-map-pin-sm-accent.svg", alt="geo", width="14", height="19")
-				| Большой пр. ПС, д.48
-			span.contact-link
-				.ic-container
-					img.svg.btn__ic(src="img/icons/ic-time.svg", alt="geo", width="19", height="19")
-				| 9:00 - 21:00 (Ежедневно)
+		.footer__line
+			.contact-links
+				a.contact-link(href="tel:+78127035555") 
+					.ic-container
+						img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", alt="tel", width="12", height="20") 
+					| +7 (812) 703-55-55
+				a.contact-link(href="mailto:oks@fsknw.ru") 
+					.ic-container
+						img.svg.btn__ic(src="img/icons/ic-envelope.svg", alt="email", width="20", height="15")
+					| oks@fsknw.ru
+				a.contact-link(href="contacts.html")
+					.ic-container
+						img.svg.btn__ic(src="img/icons/ic-map-pin-sm-accent.svg", alt="geo", width="14", height="19")
+					| Большой пр. ПС, д.48
+				span.contact-link
+					.ic-container
+						img.svg.btn__ic(src="img/icons/ic-time.svg", alt="geo", width="19", height="19")
+					| 9:00 - 21:00 (Ежедневно)
+
+			button.btn.btn--cta.js-call-callback(type="button") 
+				img.svg.btn__ic.ic-tel(src="img/icons/ic-tel.svg", alt="phone", width="12", height="20") 
+				| Позвоните мне
+
+
 
 
 		.footer__text
@@ -190,6 +199,53 @@ footer.footer
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// Модальная форма обратного звонка
+.modal.modal-callback.mfp-hide#modal-callback
+	.modal-callback__inner
+		.modal-callback__img(style="background-image: url('img/img-callback-girl.jpg')")
+		button.close-btn.mfp-close(type="button")
+		.modal-callback__col
+			.h3.text-bold Нужна консультация специалиста?
+			.modal-callback__form
+				form(action="#")
+					input.input(type="text", name="name", placeholder="Ваше имя", reqiured)
+					input.input(type="tel", name="tel", placeholder="Номер телефона", reqiured)
+					.text-center
+						button.btn.btn--cta(type="submit") 
+							img.svg.btn__ic.ic-tel(src="img/icons/ic-tel.svg", alt="phone", width="12", height="20") 
+							| Позвоните мне
+					p.privacy Отправляя форму, вы подтверждаете своё согласие на 
+						a(href="confidence.html", target="_blank") обработку персональных данных
+
+// Модальное окно благодарности
+.modal.modal-callback.modal-thanks.mfp-hide#modal-thanks
+	.modal-callback__inner
+		.modal-callback__img(style="background-image: url('img/img-callback-girl.jpg')")
+		.modal-callback__col
+			.modal-success__inner
+				.modal-success__img
+					img.img(src="img/icons/ic-success.svg", alt="alt")
+				.h2.modal-success__title Спасибо за Вашу заявку!
+				p Наш специалист свяжется с вами в&nbsp;ближайшее время и ответит на все интересующие вас вопросы.
+				button.btn.btn--border.success-btn.mfp-close(type="button")
+					img.svg.svg-stroke.btn__ic(src="img/icons/ic-tel.svg", width="12", height="20", alt="ic")
+					| Отлично, жду!
+
+
+
+	
 
 
 

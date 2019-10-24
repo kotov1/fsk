@@ -6,10 +6,11 @@
 	content: '';
 	display: block;
     position: absolute;
-    width: 140%;
+    width: 120%;
 	height: 100%;
 	display: none;
-    left: -20%;
+	border-radius: 50%;
+    left: -10%;
     z-index: 2;
     transition: all ease-in-out 0.5s;
     background-repeat: no-repeat;
